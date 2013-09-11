@@ -59,7 +59,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>321</x>
-                        <y>433</y>
+                        <y>494</y>
                         <z>0</z>
                         <width>646</width>
                         <height>96</height>
@@ -98,7 +98,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>85</x>
-                        <y>282</y>
+                        <y>343</y>
                         <z>0</z>
                         <width>9</width>
                         <height>8</height>
@@ -141,7 +141,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>97</x>
-                        <y>334</y>
+                        <y>395</y>
                         <z>0</z>
                         <width>181</width>
                         <height>24</height>
@@ -179,7 +179,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>113</x>
-                        <y>331</y>
+                        <y>392</y>
                         <z>0</z>
                         <width>14</width>
                         <height>15</height>
@@ -228,11 +228,54 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>429</x>
-                        <y>343</y>
+                        <x>409.5</x>
+                        <y>404</y>
                         <z>0</z>
-                        <width>34</width>
+                        <width>73</width>
                         <height>82</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Sprite10" uid="7">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Physics">
+                            <properties>
+                                <immovable>Yes</immovable>
+                                <collision-mask>Use collision polygon</collision-mask>
+                                <prevent-rotation>Yes</prevent-rotation>
+                                <density>1</density>
+                                <friction>0.5</friction>
+                                <elasticity>0.2</elasticity>
+                                <linear-damping>0</linear-damping>
+                                <angular-damping>0.01</angular-damping>
+                                <bullet>No</bullet>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Solid">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>201</x>
+                        <y>426.5</y>
+                        <z>0</z>
+                        <width>12</width>
+                        <height>39</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
