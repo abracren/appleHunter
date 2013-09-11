@@ -27,7 +27,7 @@
     </configurations>
     <window-size>
         <width>640</width>
-        <height>480</height>
+        <height>360</height>
     </window-size>
     <pixel-rounding>0</pixel-rounding>
     <use-loader-layout>0</use-loader-layout>
@@ -259,7 +259,16 @@
             </behaviors>
             <animation-folder expanded="1">
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9232333975272022" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.096" y="0.024" />
+                            <point x="0.836" y="0" />
+                            <point x="0.798" y="0.42" />
+                            <point x="0.596" y="0.436" />
+                            <point x="0.602" y="1" />
+                            <point x="0.112" y="0.996" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
@@ -323,6 +332,54 @@
             </behaviors>
             <animation-folder expanded="1">
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5073499121698653" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite13" sid="8858118818261809">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Physics" sid="7240232503697847">
+                    <behavior id="Physics" />
+                </behavior-type>
+                <behavior-type name="Solid" sid="3239352046776579">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2597305782475858" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite14" sid="8815068940206477">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Physics" sid="2960426422878488">
+                    <behavior id="Physics" />
+                </behavior-type>
+                <behavior-type name="Solid" sid="2905068639892945">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2264572959422615" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite15" sid="2628216863682493">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Physics" sid="6510968253889291">
+                    <behavior id="Physics" />
+                </behavior-type>
+                <behavior-type name="Solid" sid="9375523010350182">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2222432208655996" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
             </animation-folder>
