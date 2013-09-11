@@ -282,6 +282,51 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="Sprite11" sid="5734069278970938">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Physics" sid="7062104318753485">
+                    <behavior id="Physics" />
+                </behavior-type>
+                <behavior-type name="Solid" sid="9680567756640613">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4722499898231892" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="invPared" sid="3414051110231917">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="9162388484129316">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7457189572150286" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite12" sid="1162467106615545">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Physics" sid="6815358232962082">
+                    <behavior id="Physics" />
+                </behavior-type>
+                <behavior-type name="Solid" sid="3945876943644531">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5073499121698653" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families />
     <layout-folder expanded="1">

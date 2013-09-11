@@ -49,7 +49,7 @@
                     <param id="0" name="Object to create">Sprite5</param>
                     <param id="1" name="Layer">0</param>
                     <param id="2" name="X">85</param>
-                    <param id="3" name="Y">282</param>
+                    <param id="3" name="Y">100</param>
                 </action>
             </actions>
         </event-block>
