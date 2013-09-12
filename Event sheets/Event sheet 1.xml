@@ -8,12 +8,22 @@
         <variable constant="0" name="birdMoving" sid="5475433639624949" static="0" type="number">1</variable>
         <variable constant="0" name="jumpRan" sid="6641142579008261" static="0" type="number">0</variable>
         <variable constant="0" name="bigBasquet" sid="5572258107660725" static="0" type="number">0</variable>
+        <variable constant="0" name="AppleSpeed" sid="6055061328537189" static="0" type="number">100</variable>
+        <variable constant="0" name="bigBasquetTime" sid="2075747172555441" static="0" type="number">15</variable>
         <variable constant="0" name="colide" sid="5847483074379277" static="0" type="number">0</variable>
         <event-block sid="2799303908366137">
             <conditions>
                 <condition id="-2" name="On start of layout" sid="4333017317821683" type="System" />
             </conditions>
             <actions>
+                <action behavior="Physics" id="23" name="Enable/disable collisions" sid="3735596240995045" type="tobogan">
+                    <param id="0" name="Object">stick1</param>
+                    <param id="1" name="State">0</param>
+                </action>
+                <action behavior="Physics" id="23" name="Enable/disable collisions" sid="3487004975715313" type="stick1">
+                    <param id="0" name="Object">tobogan</param>
+                    <param id="1" name="State">0</param>
+                </action>
                 <action behavior="Physics" id="23" name="Enable/disable collisions" sid="3461736136784479" type="Sprite9">
                     <param id="0" name="Object">stick1</param>
                     <param id="1" name="State">1</param>
@@ -33,12 +43,13 @@
                 <action id="7" name="Set mirrored" sid="4210028058790816" type="Sprite9">
                     <param id="0" name="State">0</param>
                 </action>
+                <action id="2" name="Stop" sid="2702592631080264" type="apple" />
             </actions>
         </event-block>
         <event-block sid="8435631816642045">
             <conditions>
                 <condition id="-6" name="Every X seconds" sid="2496432503760548" type="System">
-                    <param id="0" name="Interval (seconds)">2</param>
+                    <param id="0" name="Interval (seconds)">0.5</param>
                 </condition>
             </conditions>
             <actions>
@@ -48,9 +59,32 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="2880953454581881">
+        <event-block sid="6088973112468095">
             <conditions>
-                <condition id="0" name="On collision with another object" sid="6917436554225689" type="Sprite9">
+                <condition id="-8" name="Compare two values" sid="86609096394706" type="System">
+                    <param id="0" name="First value">Sprite9.X</param>
+                    <param id="1" name="Comparison">2</param>
+                    <param id="2" name="Second value">250</param>
+                </condition>
+                <condition id="7" name="Is mirrored" sid="4173042522617435" type="Sprite9" />
+            </conditions>
+            <actions>
+                <action disabled="1" id="-9" name="Set value" sid="38493881911338" type="System">
+                    <param id="0" name="Variable">jumpRan</param>
+                    <param id="1" name="Value">650</param>
+                </action>
+                <action behavior="Platform" id="4" name="Set jump strength" sid="9774094549673434" type="Sprite9">
+                    <param id="0" name="Jump strength">650</param>
+                </action>
+                <action id="-9" name="Set value" sid="2294055552730899" type="System">
+                    <param id="0" name="Variable">forceRan</param>
+                    <param id="1" name="Value">jumpRan*3.4</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="665654384030647">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="1761970458166101" type="Sprite9">
                     <param id="0" name="Object">stick1</param>
                 </condition>
             </conditions>
@@ -64,6 +98,118 @@
                     <param id="0" name="X">stick1.X+150</param>
                     <param id="1" name="Y">Sprite9.Y</param>
                 </action>
+            </actions>
+        </event-block>
+        <event-block sid="3769815204404241">
+            <conditions>
+                <condition id="-8" name="Compare two values" sid="4445005321670968" type="System">
+                    <param id="0" name="First value">apple.count</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Second value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Create object" sid="5686535986747424" type="System">
+                    <param id="0" name="Object to create">apple</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="X">85</param>
+                    <param id="3" name="Y">0</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="9842297859315619">
+                    <conditions>
+                        <condition id="-21" name="Is between values" sid="205810765715264" type="System">
+                            <param id="0" name="Value">jumpRan</param>
+                            <param id="1" name="Lower bound">790</param>
+                            <param id="2" name="Upper bound">799</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="8852973072741825" type="apple">
+                            <param id="0" name="Instance variable">speeder</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="9951668268745232" type="apple">
+                            <param id="0" name="Instance variable">magic</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action disabled="1" id="-10" name="Set value" sid="9250475157461839" type="apple">
+                            <param id="0" name="Instance variable">triple</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="3131963464974224">
+                    <conditions>
+                        <condition id="-21" name="Is between values" sid="1745876524931279" type="System">
+                            <param id="0" name="Value">jumpRan</param>
+                            <param id="1" name="Lower bound">800</param>
+                            <param id="2" name="Upper bound">830</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="3128540873583304" type="apple">
+                            <param id="0" name="Instance variable">speeder</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="8929841886777707" type="apple">
+                            <param id="0" name="Instance variable">magic</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="7193603180302006" type="apple">
+                            <param id="0" name="Instance variable">triple</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="9637370294732978">
+                    <conditions>
+                        <condition id="-21" name="Is between values" sid="699152429725626" type="System">
+                            <param id="0" name="Value">jumpRan</param>
+                            <param id="1" name="Lower bound">750</param>
+                            <param id="2" name="Upper bound">800</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="5221407998116008" type="apple">
+                            <param id="0" name="Instance variable">speeder</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="8401837064580207" type="apple">
+                            <param id="0" name="Instance variable">magic</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="8492049395558717" type="apple">
+                            <param id="0" name="Instance variable">triple</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="9939514877179253">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="5152464015341308" type="System">
+                            <param id="0" name="First value">apple.X</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Second value">200</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="2880953454581881">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="6917436554225689" type="Sprite9">
+                    <param id="0" name="Object">stick1</param>
+                </condition>
+                <condition id="-8" name="Compare two values" sid="9705298456975121" type="System">
+                    <param id="0" name="First value">apple.count</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Second value">1</param>
+                </condition>
+            </conditions>
+            <actions>
                 <action id="-3" name="Create object" sid="4806620013028033" type="System">
                     <param id="0" name="Object to create">apple</param>
                     <param id="1" name="Layer">0</param>
@@ -71,29 +217,77 @@
                     <param id="3" name="Y">0</param>
                 </action>
             </actions>
-        </event-block>
-        <event-block sid="6088973112468095">
-            <conditions>
-                <condition id="-8" name="Compare two values" sid="86609096394706" type="System">
-                    <param id="0" name="First value">Sprite9.X</param>
-                    <param id="1" name="Comparison">2</param>
-                    <param id="2" name="Second value">350</param>
-                </condition>
-                <condition id="7" name="Is mirrored" sid="4173042522617435" type="Sprite9" />
-            </conditions>
-            <actions>
-                <action disabled="1" id="-9" name="Set value" sid="38493881911338" type="System">
-                    <param id="0" name="Variable">jumpRan</param>
-                    <param id="1" name="Value">650</param>
-                </action>
-                <action behavior="Platform" id="4" name="Set jump strength" sid="9774094549673434" type="Sprite9">
-                    <param id="0" name="Jump strength">jumpRan</param>
-                </action>
-                <action id="-9" name="Set value" sid="2294055552730899" type="System">
-                    <param id="0" name="Variable">forceRan</param>
-                    <param id="1" name="Value">jumpRan*3.4</param>
-                </action>
-            </actions>
+            <sub-events>
+                <event-block sid="5470582015528402">
+                    <conditions>
+                        <condition id="-21" name="Is between values" sid="8658465236831184" type="System">
+                            <param id="0" name="Value">jumpRan</param>
+                            <param id="1" name="Lower bound">650</param>
+                            <param id="2" name="Upper bound">750</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="7072539499379666" type="apple">
+                            <param id="0" name="Instance variable">speeder</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="5478358122196351" type="apple">
+                            <param id="0" name="Instance variable">magic</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="2518860629680343" type="apple">
+                            <param id="0" name="Instance variable">triple</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="1877780805218414">
+                    <conditions>
+                        <condition id="-21" name="Is between values" sid="7489450180643754" type="System">
+                            <param id="0" name="Value">jumpRan</param>
+                            <param id="1" name="Lower bound">800</param>
+                            <param id="2" name="Upper bound">810</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="1973086659639425" type="apple">
+                            <param id="0" name="Instance variable">speeder</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="1356700646001004" type="apple">
+                            <param id="0" name="Instance variable">magic</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="5108896806944606" type="apple">
+                            <param id="0" name="Instance variable">triple</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="5529802713919312">
+                    <conditions>
+                        <condition id="-21" name="Is between values" sid="2996526092081571" type="System">
+                            <param id="0" name="Value">jumpRan</param>
+                            <param id="1" name="Lower bound">750</param>
+                            <param id="2" name="Upper bound">799</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="5406400499900811" type="apple">
+                            <param id="0" name="Instance variable">speeder</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="7455441754495206" type="apple">
+                            <param id="0" name="Instance variable">magic</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="304324803684364" type="apple">
+                            <param id="0" name="Instance variable">triple</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
         </event-block>
         <event-block sid="8813029665008943">
             <conditions>
@@ -101,9 +295,30 @@
                     <param id="0" name="Object">basquet</param>
                 </condition>
             </conditions>
-            <actions>
-                <action id="-9" name="Destroy" sid="7861744244827476" type="apple" />
-            </actions>
+            <actions />
+            <sub-events>
+                <event-block sid="2110796229797112">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="5421119439725747" type="apple">
+                            <param id="0" name="Instance variable">magic</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="8004661651282078" type="System">
+                            <param id="0" name="Variable">bigBasquet</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7207061877806339">
+                    <conditions />
+                    <actions>
+                        <action id="-9" name="Destroy" sid="7861744244827476" type="apple" />
+                    </actions>
+                </event-block>
+            </sub-events>
         </event-block>
         <event-block sid="729894162207699">
             <conditions>
@@ -438,7 +653,7 @@
         </event-block>
         <event-block sid="8669283704422203">
             <conditions>
-                <condition id="2" inverted="1" name="Is in touch" sid="1514685935293893" type="Touch" />
+                <condition id="1" name="On any touch end" sid="1514685935293893" type="Touch" />
             </conditions>
             <actions>
                 <action id="4" name="Set animation" sid="8902079110914353" type="Sprite9">
@@ -480,17 +695,17 @@
                 <event-block sid="5518954512448975">
                     <conditions />
                     <actions>
-                        <action behavior="Platform" id="7" name="Simulate control" sid="6811761890132532" type="tresapplesTrigger">
+                        <action behavior="Platform" disabled="1" id="7" name="Simulate control" sid="6811761890132532" type="tresapplesTrigger">
                             <param id="0" name="Control">0</param>
                         </action>
-                        <action behavior="Platform" id="7" name="Simulate control" sid="8426935283335342" type="BigBasquetTrigger">
+                        <action behavior="Platform" disabled="1" id="7" name="Simulate control" sid="8426935283335342" type="BigBasquetTrigger">
                             <param id="0" name="Control">0</param>
                         </action>
                     </actions>
                 </event-block>
             </sub-events>
         </event-block>
-        <event-block disabled="1" sid="7466956970476318">
+        <event-block sid="7466956970476318">
             <conditions>
                 <condition id="-6" name="Every X seconds" sid="3988357337064824" type="System">
                     <param id="0" name="Interval (seconds)">10</param>
@@ -736,6 +951,17 @@
                 <action id="-9" name="Destroy" sid="5861000467605709" type="apple" />
             </actions>
         </event-block>
+        <event-block sid="5222296301604661">
+            <conditions>
+                <condition id="-34" name="Pick by evaluate" sid="1297320635976714" type="System">
+                    <param id="0" name="Object">apple</param>
+                    <param id="1" name="Expression">apple.y&gt;500</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="8546654956105709" type="apple" />
+            </actions>
+        </event-block>
         <event-block sid="1160408562150196">
             <conditions>
                 <condition id="-1" name="Every tick" sid="9753300297040209" type="System" />
@@ -745,6 +971,228 @@
                     <param id="0" name="Text">&quot;&quot;&amp;apple.Count</param>
                 </action>
             </actions>
+        </event-block>
+        <event-block sid="7414191187084537">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="1619791641666048" type="apple">
+                    <param id="0" name="Instance variable">triple</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+                <condition id="-21" name="Is between values" sid="8075784057242184" type="System">
+                    <param id="0" name="Value">apple.X</param>
+                    <param id="1" name="Lower bound">250</param>
+                    <param id="2" name="Upper bound">255</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="6449367980867577" type="apple">
+                    <param id="0" name="Instance variable">created</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Create object" sid="2377822347522909" type="System">
+                    <param id="0" name="Object to create">apple</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="X">apple.X</param>
+                    <param id="3" name="Y">apple.Y</param>
+                </action>
+                <action behavior="Physics" id="2" name="Apply force at angle" sid="6295053756779213" type="apple">
+                    <param id="0" name="Force">150</param>
+                    <param id="1" name="Angle">310</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="-10" name="Set value" sid="1374448642140403" type="apple">
+                    <param id="0" name="Instance variable">created</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5229779188911879">
+            <conditions />
+            <actions />
+        </event-block>
+        <event-block disabled="1" sid="3708460268197881">
+            <conditions>
+                <condition id="-21" name="Is between values" sid="4777738556282448" type="System">
+                    <param id="0" name="Value">apple.X</param>
+                    <param id="1" name="Lower bound">270</param>
+                    <param id="2" name="Upper bound">275</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block disabled="1" sid="7075761807656568">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="743408941004396" type="apple">
+                            <param id="0" name="Instance variable">triple</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="7803632848628325" type="apple">
+                            <param id="0" name="Instance variable">created</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="2921801495047837" type="System">
+                            <param id="0" name="Object to create">apple</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="X">apple.X</param>
+                            <param id="3" name="Y">apple.Y</param>
+                        </action>
+                        <action behavior="Physics" id="2" name="Apply force at angle" sid="7962958023223443" type="apple">
+                            <param id="0" name="Force">150</param>
+                            <param id="1" name="Angle">310</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="9683414583895839" type="apple">
+                            <param id="0" name="Instance variable">created</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="4507270095461644">
+            <conditions>
+                <condition id="-21" name="Is between values" sid="99372491671696" type="System">
+                    <param id="0" name="Value">apple.X</param>
+                    <param id="1" name="Lower bound">270</param>
+                    <param id="2" name="Upper bound">275</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="5590110096078959">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="6417032678704987" type="apple">
+                            <param id="0" name="Instance variable">speeder</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="1484033102337424" type="System">
+                            <param id="0" name="Variable">AppleSpeed</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="9681921469200201">
+            <conditions />
+            <actions />
+        </event-block>
+        <event-block sid="557536184296086">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="2764928681385573" type="apple">
+                    <param id="0" name="Instance variable">magic</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+                <condition id="-1" name="Every tick" sid="6816574778554725" type="System" />
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="5610418369044334" type="apple">
+                    <param id="0" name="Frame number">1</param>
+                </action>
+                <action id="2" name="Stop" sid="3834065606103784" type="apple" />
+            </actions>
+        </event-block>
+        <event-block sid="3299290849163639">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="6803348097285433" type="apple">
+                    <param id="0" name="Instance variable">speeder</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+                <condition id="-1" name="Every tick" sid="8172261840485794" type="System" />
+            </conditions>
+            <actions>
+                <action disabled="1" id="5" name="Set frame" sid="7911749239031086" type="apple">
+                    <param id="0" name="Frame number">1</param>
+                </action>
+                <action id="2" name="Stop" sid="2974047230470449" type="apple" />
+                <action id="-5" name="Set width" sid="5057328871615503" type="apple">
+                    <param id="0" name="Width">20</param>
+                </action>
+                <action id="-6" name="Set height" sid="4745785783664857" type="apple">
+                    <param id="0" name="Height">20</param>
+                </action>
+                <action behavior="Physics" id="16" name="Set density" sid="9448098243342345" type="apple">
+                    <param id="0" name="Density">3</param>
+                </action>
+                <action behavior="Physics" disabled="1" id="12" name="Set world gravity" sid="4030097899326562" type="apple">
+                    <param id="0" name="Gravity">500</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="386064719414788">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="3971453890003157" type="apple">
+                    <param id="0" name="Instance variable">magic</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+                <condition id="-1" name="Every tick" sid="9162213652485206" type="System" />
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="2294064523808142" type="apple">
+                    <param id="0" name="Frame number">0</param>
+                </action>
+                <action id="2" name="Stop" sid="3232882116311844" type="apple" />
+            </actions>
+        </event-block>
+        <event-block sid="3618407065752769">
+            <conditions>
+                <condition id="-34" name="Pick by evaluate" sid="2477505730695164" type="System">
+                    <param id="0" name="Object">apple</param>
+                    <param id="1" name="Expression">apple.x&lt;200</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Physics" id="23" name="Enable/disable collisions" sid="8781853225613486" type="apple">
+                    <param id="0" name="Object">apple</param>
+                    <param id="1" name="State">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="3258139457977318">
+            <conditions>
+                <condition disabled="1" id="0" name="On key pressed" sid="252873071676462" type="Keyboard">
+                    <param id="0" name="Key">87 (W)</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="3572414437450449" type="System">
+                    <param id="0" name="Variable">bigBasquet</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Flash" disabled="1" id="0" name="Flash" sid="450963996905539" type="Sprite9">
+                    <param id="0" name="&apos;On&apos; time">0.1</param>
+                    <param id="1" name="&apos;Off&apos; time">0.1</param>
+                    <param id="2" name="Duration">10</param>
+                </action>
+                <action id="-16" name="Wait" sid="1984497829048303" type="System">
+                    <param id="0" name="Seconds">bigBasquetTime</param>
+                </action>
+                <action id="-9" name="Set value" sid="6587646858610492" type="System">
+                    <param id="0" name="Variable">bigBasquet</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="9032527728883009">
+            <conditions>
+                <condition disabled="1" id="0" name="On collision with another object" sid="7888912147247192" type="apple">
+                    <param id="0" name="Object">stick1</param>
+                </condition>
+            </conditions>
+            <actions />
         </event-block>
     </events>
 </c2eventsheet>

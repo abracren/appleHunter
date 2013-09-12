@@ -19,6 +19,7 @@
         <plugin author="Scirra" id="TextBox" version="1">Text box</plugin>
     </used-plugins>
     <used-behaviors>
+        <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
         <behavior author="Scirra" id="Physics" version="1">Physics</behavior>
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
         <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
@@ -146,6 +147,7 @@
                 <instance-variable name="speeder" sid="1976277859707397" type="number" />
                 <instance-variable name="magic" sid="2081337773644933" type="number" />
                 <instance-variable name="triple" sid="7947651056134322" type="number" />
+                <instance-variable name="created" sid="4881760724969506" type="number" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="Physics" sid="9116106392316847">
@@ -156,7 +158,8 @@
                 </behavior-type>
             </behaviors>
             <animation-folder expanded="1">
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3895293270556765" speed="5">
+                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3895293270556765" speed="5">
+                    <frame duration="1" hotspotX="0.508" hotspotY="0.524" />
                     <frame duration="1" hotspotX="0.508" hotspotY="0.524" />
                 </animation>
             </animation-folder>
@@ -226,13 +229,13 @@
                     <frame duration="1" hotspotX="0.477778" hotspotY="0.466667">
                         <image-point name="Imagepoint 1" x="0.927778" y="0.4" />
                         <collision-poly>
-                            <point x="0" y="0" />
-                            <point x="0.151389" y="0" />
-                            <point x="0.126389" y="0.666667" />
+                            <point x="0.0944444" y="0" />
+                            <point x="0.1625" y="0" />
+                            <point x="0.143056" y="0.633334" />
                             <point x="0.810417" y="0.783333" />
                             <point x="1" y="0.7" />
                             <point x="1" y="1" />
-                            <point x="0" y="1" />
+                            <point x="0.0944444" y="0.966667" />
                         </collision-poly>
                     </frame>
                 </animation>
@@ -265,6 +268,9 @@
                 </behavior-type>
                 <behavior-type name="Physics" sid="7847336493588797">
                     <behavior id="Physics" />
+                </behavior-type>
+                <behavior-type name="Flash" sid="1478203541024329">
+                    <behavior id="Flash" />
                 </behavior-type>
             </behaviors>
             <animation-folder expanded="1">
@@ -655,6 +661,46 @@
             <animation-folder expanded="1">
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9648827153663076" speed="5">
                     <frame duration="1" hotspotX="0.478528" hotspotY="0.454545" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="tobogan" sid="6194661745722337">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Physics" sid="4838887836203793">
+                    <behavior id="Physics" />
+                </behavior-type>
+                <behavior-type name="Solid" sid="9673341556115597">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5439405830613732" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="pusher" sid="4355419329892457">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9254406258198221" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite11" sid="3800905934742975">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Physics" sid="6158193325354529">
+                    <behavior id="Physics" />
+                </behavior-type>
+                <behavior-type name="Solid" sid="8446231552100983">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="921153221307733" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
             </animation-folder>
         </object-type>
