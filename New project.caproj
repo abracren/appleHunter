@@ -16,6 +16,7 @@
         <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="BrashMonkey" id="Spriter" version="1">Scml</plugin>
+        <plugin author="Scirra" id="TextBox" version="1">Text box</plugin>
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="Physics" version="1">Physics</behavior>
@@ -141,6 +142,11 @@
         </object-type>
         <object-type name="apple" sid="5661843376922116">
             <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="speeder" sid="1976277859707397" type="number" />
+                <instance-variable name="magic" sid="2081337773644933" type="number" />
+                <instance-variable name="triple" sid="7947651056134322" type="number" />
+            </instance-variables>
             <behaviors>
                 <behavior-type name="Physics" sid="9116106392316847">
                     <behavior id="Physics" />
@@ -593,7 +599,7 @@
         <object-type name="Function" sid="6985339366319721">
             <plugin id="Function" />
         </object-type>
-        <object-type name="tresapplescolider" sid="5156065757514289">
+        <object-type name="tresapplesTrigger" sid="5156065757514289">
             <plugin id="Sprite" />
             <behaviors>
                 <behavior-type name="Platform" sid="8520451065284479">
@@ -622,6 +628,33 @@
             <animation-folder expanded="1">
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1930056649805538" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite5" sid="6207614428012858">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="967811319919102" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="TextBox" sid="2985037060875164">
+            <plugin id="TextBox" />
+        </object-type>
+        <object-type name="BigBasquetTrigger" sid="9415360933210852">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Platform" sid="1152142714097672">
+                    <behavior id="Platform" />
+                </behavior-type>
+                <behavior-type name="DestroyOutsideLayout" sid="9355511106247455">
+                    <behavior id="destroy" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9648827153663076" speed="5">
+                    <frame duration="1" hotspotX="0.478528" hotspotY="0.454545" />
                 </animation>
             </animation-folder>
         </object-type>

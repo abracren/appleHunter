@@ -18,10 +18,6 @@
                     <param id="0" name="Object">stick1</param>
                     <param id="1" name="State">1</param>
                 </action>
-                <action behavior="Physics" id="23" name="Enable/disable collisions" sid="2025084648551832" type="Sprite3">
-                    <param id="0" name="Object">triang</param>
-                    <param id="1" name="State">1</param>
-                </action>
                 <action behavior="Physics" id="11" name="Create revolute joint" sid="9296106505772125" type="pin">
                     <param id="0" name="This image point">0</param>
                     <param id="1" name="Object">stick1</param>
@@ -36,6 +32,19 @@
                 </action>
                 <action id="7" name="Set mirrored" sid="4210028058790816" type="Sprite9">
                     <param id="0" name="State">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8435631816642045">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="2496432503760548" type="System">
+                    <param id="0" name="Interval (seconds)">2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="3925955945979944" type="System">
+                    <param id="0" name="Variable">jumpRan</param>
+                    <param id="1" name="Value">random(650,850)</param>
                 </action>
             </actions>
         </event-block>
@@ -73,9 +82,9 @@
                 <condition id="7" name="Is mirrored" sid="4173042522617435" type="Sprite9" />
             </conditions>
             <actions>
-                <action id="-9" name="Set value" sid="3925955945979944" type="System">
+                <action disabled="1" id="-9" name="Set value" sid="38493881911338" type="System">
                     <param id="0" name="Variable">jumpRan</param>
-                    <param id="1" name="Value">random(650,850)</param>
+                    <param id="1" name="Value">650</param>
                 </action>
                 <action behavior="Platform" id="4" name="Set jump strength" sid="9774094549673434" type="Sprite9">
                     <param id="0" name="Jump strength">jumpRan</param>
@@ -298,17 +307,6 @@
                 </event-block>
             </sub-events>
         </event-block>
-        <event-block disabled="1" sid="9858514544678646">
-            <conditions>
-                <condition behavior="Platform" id="7" name="On stopped" sid="7231073898556014" type="Sprite9" />
-            </conditions>
-            <actions>
-                <action id="4" name="Set animation" sid="1722753341944528" type="Sprite9">
-                    <param id="0" name="Animation">&quot;stand&quot;</param>
-                    <param id="1" name="From">1</param>
-                </action>
-            </actions>
-        </event-block>
         <event-block sid="9707530138741007">
             <conditions>
                 <condition id="7" name="On any key released" sid="7853102000713642" type="Keyboard" />
@@ -368,7 +366,7 @@
                     </conditions>
                     <actions>
                         <action id="-5" name="Set width" sid="2535011750305988" type="basquet">
-                            <param id="0" name="Width">100</param>
+                            <param id="0" name="Width">70</param>
                         </action>
                     </actions>
                 </event-block>
@@ -438,9 +436,9 @@
                 </action>
             </actions>
         </event-block>
-        <event-block disabled="1" sid="8669283704422203">
+        <event-block sid="8669283704422203">
             <conditions>
-                <condition disabled="1" id="1" name="On any touch end" sid="1514685935293893" type="Touch" />
+                <condition id="2" inverted="1" name="Is in touch" sid="1514685935293893" type="Touch" />
             </conditions>
             <actions>
                 <action id="4" name="Set animation" sid="8902079110914353" type="Sprite9">
@@ -482,17 +480,20 @@
                 <event-block sid="5518954512448975">
                     <conditions />
                     <actions>
-                        <action behavior="Platform" id="7" name="Simulate control" sid="6811761890132532" type="tresapplescolider">
+                        <action behavior="Platform" id="7" name="Simulate control" sid="6811761890132532" type="tresapplesTrigger">
+                            <param id="0" name="Control">0</param>
+                        </action>
+                        <action behavior="Platform" id="7" name="Simulate control" sid="8426935283335342" type="BigBasquetTrigger">
                             <param id="0" name="Control">0</param>
                         </action>
                     </actions>
                 </event-block>
             </sub-events>
         </event-block>
-        <event-block sid="4927288824127606">
+        <event-block disabled="1" sid="7466956970476318">
             <conditions>
-                <condition id="-6" name="Every X seconds" sid="8616823453849231" type="System">
-                    <param id="0" name="Interval (seconds)">5</param>
+                <condition id="-6" name="Every X seconds" sid="3988357337064824" type="System">
+                    <param id="0" name="Interval (seconds)">10</param>
                 </condition>
             </conditions>
             <actions>
@@ -502,8 +503,32 @@
                     <param id="2" name="X">600</param>
                     <param id="3" name="Y">10</param>
                 </action>
+            </actions>
+        </event-block>
+        <event-block disabled="1" sid="4062883735259523">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="7961448677134659" type="System">
+                    <param id="0" name="Interval (seconds)">4</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Create object" sid="7293358060424712" type="System">
+                    <param id="0" name="Object to create">BigBasquetTrigger</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="X">600</param>
+                    <param id="3" name="Y">30</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block disabled="1" sid="4927288824127606">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="8616823453849231" type="System">
+                    <param id="0" name="Interval (seconds)">5</param>
+                </condition>
+            </conditions>
+            <actions>
                 <action id="-3" name="Create object" sid="504735677270319" type="System">
-                    <param id="0" name="Object to create">tresapplescolider</param>
+                    <param id="0" name="Object to create">tresapplesTrigger</param>
                     <param id="1" name="Layer">0</param>
                     <param id="2" name="X">500</param>
                     <param id="3" name="Y">100</param>
@@ -521,7 +546,7 @@
                 </condition>
                 <condition id="-1" name="Compare X" sid="3502602597210536" type="Sprite16">
                     <param id="0" name="Comparison">4</param>
-                    <param id="1" name="X co-ordinate">150</param>
+                    <param id="1" name="X co-ordinate">200</param>
                 </condition>
             </conditions>
             <actions>
@@ -555,7 +580,12 @@
         <event-block sid="1241564400879975">
             <conditions>
                 <condition id="1" name="Is overlapping another object" sid="1450060912614014" type="apple">
-                    <param id="0" name="Object">tresapplescolider</param>
+                    <param id="0" name="Object">tresapplesTrigger</param>
+                </condition>
+                <condition id="-8" name="Compare two values" sid="8286056285360594" type="System">
+                    <param id="0" name="First value">tresapplesTrigger.x</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Second value">200</param>
                 </condition>
             </conditions>
             <actions>
@@ -572,7 +602,7 @@
                             <param id="0" name="Variable">tresApples</param>
                             <param id="1" name="Value">0</param>
                         </action>
-                        <action id="-9" name="Destroy" sid="2783713011748873" type="tresapplescolider" />
+                        <action id="-9" name="Destroy" sid="2783713011748873" type="tresapplesTrigger" />
                     </actions>
                 </event-block>
             </sub-events>
@@ -607,8 +637,8 @@
                         <action id="-3" name="Create object" sid="4096567715524014" type="System">
                             <param id="0" name="Object to create">apple</param>
                             <param id="1" name="Layer">0</param>
-                            <param id="2" name="X">tresapplescolider.X</param>
-                            <param id="3" name="Y">tresapplescolider.Y</param>
+                            <param id="2" name="X">tresapplesTrigger.X</param>
+                            <param id="3" name="Y">tresapplesTrigger.Y</param>
                         </action>
                         <action behavior="Physics" id="2" name="Apply force at angle" sid="3010986292749417" type="apple">
                             <param id="0" name="Force">150</param>
@@ -655,6 +685,64 @@
                 <action id="-9" name="Set value" sid="6130083586254747" type="System">
                     <param id="0" name="Variable">bigBasquet</param>
                     <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block disabled="1" sid="538823792145206">
+            <conditions>
+                <condition id="-24" name="For Each (ordered)" sid="137828701679205" type="System">
+                    <param id="0" name="Object">apple</param>
+                    <param id="1" name="Expression">0</param>
+                    <param id="2" name="Order">0</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block disabled="1" sid="7694722826472475">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="1729401857163157" type="System" />
+                        <condition id="-1" name="Compare X" sid="2330994298251481" type="apple">
+                            <param id="0" name="Comparison">4</param>
+                            <param id="1" name="X co-ordinate">200</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="9572011300146706" type="Sprite5" />
+                        <action id="-3" name="Create object" sid="2972374017655142" type="System">
+                            <param id="0" name="Object to create">Sprite5</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="X">apple.X</param>
+                            <param id="3" name="Y">341</param>
+                        </action>
+                        <action disabled="1" id="-1" name="Set X" sid="3168552243809259" type="Sprite5">
+                            <param id="0" name="X">apple.X</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="2268293177442172">
+            <conditions />
+            <actions />
+        </event-block>
+        <event-block sid="9884397275860345">
+            <conditions>
+                <condition id="-34" name="Pick by evaluate" sid="5748879208754815" type="System">
+                    <param id="0" name="Object">apple</param>
+                    <param id="1" name="Expression">apple.X&lt;0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="5861000467605709" type="apple" />
+            </actions>
+        </event-block>
+        <event-block sid="1160408562150196">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="9753300297040209" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="969276334789859" type="TextBox">
+                    <param id="0" name="Text">&quot;&quot;&amp;apple.Count</param>
                 </action>
             </actions>
         </event-block>
