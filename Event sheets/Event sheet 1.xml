@@ -4,7 +4,10 @@
     <name>Event sheet 1</name>
     <events>
         <variable constant="0" name="forceRan" sid="4042509109697301" static="0" type="number">0</variable>
+        <variable constant="0" name="tresApples" sid="4697374307113076" static="0" type="number">1</variable>
+        <variable constant="0" name="birdMoving" sid="5475433639624949" static="0" type="number">1</variable>
         <variable constant="0" name="jumpRan" sid="6641142579008261" static="0" type="number">0</variable>
+        <variable constant="0" name="bigBasquet" sid="5572258107660725" static="0" type="number">0</variable>
         <variable constant="0" name="colide" sid="5847483074379277" static="0" type="number">0</variable>
         <event-block sid="2799303908366137">
             <conditions>
@@ -23,9 +26,16 @@
                     <param id="0" name="This image point">0</param>
                     <param id="1" name="Object">stick1</param>
                 </action>
-                <action behavior="Physics" id="23" name="Enable/disable collisions" sid="9876963195913826" type="Sprite5">
+                <action behavior="Physics" id="23" name="Enable/disable collisions" sid="9876963195913826" type="apple">
                     <param id="0" name="Object">stick1</param>
                     <param id="1" name="State">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="6155033752664209" type="Sprite9">
+                    <param id="0" name="Animation">&quot;stand&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="7" name="Set mirrored" sid="4210028058790816" type="Sprite9">
+                    <param id="0" name="State">0</param>
                 </action>
             </actions>
         </event-block>
@@ -46,7 +56,7 @@
                     <param id="1" name="Y">Sprite9.Y</param>
                 </action>
                 <action id="-3" name="Create object" sid="4806620013028033" type="System">
-                    <param id="0" name="Object to create">Sprite5</param>
+                    <param id="0" name="Object to create">apple</param>
                     <param id="1" name="Layer">0</param>
                     <param id="2" name="X">85</param>
                     <param id="3" name="Y">0</param>
@@ -78,12 +88,22 @@
         </event-block>
         <event-block sid="8813029665008943">
             <conditions>
-                <condition id="0" name="On collision with another object" sid="6188244212105765" type="Sprite5">
-                    <param id="0" name="Object">Sprite9</param>
+                <condition id="0" name="On collision with another object" sid="6188244212105765" type="apple">
+                    <param id="0" name="Object">basquet</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="-9" name="Destroy" sid="7861744244827476" type="Sprite5" />
+                <action id="-9" name="Destroy" sid="7861744244827476" type="apple" />
+            </actions>
+        </event-block>
+        <event-block sid="729894162207699">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="537772957163408" type="apple">
+                    <param id="0" name="Object">Sprite</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="7674851943450166" type="apple" />
             </actions>
         </event-block>
         <event-block sid="2047918931344663">
@@ -97,6 +117,38 @@
                     <param id="0" name="State">1</param>
                 </action>
             </actions>
+            <sub-events>
+                <event-block sid="7228840089754445">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="5493836093290883" type="System">
+                            <param id="0" name="Variable">bigBasquet</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="6348562155271015" type="Sprite9">
+                            <param id="0" name="Animation">&quot;run&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="2498248057709522">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="3767395933948868" type="System">
+                            <param id="0" name="Variable">bigBasquet</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="7648148682236377" type="Sprite9">
+                            <param id="0" name="Animation">&quot;basquetRun&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
         </event-block>
         <event-block sid="1360064170418267">
             <conditions>
@@ -109,6 +161,38 @@
                     <param id="0" name="State">0</param>
                 </action>
             </actions>
+            <sub-events>
+                <event-block sid="1852641953732996">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="9545612303911221" type="System">
+                            <param id="0" name="Variable">bigBasquet</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="7200860808668681" type="Sprite9">
+                            <param id="0" name="Animation">&quot;run&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="1628873499381648">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="4314614528991503" type="System">
+                            <param id="0" name="Variable">bigBasquet</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="6029136148664362" type="Sprite9">
+                            <param id="0" name="Animation">&quot;basquetRun&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
         </event-block>
         <event-block sid="7577244280834887">
             <conditions>
@@ -133,6 +217,446 @@
                 </condition>
             </conditions>
             <actions />
+        </event-block>
+        <event-block sid="2541260938339892">
+            <conditions>
+                <condition behavior="Platform" id="3" name="Is jumping" sid="1962745980360868" type="Sprite9" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="261182591471845">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="8865095800733533" type="System">
+                            <param id="0" name="Variable">bigBasquet</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="1748988251973986" type="Sprite9">
+                            <param id="0" name="Animation">&quot;jump&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7262944655117702">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="7067763774538071" type="System">
+                            <param id="0" name="Variable">bigBasquet</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="7789257842942648" type="Sprite9">
+                            <param id="0" name="Animation">&quot;basquetJump&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="1888906892041743">
+            <conditions>
+                <condition behavior="Platform" id="4" name="Is falling" sid="3538129045999141" type="Sprite9" />
+                <condition id="-2" name="Compare Y" sid="6663077471780267" type="Sprite9">
+                    <param id="0" name="Comparison">2</param>
+                    <param id="1" name="Y co-ordinate">200</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="5777975106488525">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="241161942485698" type="System">
+                            <param id="0" name="Variable">bigBasquet</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="8826140662778986" type="Sprite9">
+                            <param id="0" name="Animation">&quot;fall&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="8767818516468017">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="80827786325268" type="System">
+                            <param id="0" name="Variable">bigBasquet</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="5220172345247117" type="Sprite9">
+                            <param id="0" name="Animation">&quot;basquetFall&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block disabled="1" sid="9858514544678646">
+            <conditions>
+                <condition behavior="Platform" id="7" name="On stopped" sid="7231073898556014" type="Sprite9" />
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="1722753341944528" type="Sprite9">
+                    <param id="0" name="Animation">&quot;stand&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="9707530138741007">
+            <conditions>
+                <condition id="7" name="On any key released" sid="7853102000713642" type="Keyboard" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="3670341319515598">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="5126437446738947" type="System">
+                            <param id="0" name="Variable">bigBasquet</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="9444370514863344" type="Sprite9">
+                            <param id="0" name="Animation">&quot;stand&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="9626714780566033">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="2861888862920155" type="System">
+                            <param id="0" name="Variable">bigBasquet</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="1564484028633493" type="Sprite9">
+                            <param id="0" name="Animation">&quot;basquetStand&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="1278235965081598">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="3964734050740226" type="System" />
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="4441888366562677" type="basquet">
+                    <param id="0" name="X">Sprite9.ImagePointX(1)</param>
+                    <param id="1" name="Y">Sprite9.ImagePointY(1)</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="8587723604006545">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="144832536496487" type="System">
+                            <param id="0" name="Variable">bigBasquet</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-5" name="Set width" sid="2535011750305988" type="basquet">
+                            <param id="0" name="Width">100</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7188408424809934">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="363047075407389" type="System">
+                            <param id="0" name="Variable">bigBasquet</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-5" name="Set width" sid="1695309083025877" type="basquet">
+                            <param id="0" name="Width">41</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="5725001114944562">
+            <conditions>
+                <condition id="4" name="Is touching object" sid="7845958921503451" type="Touch">
+                    <param id="0" name="Object">buttonR</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="7" name="Simulate control" sid="5154420538063222" type="Sprite9">
+                    <param id="0" name="Control">1</param>
+                </action>
+                <action id="7" name="Set mirrored" sid="7429498277700333" type="Sprite9">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="2540144692008428" type="Sprite9">
+                    <param id="0" name="Animation">&quot;run&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4923475565950481">
+            <conditions>
+                <condition id="4" name="Is touching object" sid="6166683855947653" type="Touch">
+                    <param id="0" name="Object">buttonL</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="7" name="Simulate control" sid="2705769770232996" type="Sprite9">
+                    <param id="0" name="Control">0</param>
+                </action>
+                <action id="7" name="Set mirrored" sid="6549240003622774" type="Sprite9">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action id="4" name="Set animation" sid="9863075406081603" type="Sprite9">
+                    <param id="0" name="Animation">&quot;run&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="39216185448283">
+            <conditions>
+                <condition id="4" name="Is touching object" sid="3564738755588243" type="Touch">
+                    <param id="0" name="Object">buttonJ</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="7" name="Simulate control" sid="2747275489233576" type="Sprite9">
+                    <param id="0" name="Control">2</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block disabled="1" sid="8669283704422203">
+            <conditions>
+                <condition disabled="1" id="1" name="On any touch end" sid="1514685935293893" type="Touch" />
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="8902079110914353" type="Sprite9">
+                    <param id="0" name="Animation">&quot;stand&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6127306971674845">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="5977012488326533" type="System">
+                    <param id="0" name="Variable">colide</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions />
+        </event-block>
+        <event-block sid="9214983629508516">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="5989197981048684" type="System" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="1046475925827003">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="9251773426559885" type="System">
+                            <param id="0" name="Variable">birdMoving</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="7" name="Simulate control" sid="8335025876730699" type="Sprite16">
+                            <param id="0" name="Control">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="5518954512448975">
+                    <conditions />
+                    <actions>
+                        <action behavior="Platform" id="7" name="Simulate control" sid="6811761890132532" type="tresapplescolider">
+                            <param id="0" name="Control">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="4927288824127606">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="8616823453849231" type="System">
+                    <param id="0" name="Interval (seconds)">5</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Create object" sid="6048440700243965" type="System">
+                    <param id="0" name="Object to create">Sprite16</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="X">600</param>
+                    <param id="3" name="Y">10</param>
+                </action>
+                <action id="-3" name="Create object" sid="504735677270319" type="System">
+                    <param id="0" name="Object to create">tresapplescolider</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="X">500</param>
+                    <param id="3" name="Y">100</param>
+                </action>
+                <action id="-9" name="Set value" sid="7026862048789704" type="System">
+                    <param id="0" name="Variable">tresApples</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="2659930809430611">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="4867396436583111" type="apple">
+                    <param id="0" name="Object">Sprite16</param>
+                </condition>
+                <condition id="-1" name="Compare X" sid="3502602597210536" type="Sprite16">
+                    <param id="0" name="Comparison">4</param>
+                    <param id="1" name="X co-ordinate">150</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="5" name="Set gravity" sid="7298318625083476" type="Sprite16">
+                    <param id="0" name="Gravity">1500</param>
+                </action>
+                <action id="-9" name="Set value" sid="6672199637916707" type="System">
+                    <param id="0" name="Variable">birdMoving</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8854740668055229">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="8932272331565045" type="Sprite16">
+                    <param id="0" name="Object">Sprite9</param>
+                </condition>
+                <condition id="-2" name="Compare Y" sid="6436183933921002" type="Sprite16">
+                    <param id="0" name="Comparison">4</param>
+                    <param id="1" name="Y co-ordinate">200</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="9863833129729762" type="Sprite16" />
+                <action id="-9" name="Set value" sid="8165069810519948" type="System">
+                    <param id="0" name="Variable">birdMoving</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1241564400879975">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="1450060912614014" type="apple">
+                    <param id="0" name="Object">tresapplescolider</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="9023828825975538" type="Function">
+                    <param id="0" name="Name">&quot;tresApples&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="7415401204970578">
+                    <conditions />
+                    <actions>
+                        <action id="-9" name="Set value" sid="3626397971112675" type="System">
+                            <param id="0" name="Variable">tresApples</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="2783713011748873" type="tresapplescolider" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="3664703645857811">
+            <conditions />
+            <actions />
+        </event-block>
+        <event-block sid="6723824654917487">
+            <conditions>
+                <condition id="0" name="On function" sid="3734488410694063" type="Function">
+                    <param id="0" name="Name">&quot;tresApples&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <variable constant="0" name="i" sid="2851836850403728" static="0" type="number">0</variable>
+                <event-block sid="3096533621595254">
+                    <conditions>
+                        <condition id="-10" name="For" sid="3643556576160125" type="System">
+                            <param id="0" name="Name">&quot;&quot;</param>
+                            <param id="1" name="Start index">i</param>
+                            <param id="2" name="End index">3</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="5350190967543077" type="System">
+                            <param id="0" name="Variable">tresApples</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="4096567715524014" type="System">
+                            <param id="0" name="Object to create">apple</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="X">tresapplescolider.X</param>
+                            <param id="3" name="Y">tresapplescolider.Y</param>
+                        </action>
+                        <action behavior="Physics" id="2" name="Apply force at angle" sid="3010986292749417" type="apple">
+                            <param id="0" name="Force">150</param>
+                            <param id="1" name="Angle">random(280,300)</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="4885161419898725" type="System">
+                            <param id="0" name="Variable">i</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7860075575654994">
+                    <conditions />
+                    <actions>
+                        <action id="-9" name="Set value" sid="8237235892557405" type="System">
+                            <param id="0" name="Variable">tresApples</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="9755831545435161">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="2055334545501423" type="Keyboard">
+                    <param id="0" name="Key">32 (Barra Espaciadora)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="2258100104441266" type="System">
+                    <param id="0" name="Variable">bigBasquet</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="7369723619401458">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="4920341268454222" type="Keyboard">
+                    <param id="0" name="Key">71 (G)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="6130083586254747" type="System">
+                    <param id="0" name="Variable">bigBasquet</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
         </event-block>
     </events>
 </c2eventsheet>
