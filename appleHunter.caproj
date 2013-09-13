@@ -420,7 +420,7 @@
                         </collision-poly>
                     </frame>
                 </animation>
-                <animation framecount="19" loop="0" name="basquetRun" pingpong="0" repeatcount="1" repeatto="0" sid="8351713824812897" speed="5">
+                <animation framecount="19" loop="0" name="basquetRun" pingpong="0" repeatcount="1" repeatto="0" sid="8351713824812897" speed="24">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.501377">
                         <image-point name="Imagepoint 1" x="0.68595" y="0.0440771" />
                         <collision-poly>
