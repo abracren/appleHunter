@@ -1,15 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2project>
-    <name>New project</name>
-    <description></description>
+    <name>appleHunter</name>
+    <description>applehunter</description>
     <version>1.0.0.0</version>
-    <author></author>
-    <author-email></author-email>
-    <author-website>http://</author-website>
-    <app-id>com.mycompany.myapp</app-id>
+    <author>ariel kuhn</author>
+    <author-email>arielgkuhn@gmail.com</author-email>
+    <author-website>http://mxdesign.com.ar</author-website>
+    <app-id>com.mxdesign.applehunter</app-id>
     <unique-id>2kg24gbyu6n6</unique-id>
     <saved-with-version>14300</saved-with-version>
     <used-plugins>
+        <plugin author="Scirra" id="CJSAds" version="1">CocoonJS</plugin>
         <plugin author="Scirra" id="Function" version="1">Function</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
@@ -704,6 +705,25 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="Sprite12" sid="5266665615226503">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2326392874707783" speed="5">
+                    <frame duration="1" hotspotX="0.525" hotspotY="0.513889" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite13" sid="6091870904671479">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5999884414971598" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="CocoonJS" sid="9462897975795909">
+            <plugin id="CJSAds" />
+        </object-type>
     </object-folder>
     <families />
     <layout-folder expanded="1">
@@ -721,6 +741,13 @@
             </properties>
         </global-instance>
         <global-instance type="Function" uid="11" />
+        <global-instance type="CocoonJS" uid="22">
+            <properties>
+                <physics-engine>Standard web-based</physics-engine>
+                <store-mode>Managed</store-mode>
+                <store-sandbox>Enabled</store-sandbox>
+            </properties>
+        </global-instance>
     </global-instances>
     <sounds-folder expanded="1" />
     <music-folder expanded="1" />
