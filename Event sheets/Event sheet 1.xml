@@ -47,6 +47,10 @@
                             <param id="0" name="State">0</param>
                         </action>
                         <action id="2" name="Stop" sid="2702592631080264" type="apple" />
+                        <action id="4" name="Set animation" sid="5630509059677314" type="bird">
+                            <param id="0" name="Animation">&quot;fly&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
                     </actions>
                 </event-block>
             </sub-events>
@@ -816,7 +820,7 @@
                 </action>
             </actions>
         </event-block>
-        <event-group collapsed="1" description="" sid="768143005920519" title="Birds">
+        <event-group description="" sid="768143005920519" title="Birds">
             <sub-events>
                 <event-block sid="955193310390578">
                     <conditions>
@@ -833,7 +837,7 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action behavior="Platform" id="7" name="Simulate control" sid="1165369186082989" type="Sprite16">
+                                <action behavior="Platform" id="7" name="Simulate control" sid="1165369186082989" type="bird">
                                     <param id="0" name="Control">0</param>
                                 </action>
                             </actions>
@@ -848,45 +852,49 @@
                     </conditions>
                     <actions>
                         <action id="-3" name="Create object" sid="7388653750703783" type="System">
-                            <param id="0" name="Object to create">Sprite16</param>
+                            <param id="0" name="Object to create">bird</param>
                             <param id="1" name="Layer">0</param>
                             <param id="2" name="X">600</param>
-                            <param id="3" name="Y">10</param>
+                            <param id="3" name="Y">20</param>
                         </action>
                     </actions>
                 </event-block>
                 <event-block sid="6560785529390868">
                     <conditions>
                         <condition id="1" name="Is overlapping another object" sid="5376319223426343" type="apple">
-                            <param id="0" name="Object">Sprite16</param>
+                            <param id="0" name="Object">bird</param>
                         </condition>
-                        <condition id="-1" name="Compare X" sid="6196470687268816" type="Sprite16">
+                        <condition id="-1" name="Compare X" sid="6196470687268816" type="bird">
                             <param id="0" name="Comparison">4</param>
                             <param id="1" name="X co-ordinate">200</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action behavior="Platform" id="5" name="Set gravity" sid="2738713942872251" type="Sprite16">
+                        <action behavior="Platform" id="5" name="Set gravity" sid="2738713942872251" type="bird">
                             <param id="0" name="Gravity">1500</param>
                         </action>
                         <action id="-9" name="Set value" sid="2004800622206947" type="System">
                             <param id="0" name="Variable">birdMoving</param>
                             <param id="1" name="Value">0</param>
                         </action>
+                        <action id="4" name="Set animation" sid="9190505755406302" type="bird">
+                            <param id="0" name="Animation">&quot;die&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="3474515492011122">
                     <conditions>
-                        <condition id="1" name="Is overlapping another object" sid="620536499153845" type="Sprite16">
+                        <condition id="1" name="Is overlapping another object" sid="620536499153845" type="bird">
                             <param id="0" name="Object">player</param>
                         </condition>
-                        <condition id="-2" name="Compare Y" sid="8933373462180827" type="Sprite16">
+                        <condition id="-2" name="Compare Y" sid="8933373462180827" type="bird">
                             <param id="0" name="Comparison">4</param>
                             <param id="1" name="Y co-ordinate">200</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-9" name="Destroy" sid="2828788107096928" type="Sprite16" />
+                        <action id="-9" name="Destroy" sid="2828788107096928" type="bird" />
                         <action id="-9" name="Set value" sid="4193440556363864" type="System">
                             <param id="0" name="Variable">birdMoving</param>
                             <param id="1" name="Value">1</param>

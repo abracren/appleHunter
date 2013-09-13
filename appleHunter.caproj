@@ -37,17 +37,17 @@
         <height>360</height>
     </window-size>
     <pixel-rounding>0</pixel-rounding>
-    <use-loader-layout>0</use-loader-layout>
+    <use-loader-layout>1</use-loader-layout>
     <configuration-settings>
         <prop name="Clear background">Yes</prop>
         <prop name="Enable WebGL">On</prop>
         <prop name="Fullscreen in browser">Letterbox scale</prop>
         <prop name="Hide address bar">No</prop>
-        <prop name="Loader style">Progress bar &amp; logo</prop>
+        <prop name="Loader style">Progress bar only</prop>
         <prop name="Pause on unfocus">No</prop>
         <prop name="Preview browser">(default)</prop>
         <prop name="Sampling">Linear</prop>
-        <prop name="Use iOS retina display">All devices</prop>
+        <prop name="Use iOS retina display">Never</prop>
     </configuration-settings>
     <object-folder expanded="1">
         <object-type name="Sprite" sid="4396054404316236">
@@ -594,7 +594,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Sprite16" sid="4236812152983996">
+        <object-type name="bird" sid="4236812152983996">
             <plugin id="Sprite" />
             <behaviors>
                 <behavior-type name="Platform" sid="6356268860575506">
@@ -605,8 +605,42 @@
                 </behavior-type>
             </behaviors>
             <animation-folder expanded="1">
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4870145173655684" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.615385" />
+                <animation framecount="10" loop="1" name="fly" pingpong="0" repeatcount="1" repeatto="0" sid="4870145173655684" speed="10">
+                    <frame duration="1" hotspotX="0.502326" hotspotY="0.613139">
+                        <collision-poly>
+                            <point x="0.223256" y="0.350365" />
+                            <point x="0.497674" y="0.145985" />
+                            <point x="0.874419" y="0.19708" />
+                            <point x="0.948837" y="0.49635" />
+                            <point x="0.906977" y="0.854015" />
+                            <point x="0.497674" y="0.693431" />
+                            <point x="0.306977" y="0.518248" />
+                            <point x="0.12093" y="0.49635" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.502326" hotspotY="0.576642" />
+                    <frame duration="1" hotspotX="0.52093" hotspotY="0.576642" />
+                    <frame duration="1" hotspotX="0.511628" hotspotY="0.547445" />
+                    <frame duration="1" hotspotX="0.511628" hotspotY="0.583942" />
+                    <frame duration="1" hotspotX="0.497674" hotspotY="0.605839" />
+                    <frame duration="1" hotspotX="0.488372" hotspotY="0.620438" />
+                    <frame duration="1" hotspotX="0.511628" hotspotY="0.605839" />
+                    <frame duration="1" hotspotX="0.502326" hotspotY="0.59854" />
+                    <frame duration="1" hotspotX="0.511628" hotspotY="0.583942" />
+                </animation>
+                <animation framecount="1" loop="0" name="die" pingpong="0" repeatcount="1" repeatto="0" sid="749788998789266" speed="5">
+                    <frame duration="1" hotspotX="0.502222" hotspotY="0.504065">
+                        <collision-poly>
+                            <point x="0.391111" y="0.715447" />
+                            <point x="0.497778" y="0.243902" />
+                            <point x="0.88" y="0.219512" />
+                            <point x="0.924444" y="0.495935" />
+                            <point x="0.893333" y="0.804878" />
+                            <point x="0.497778" y="0.902439" />
+                            <point x="0.0977778" y="0.821138" />
+                            <point x="0.217778" y="0.495935" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
@@ -846,6 +880,22 @@
                             <point x="0.0133333" y="0.382609" />
                         </collision-poly>
                     </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="arbol2" sid="2524424132831486">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Physics" sid="9777139825526283">
+                    <behavior id="Physics" />
+                </behavior-type>
+                <behavior-type name="Solid" sid="4985137951067349">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8337123852096203" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
             </animation-folder>
         </object-type>
