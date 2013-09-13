@@ -365,7 +365,8 @@
                 </event-block>
                 <event-block sid="8131494858961774">
                     <conditions>
-                        <condition id="0" name="On collision with another object" sid="5203538503060398" type="apple">
+                        <condition id="-1" name="Every tick" sid="1211933421722192" type="System" />
+                        <condition id="1" name="Is overlapping another object" sid="5203538503060398" type="apple">
                             <param id="0" name="Object">basquet</param>
                         </condition>
                     </conditions>
@@ -935,7 +936,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="8643764412194803" title="Intance Variables Functions">
+        <event-group description="" sid="8643764412194803" title="Intance Variables Functions">
             <sub-events>
                 <event-block sid="746290564293407">
                     <conditions>
