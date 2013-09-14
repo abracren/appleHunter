@@ -522,7 +522,7 @@
         <object-type name="Keyboard" sid="9212346399691922">
             <plugin id="Keyboard" />
         </object-type>
-        <object-type name="Sprite10" sid="3683309470388337">
+        <object-type name="breakPointStick" sid="3683309470388337">
             <plugin id="Sprite" />
             <behaviors>
                 <behavior-type name="Physics" sid="4415921891824286">
