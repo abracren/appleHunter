@@ -10,6 +10,11 @@
         <variable constant="0" name="bigBasquet" sid="5572258107660725" static="0" type="number">0</variable>
         <variable constant="0" name="AppleSpeed" sid="6055061328537189" static="0" type="number">100</variable>
         <variable constant="0" name="bigBasquetTime" sid="2075747172555441" static="0" type="number">15</variable>
+        <comment>zoom</comment>
+        <variable constant="0" name="zoom" sid="4361493536635001" static="0" type="number">1</variable>
+        <variable constant="0" name="appleTemp" sid="2594986764043756" static="0" type="number">0</variable>
+        <variable constant="0" name="appleZoomFactor" sid="9740494259756866" static="0" type="number">0</variable>
+        <variable constant="0" name="appleZoom" sid="3197364449373718" static="0" type="number">1</variable>
         <variable constant="0" name="breakpoint" sid="6245862550025879" static="0" type="number">200</variable>
         <variable constant="0" name="colide" sid="5847483074379277" static="0" type="number">0</variable>
         <event-group description="" sid="2116889551096455" title="Start">
@@ -68,6 +73,17 @@
                     <actions>
                         <action behavior="Platform" id="4" name="Set jump strength" sid="429306124536378" type="player">
                             <param id="0" name="Jump strength">400</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="755968205345246">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="4521779248305558" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="2025070498214399" type="System">
+                            <param id="0" name="Variable">appleZoom</param>
+                            <param id="1" name="Value">apple.Y*0.006</param>
                         </action>
                     </actions>
                 </event-block>
@@ -130,6 +146,10 @@
                         </action>
                         <action id="7" name="Set mirrored" sid="9351007415857001" type="player">
                             <param id="0" name="State">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="490034165501103" type="System">
+                            <param id="0" name="Variable">zoom</param>
+                            <param id="1" name="Value">0</param>
                         </action>
                     </actions>
                 </event-block>
@@ -395,6 +415,17 @@
                             <conditions />
                             <actions>
                                 <action id="-9" name="Destroy" sid="1736432713884522" type="apple" />
+                                <action disabled="1" id="0" name="Call function" sid="2732874496890346" type="Function">
+                                    <param id="0" name="Name">&quot;zoomfactorLower&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action disabled="1" id="-16" name="Wait" sid="8579787207093733" type="System">
+                                    <param id="0" name="Seconds">1</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="5970537474048035" type="System">
+                                    <param id="0" name="Variable">zoom</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
                             </actions>
                         </event-block>
                     </sub-events>
@@ -407,6 +438,17 @@
                     </conditions>
                     <actions>
                         <action id="-9" name="Destroy" sid="2459134817525992" type="apple" />
+                        <action disabled="1" id="0" name="Call function" sid="1697891532364963" type="Function">
+                            <param id="0" name="Name">&quot;zoomfactorLower&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action disabled="1" id="-16" name="Wait" sid="5066068899409653" type="System">
+                            <param id="0" name="Seconds">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="3368240176496385" type="System">
+                            <param id="0" name="Variable">zoom</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="1070297954994518">
@@ -1257,6 +1299,233 @@
                             <param id="0" name="Text">&quot;&quot;&amp;forceRan</param>
                         </action>
                     </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="8906374010124048" title="Zoom">
+            <sub-events>
+                <event-block sid="793091736167962">
+                    <conditions>
+                        <condition disabled="1" id="2" name="Key is down" sid="4085156145862433" type="Keyboard">
+                            <param id="0" name="Key">90 (Z)</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="6675106408675209" type="System">
+                            <param id="0" name="Variable">zoom</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-33" name="Set layer parallax" sid="2626374468969055" type="System">
+                            <param id="0" name="Layer">1</param>
+                            <param id="1" name="Parallax X">LayerParallaxX(1)</param>
+                            <param id="2" name="Parallax Y">100</param>
+                        </action>
+                        <action id="-33" name="Set layer parallax" sid="9024986828547086" type="System">
+                            <param id="0" name="Layer">0</param>
+                            <param id="1" name="Parallax X">LayerParallaxX(0)</param>
+                            <param id="2" name="Parallax Y">100</param>
+                        </action>
+                        <action id="-33" name="Set layer parallax" sid="4699547890475167" type="System">
+                            <param id="0" name="Layer">2</param>
+                            <param id="1" name="Parallax X">0</param>
+                            <param id="2" name="Parallax Y">0</param>
+                        </action>
+                        <action id="0" name="Call function" sid="2949640770500191" type="Function">
+                            <param id="0" name="Name">&quot;raise325&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7723780250829204">
+                    <conditions>
+                        <condition disabled="1" id="3" name="On key released" sid="1602449108353394" type="Keyboard">
+                            <param id="0" name="Key">90 (Z)</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="4091319550173731" type="System">
+                            <param id="0" name="Variable">zoom</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="1229810708767881" type="Function">
+                            <param id="0" name="Name">&quot;down325&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action disabled="1" id="-17" name="Set layer scale" sid="8036751680020494" type="System">
+                            <param id="0" name="Layer">0</param>
+                            <param id="1" name="Scale">1</param>
+                        </action>
+                        <action disabled="1" id="-17" name="Set layer scale" sid="1113821364964349" type="System">
+                            <param id="0" name="Layer">1</param>
+                            <param id="1" name="Scale">1</param>
+                        </action>
+                        <action id="-33" name="Set layer parallax" sid="2215598766672048" type="System">
+                            <param id="0" name="Layer">1</param>
+                            <param id="1" name="Parallax X">LayerParallaxX(1)</param>
+                            <param id="2" name="Parallax Y">0</param>
+                        </action>
+                        <action id="-33" name="Set layer parallax" sid="297164669031314" type="System">
+                            <param id="0" name="Layer">0</param>
+                            <param id="1" name="Parallax X">LayerParallaxX(0)</param>
+                            <param id="2" name="Parallax Y">0</param>
+                        </action>
+                        <action id="-33" name="Set layer parallax" sid="9727494824661268" type="System">
+                            <param id="0" name="Layer">2</param>
+                            <param id="1" name="Parallax X">0</param>
+                            <param id="2" name="Parallax Y">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block disabled="1" sid="2334544967975139">
+                    <conditions>
+                        <condition id="-1" name="Compare X" sid="8646197221413978" type="apple">
+                            <param id="0" name="Comparison">4</param>
+                            <param id="1" name="X co-ordinate">breakpoint</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="9546679536172823" type="appleH">
+                            <param id="0" name="Text">&quot;&quot;&amp;floor(((apple.Y-360)*-1)-42)</param>
+                        </action>
+                        <action id="0" name="Call function" sid="2121593924605846" type="Function">
+                            <param id="0" name="Name">&quot;raise325&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action disabled="1" id="-9" name="Set value" sid="6755464220026609" type="System">
+                            <param id="0" name="Variable">appleTemp</param>
+                            <param id="1" name="Value">floor(((apple.Y-360)*-1)-42)</param>
+                        </action>
+                        <action disabled="1" id="-9" name="Set value" sid="7397767561287992" type="System">
+                            <param id="0" name="Variable">appleZoomFactor</param>
+                            <param id="1" name="Value">(1/325)*appleTemp</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block disabled="1" sid="3353060078983218">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="601569007701209" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-17" name="Set layer scale" sid="7008059623318343" type="System">
+                            <param id="0" name="Layer">0</param>
+                            <param id="1" name="Scale">2.2-appleZoomFactor</param>
+                        </action>
+                        <action id="-17" name="Set layer scale" sid="3043798868915699" type="System">
+                            <param id="0" name="Layer">1</param>
+                            <param id="1" name="Scale">2.2-appleZoomFactor</param>
+                        </action>
+                        <action disabled="1" id="-17" name="Set layer scale" sid="5976883880675543" type="System">
+                            <param id="0" name="Layer">2</param>
+                            <param id="1" name="Scale">2-appleZoomFactor</param>
+                        </action>
+                        <action id="0" name="Set text" sid="7285939089382793" type="zoom1">
+                            <param id="0" name="Text">&quot;&quot;&amp;appleZoomFactor</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="9979809234471455">
+                    <conditions>
+                        <condition id="0" name="On function" sid="1105905401847165" type="Function">
+                            <param id="0" name="Name">&quot;down325&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="879020174280242">
+                            <conditions>
+                                <condition id="-21" name="Is between values" sid="2723624906965186" type="System">
+                                    <param id="0" name="Value">appleZoom</param>
+                                    <param id="1" name="Lower bound">1.01</param>
+                                    <param id="2" name="Upper bound">1.29</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="3391425311249281">
+                                    <conditions>
+                                        <condition id="-6" name="Every X seconds" sid="2801255740933033" type="System">
+                                            <param id="0" name="Interval (seconds)">0.1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-11" name="Subtract from" sid="8148841426484558" type="System">
+                                            <param id="0" name="Variable">AppleSpeed</param>
+                                            <param id="1" name="Value">0.01</param>
+                                        </action>
+                                        <action id="-17" name="Set layer scale" sid="2987392676853937" type="System">
+                                            <param id="0" name="Layer">0</param>
+                                            <param id="1" name="Scale">appleZoom</param>
+                                        </action>
+                                        <action id="-17" name="Set layer scale" sid="1431105049450197" type="System">
+                                            <param id="0" name="Layer">1</param>
+                                            <param id="1" name="Scale">appleZoom</param>
+                                        </action>
+                                        <action disabled="1" id="-17" name="Set layer scale" sid="2351081447934278" type="System">
+                                            <param id="0" name="Layer">2</param>
+                                            <param id="1" name="Scale">appleZoom</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="8098484062835312">
+                                    <conditions />
+                                    <actions />
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="2632020342166895">
+                    <conditions>
+                        <condition id="0" name="On function" sid="6988839794270274" type="Function">
+                            <param id="0" name="Name">&quot;raise325&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="7363498328641455">
+                            <conditions>
+                                <condition id="-21" name="Is between values" sid="8023279617547256" type="System">
+                                    <param id="0" name="Value">appleZoom</param>
+                                    <param id="1" name="Lower bound">1.01</param>
+                                    <param id="2" name="Upper bound">1.29</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="4923036214071677">
+                                    <conditions>
+                                        <condition id="-6" name="Every X seconds" sid="2242177980483127" type="System">
+                                            <param id="0" name="Interval (seconds)">0.1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Add to" sid="438168140206406" type="System">
+                                            <param id="0" name="Variable">appleZoom</param>
+                                            <param id="1" name="Value">0.01</param>
+                                        </action>
+                                        <action id="-17" name="Set layer scale" sid="4184723679502115" type="System">
+                                            <param id="0" name="Layer">0</param>
+                                            <param id="1" name="Scale">appleZoom</param>
+                                        </action>
+                                        <action id="-17" name="Set layer scale" sid="6753702798995738" type="System">
+                                            <param id="0" name="Layer">1</param>
+                                            <param id="1" name="Scale">appleZoom</param>
+                                        </action>
+                                        <action disabled="1" id="-17" name="Set layer scale" sid="2835004838986189" type="System">
+                                            <param id="0" name="Layer">2</param>
+                                            <param id="1" name="Scale">appleZoom</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="4815321116919405">
+                                    <conditions />
+                                    <actions />
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-group>
