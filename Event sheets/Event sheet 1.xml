@@ -488,7 +488,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="3464215456308079" title="controles">
+        <event-group description="" sid="3464215456308079" title="controles">
             <sub-events>
                 <event-block sid="483894788559556">
                     <conditions>
@@ -840,12 +840,39 @@
                     <conditions>
                         <condition id="1" name="On any touch end" sid="2154861863462344" type="Touch" />
                     </conditions>
-                    <actions>
-                        <action id="4" name="Set animation" sid="2330930309973825" type="player">
-                            <param id="0" name="Animation">&quot;stand&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                    </actions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="6051255114132259">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="9818480313882859" type="System">
+                                    <param id="0" name="Variable">bigBasquet</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="2330930309973825" type="player">
+                                    <param id="0" name="Animation">&quot;stand&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="645235183722637">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="3899459422228851" type="System">
+                                    <param id="0" name="Variable">bigBasquet</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="5987688795763603" type="player">
+                                    <param id="0" name="Animation">&quot;basquetStand&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-block sid="7938888748594093">
                     <conditions>
@@ -865,7 +892,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="768143005920519" title="Birds">
+        <event-group description="" sid="768143005920519" title="Birds">
             <sub-events>
                 <event-block sid="955193310390578">
                     <conditions>
