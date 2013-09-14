@@ -37,10 +37,10 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>427</x>
-                        <y>236.155761719</y>
+                        <x>626</x>
+                        <y>179.155761719</y>
                         <z>0</z>
-                        <width>1285</width>
+                        <width>1267</width>
                         <height>565</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
@@ -137,58 +137,6 @@
                         <opacity>0.5</opacity>
                     </world>
                 </instance>
-                <instance type="jumpRan" uid="25">
-                    <properties>
-                        <text></text>
-                        <placeholder></placeholder>
-                        <tooltip></tooltip>
-                        <initial-visibility>Visible</initial-visibility>
-                        <enabled>Yes</enabled>
-                        <read-only>No</read-only>
-                        <spell-check>No</spell-check>
-                        <type>Text</type>
-                        <auto-font-size>Yes</auto-font-size>
-                        <id-optional></id-optional>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>584</x>
-                        <y>-77</y>
-                        <z>0</z>
-                        <width>150</width>
-                        <height>22</height>
-                        <depth>0</depth>
-                        <hotspotX>0</hotspotX>
-                        <hotspotY>0</hotspotY>
-                    </world>
-                </instance>
-                <instance type="forceRan" uid="26">
-                    <properties>
-                        <text></text>
-                        <placeholder></placeholder>
-                        <tooltip></tooltip>
-                        <initial-visibility>Visible</initial-visibility>
-                        <enabled>Yes</enabled>
-                        <read-only>No</read-only>
-                        <spell-check>No</spell-check>
-                        <type>Text</type>
-                        <auto-font-size>Yes</auto-font-size>
-                        <id-optional></id-optional>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>542</x>
-                        <y>-45</y>
-                        <z>0</z>
-                        <width>150</width>
-                        <height>22</height>
-                        <depth>0</depth>
-                        <hotspotX>0</hotspotX>
-                        <hotspotY>0</hotspotY>
-                    </world>
-                </instance>
                 <instance type="Sprite5" uid="27">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
@@ -199,8 +147,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>31</x>
-                        <y>99</y>
+                        <x>110</x>
+                        <y>95</y>
                         <z>0</z>
                         <width>395</width>
                         <height>482</height>
@@ -222,7 +170,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>759</x>
-                        <y>150</y>
+                        <y>125</y>
                         <z>0</z>
                         <width>-326</width>
                         <height>417</height>
@@ -298,56 +246,24 @@
                         <opacity>0.100000001</opacity>
                     </world>
                 </instance>
-                <instance type="appleH" uid="31">
+                <instance type="TiledBackground" uid="34">
                     <properties>
-                        <text></text>
-                        <placeholder></placeholder>
-                        <tooltip></tooltip>
                         <initial-visibility>Visible</initial-visibility>
-                        <enabled>Yes</enabled>
-                        <read-only>No</read-only>
-                        <spell-check>No</spell-check>
-                        <type>Text</type>
-                        <auto-font-size>Yes</auto-font-size>
-                        <id-optional></id-optional>
+                        <hotspot>Top-left</hotspot>
                     </properties>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1297</x>
-                        <y>81</y>
+                        <x>75.500091553</x>
+                        <y>315.499664307</y>
                         <z>0</z>
-                        <width>150</width>
-                        <height>22</height>
+                        <width>494.501342773</width>
+                        <height>39.999481201</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
-                    </world>
-                </instance>
-                <instance type="zoom1" uid="32">
-                    <properties>
-                        <text></text>
-                        <placeholder></placeholder>
-                        <tooltip></tooltip>
-                        <initial-visibility>Visible</initial-visibility>
-                        <enabled>Yes</enabled>
-                        <read-only>No</read-only>
-                        <spell-check>No</spell-check>
-                        <type>Text</type>
-                        <auto-font-size>Yes</auto-font-size>
-                        <id-optional></id-optional>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>1309</x>
-                        <y>176</y>
-                        <z>0</z>
-                        <width>150</width>
-                        <height>22</height>
-                        <depth>0</depth>
-                        <hotspotX>0</hotspotX>
-                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
                     </world>
                 </instance>
             </instances>
@@ -443,8 +359,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>224</x>
-                        <y>236</y>
+                        <x>172</x>
+                        <y>90</y>
                         <z>0</z>
                         <width>13</width>
                         <height>13</height>
@@ -797,43 +713,6 @@
                         <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>0.5</opacity>
-                    </world>
-                </instance>
-                <instance type="BigBasquetTrigger" uid="19">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <behavior-instances>
-                        <behavior-instance type="Platform">
-                            <properties>
-                                <max-speed>330</max-speed>
-                                <acceleration>1500</acceleration>
-                                <deceleration>1500</deceleration>
-                                <jump-strength>650</jump-strength>
-                                <gravity>0</gravity>
-                                <max-fall-speed>1000</max-fall-speed>
-                                <default-controls>No</default-controls>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                        <behavior-instance type="DestroyOutsideLayout" />
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>1355</x>
-                        <y>-52</y>
-                        <z>0</z>
-                        <width>68</width>
-                        <height>8</height>
-                        <depth>0</depth>
-                        <hotspotX>0.478527606</hotspotX>
-                        <hotspotY>0.454545468</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
                     </world>
                 </instance>
                 <instance type="tobogan" uid="20">
