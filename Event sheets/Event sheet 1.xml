@@ -734,134 +734,138 @@
                         </event-block>
                     </sub-events>
                 </event-block>
+                <event-block sid="2714636280123714">
+                    <conditions>
+                        <condition id="4" name="Is touching object" sid="3121189893735274" type="Touch">
+                            <param id="0" name="Object">buttonR</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="7" name="Simulate control" sid="4446222807992838" type="player">
+                            <param id="0" name="Control">1</param>
+                        </action>
+                        <action id="7" name="Set mirrored" sid="9903301364376319" type="player">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action disabled="1" id="4" name="Set animation" sid="8803724864618361" type="player">
+                            <param id="0" name="Animation">&quot;run&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="907662710785967">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="6423847464218411" type="System">
+                                    <param id="0" name="Variable">bigBasquet</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="3293525496722606" type="player">
+                                    <param id="0" name="Animation">&quot;run&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="2889090018818233">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="8487098769231993" type="System">
+                                    <param id="0" name="Variable">bigBasquet</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="786443065309815" type="player">
+                                    <param id="0" name="Animation">&quot;basquetRun&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="7168049663799727">
+                    <conditions>
+                        <condition id="4" name="Is touching object" sid="2837645822730381" type="Touch">
+                            <param id="0" name="Object">buttonL</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="7" name="Simulate control" sid="675390407906423" type="player">
+                            <param id="0" name="Control">0</param>
+                        </action>
+                        <action id="7" name="Set mirrored" sid="3539857178290932" type="player">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action disabled="1" id="4" name="Set animation" sid="5541151153342307" type="player">
+                            <param id="0" name="Animation">&quot;run&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="660623180923457">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="5990849317760059" type="System">
+                                    <param id="0" name="Variable">bigBasquet</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="4618200025969728" type="player">
+                                    <param id="0" name="Animation">&quot;run&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="4066576690411478">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="1600806296314837" type="System">
+                                    <param id="0" name="Variable">bigBasquet</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="6413567901042753" type="player">
+                                    <param id="0" name="Animation">&quot;basquetRun&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="1628935669639292">
+                    <conditions>
+                        <condition id="1" name="On any touch end" sid="2154861863462344" type="Touch" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="2330930309973825" type="player">
+                            <param id="0" name="Animation">&quot;stand&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7938888748594093">
+                    <conditions>
+                        <condition id="4" name="Is touching object" sid="865028405623484" type="Touch">
+                            <param id="0" name="Object">buttonJ</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="7" name="Simulate control" sid="5536161279703644" type="player">
+                            <param id="0" name="Control">2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="3098395409261877">
+                    <conditions />
+                    <actions />
+                </event-block>
             </sub-events>
         </event-group>
-        <event-block sid="2714636280123714">
-            <conditions>
-                <condition id="4" name="Is touching object" sid="3121189893735274" type="Touch">
-                    <param id="0" name="Object">buttonR</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action behavior="Platform" id="7" name="Simulate control" sid="4446222807992838" type="player">
-                    <param id="0" name="Control">1</param>
-                </action>
-                <action id="7" name="Set mirrored" sid="9903301364376319" type="player">
-                    <param id="0" name="State">1</param>
-                </action>
-                <action disabled="1" id="4" name="Set animation" sid="8803724864618361" type="player">
-                    <param id="0" name="Animation">&quot;run&quot;</param>
-                    <param id="1" name="From">1</param>
-                </action>
-            </actions>
-            <sub-events>
-                <event-block sid="907662710785967">
-                    <conditions>
-                        <condition id="-14" name="Compare variable" sid="6423847464218411" type="System">
-                            <param id="0" name="Variable">bigBasquet</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">0</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="4" name="Set animation" sid="3293525496722606" type="player">
-                            <param id="0" name="Animation">&quot;run&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="2889090018818233">
-                    <conditions>
-                        <condition id="-14" name="Compare variable" sid="8487098769231993" type="System">
-                            <param id="0" name="Variable">bigBasquet</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">1</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="4" name="Set animation" sid="786443065309815" type="player">
-                            <param id="0" name="Animation">&quot;basquetRun&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-            </sub-events>
-        </event-block>
-        <event-block sid="7168049663799727">
-            <conditions>
-                <condition id="4" name="Is touching object" sid="2837645822730381" type="Touch">
-                    <param id="0" name="Object">buttonL</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action behavior="Platform" id="7" name="Simulate control" sid="675390407906423" type="player">
-                    <param id="0" name="Control">0</param>
-                </action>
-                <action id="7" name="Set mirrored" sid="3539857178290932" type="player">
-                    <param id="0" name="State">0</param>
-                </action>
-                <action disabled="1" id="4" name="Set animation" sid="5541151153342307" type="player">
-                    <param id="0" name="Animation">&quot;run&quot;</param>
-                    <param id="1" name="From">1</param>
-                </action>
-            </actions>
-            <sub-events>
-                <event-block sid="660623180923457">
-                    <conditions>
-                        <condition id="-14" name="Compare variable" sid="5990849317760059" type="System">
-                            <param id="0" name="Variable">bigBasquet</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">0</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="4" name="Set animation" sid="4618200025969728" type="player">
-                            <param id="0" name="Animation">&quot;run&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="4066576690411478">
-                    <conditions>
-                        <condition id="-14" name="Compare variable" sid="1600806296314837" type="System">
-                            <param id="0" name="Variable">bigBasquet</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">1</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="4" name="Set animation" sid="6413567901042753" type="player">
-                            <param id="0" name="Animation">&quot;basquetRun&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-            </sub-events>
-        </event-block>
-        <event-block sid="1628935669639292">
-            <conditions>
-                <condition id="1" name="On any touch end" sid="2154861863462344" type="Touch" />
-            </conditions>
-            <actions>
-                <action id="4" name="Set animation" sid="2330930309973825" type="player">
-                    <param id="0" name="Animation">&quot;stand&quot;</param>
-                    <param id="1" name="From">1</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="7938888748594093">
-            <conditions>
-                <condition id="4" name="Is touching object" sid="865028405623484" type="Touch">
-                    <param id="0" name="Object">buttonJ</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action behavior="Platform" id="7" name="Simulate control" sid="5536161279703644" type="player">
-                    <param id="0" name="Control">2</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-group description="" sid="768143005920519" title="Birds">
+        <event-group collapsed="1" description="" sid="768143005920519" title="Birds">
             <sub-events>
                 <event-block sid="955193310390578">
                     <conditions>
@@ -985,7 +989,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="8643764412194803" title="Intance Variables Functions">
+        <event-group description="" sid="8643764412194803" title="Intance Variables Functions">
             <sub-events>
                 <event-block sid="746290564293407">
                     <conditions>
@@ -996,8 +1000,8 @@
                         </condition>
                         <condition id="-21" name="Is between values" sid="4365755321386366" type="System">
                             <param id="0" name="Value">apple.X</param>
-                            <param id="1" name="Lower bound">250</param>
-                            <param id="2" name="Upper bound">255</param>
+                            <param id="1" name="Lower bound">breakpoint+30</param>
+                            <param id="2" name="Upper bound">breakpoint+35</param>
                         </condition>
                         <condition id="-7" name="Compare instance variable" sid="5713158582286764" type="apple">
                             <param id="0" name="Instance variable">created</param>
@@ -1025,10 +1029,10 @@
                 </event-block>
                 <event-block sid="8959660131713064">
                     <conditions>
-                        <condition id="-21" name="Is between values" sid="377336914048393" type="System">
+                        <condition id="-21" name="Is between values" sid="5758401000993072" type="System">
                             <param id="0" name="Value">apple.X</param>
-                            <param id="1" name="Lower bound">270</param>
-                            <param id="2" name="Upper bound">275</param>
+                            <param id="1" name="Lower bound">breakpoint+100</param>
+                            <param id="2" name="Upper bound">breakpoint+105</param>
                         </condition>
                     </conditions>
                     <actions />

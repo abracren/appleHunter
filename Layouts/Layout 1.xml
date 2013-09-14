@@ -199,14 +199,36 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>139</x>
-                        <y>115</y>
+                        <x>31</x>
+                        <y>99</y>
                         <z>0</z>
                         <width>395</width>
                         <height>482</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.501449287</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Sprite10" uid="33">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>759</x>
+                        <y>150</y>
+                        <z>0</z>
+                        <width>-326</width>
+                        <height>417</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.501448989</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -221,8 +243,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>794</x>
-                        <y>115</y>
+                        <x>1074</x>
+                        <y>142</y>
                         <z>0</z>
                         <width>386</width>
                         <height>485</height>
