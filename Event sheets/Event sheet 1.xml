@@ -11,7 +11,9 @@
         <variable constant="0" name="AppleSpeed" sid="6055061328537189" static="0" type="number">100</variable>
         <variable constant="0" name="bigBasquetTime" sid="2075747172555441" static="0" type="number">15</variable>
         <comment>zoom</comment>
-        <variable constant="0" name="zoom" sid="4361493536635001" static="0" type="number">1</variable>
+        <variable constant="0" name="parallax" sid="3949995712694021" static="0" type="number">5</variable>
+        <variable constant="0" name="zoomToggle" sid="6926013318688678" static="0" type="number">1</variable>
+        <variable constant="0" name="zoom" sid="4361493536635001" static="0" type="number">1.3</variable>
         <variable constant="0" name="appleTemp" sid="2594986764043756" static="0" type="number">0</variable>
         <variable constant="0" name="appleZoomFactor" sid="9740494259756866" static="0" type="number">0</variable>
         <variable constant="0" name="appleZoom" sid="3197364449373718" static="0" type="number">1</variable>
@@ -148,7 +150,7 @@
                             <param id="0" name="State">1</param>
                         </action>
                         <action id="-9" name="Set value" sid="490034165501103" type="System">
-                            <param id="0" name="Variable">zoom</param>
+                            <param id="0" name="Variable">zoomToggle</param>
                             <param id="1" name="Value">0</param>
                         </action>
                     </actions>
@@ -423,7 +425,7 @@
                                     <param id="0" name="Seconds">1</param>
                                 </action>
                                 <action id="-9" name="Set value" sid="5970537474048035" type="System">
-                                    <param id="0" name="Variable">zoom</param>
+                                    <param id="0" name="Variable">zoomToggle</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
                             </actions>
@@ -446,7 +448,7 @@
                             <param id="0" name="Seconds">1</param>
                         </action>
                         <action id="-9" name="Set value" sid="3368240176496385" type="System">
-                            <param id="0" name="Variable">zoom</param>
+                            <param id="0" name="Variable">zoomToggle</param>
                             <param id="1" name="Value">1</param>
                         </action>
                     </actions>
@@ -489,7 +491,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="3464215456308079" title="controles">
+        <event-group collapsed="1" description="" sid="3464215456308079" title="controles">
             <sub-events>
                 <event-block sid="483894788559556">
                     <conditions>
@@ -862,7 +864,7 @@
                 </action>
             </actions>
         </event-block>
-        <event-group description="" sid="768143005920519" title="Birds">
+        <event-group collapsed="1" description="" sid="768143005920519" title="Birds">
             <sub-events>
                 <event-block sid="955193310390578">
                     <conditions>
@@ -986,7 +988,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="8643764412194803" title="Intance Variables Functions">
+        <event-group collapsed="1" description="" sid="8643764412194803" title="Intance Variables Functions">
             <sub-events>
                 <event-block sid="746290564293407">
                     <conditions>
@@ -1285,7 +1287,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="6484123766701948" title="text">
+        <event-group collapsed="1" description="" sid="6484123766701948" title="text">
             <sub-events>
                 <event-block sid="5451011050003319">
                     <conditions>
@@ -1302,14 +1304,390 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="8906374010124048" title="Zoom">
+        <event-group collapsed="1" description="" inactive="1" sid="3773546000400658" title="zoomIn">
             <sub-events>
-                <event-block sid="793091736167962">
+                <event-block sid="4111584622960909">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="3694630202395136" type="System">
+                            <param id="0" name="Interval (seconds)">0.01</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="2805850713776563" type="System">
+                            <param id="0" name="Variable">zoom</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">1.30</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="3104742621848856" type="System">
+                            <param id="0" name="Variable">zoom</param>
+                            <param id="1" name="Value">0.005</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="6107338078791764">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="2668778317374661" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-17" name="Set layer scale" sid="5715814317503888" type="System">
+                            <param id="0" name="Layer">0</param>
+                            <param id="1" name="Scale">zoom</param>
+                        </action>
+                        <action id="-17" name="Set layer scale" sid="498879417796954" type="System">
+                            <param id="0" name="Layer">1</param>
+                            <param id="1" name="Scale">zoom</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="801822054186006">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="8684207199605285" type="System">
+                            <param id="0" name="Variable">zoom</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">1.30</param>
+                        </condition>
+                        <condition id="-1" name="Every tick" sid="1681633591334341" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="5829223726006839" type="System">
+                            <param id="0" name="Variable">zoom</param>
+                            <param id="1" name="Value">1.30</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="7498240991123722" type="System">
+                            <param id="0" name="Group name">&quot;zoomIn&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group collapsed="1" description="" inactive="1" sid="6265894030841722" title="zoomOut">
+            <sub-events>
+                <event-block sid="5140983384126088">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="656426002826183" type="System">
+                            <param id="0" name="Interval (seconds)">0.01</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="6251253243288769" type="System">
+                            <param id="0" name="Variable">zoom</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-11" name="Subtract from" sid="7021798173262982" type="System">
+                            <param id="0" name="Variable">zoom</param>
+                            <param id="1" name="Value">0.005</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="8443906186703099">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="4435910091587716" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-17" name="Set layer scale" sid="1658880815402031" type="System">
+                            <param id="0" name="Layer">0</param>
+                            <param id="1" name="Scale">zoom</param>
+                        </action>
+                        <action id="-17" name="Set layer scale" sid="7391210840006685" type="System">
+                            <param id="0" name="Layer">1</param>
+                            <param id="1" name="Scale">zoom</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="6165884722864391">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="4322811904232112" type="System">
+                            <param id="0" name="Variable">zoom</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">0.95</param>
+                        </condition>
+                        <condition id="-1" name="Every tick" sid="8878635789698542" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="5623949148826597" type="System">
+                            <param id="0" name="Variable">zoom</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="4950203375733313" type="System">
+                            <param id="0" name="Group name">&quot;zoomOut&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="3202291099598482" type="System">
+                            <param id="0" name="Group name">&quot;zoomIn&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="858063542078647" title="ZoomNew">
+            <sub-events>
+                <event-block collapsed="1" sid="3668955889258466">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="7840209011809999" type="System">
+                            <param id="0" name="Variable">zoomToggle</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="3509629039335787">
+                            <conditions>
+                                <condition id="-6" name="Every X seconds" sid="7507739437041844" type="System">
+                                    <param id="0" name="Interval (seconds)">0.01</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="3142562314671404" type="System">
+                                    <param id="0" name="Variable">zoom</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">1.30</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Add to" sid="1212476091966805" type="System">
+                                    <param id="0" name="Variable">zoom</param>
+                                    <param id="1" name="Value">0.005</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="8693048918099865">
+                            <conditions>
+                                <condition id="-1" name="Every tick" sid="9013669283569237" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-17" name="Set layer scale" sid="1052899543778122" type="System">
+                                    <param id="0" name="Layer">0</param>
+                                    <param id="1" name="Scale">zoom</param>
+                                </action>
+                                <action id="-17" name="Set layer scale" sid="3796322150553952" type="System">
+                                    <param id="0" name="Layer">1</param>
+                                    <param id="1" name="Scale">zoom</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="5690131672247578">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="6702696436869576" type="System">
+                                    <param id="0" name="Variable">zoom</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">1.30</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="6682412956410486" type="System">
+                                    <param id="0" name="Variable">zoom</param>
+                                    <param id="1" name="Value">1.30</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block collapsed="1" sid="6327358520314345">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="5777886148654195" type="System">
+                            <param id="0" name="Variable">zoomToggle</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="8632555918096829">
+                            <conditions>
+                                <condition id="-6" name="Every X seconds" sid="2305617375073732" type="System">
+                                    <param id="0" name="Interval (seconds)">0.01</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="573602323431644" type="System">
+                                    <param id="0" name="Variable">zoom</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-11" name="Subtract from" sid="4907195890366988" type="System">
+                                    <param id="0" name="Variable">zoom</param>
+                                    <param id="1" name="Value">0.005</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="7709915692713623">
+                            <conditions>
+                                <condition id="-1" name="Every tick" sid="9291451288393981" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-17" name="Set layer scale" sid="774334852858141" type="System">
+                                    <param id="0" name="Layer">0</param>
+                                    <param id="1" name="Scale">zoom</param>
+                                </action>
+                                <action id="-17" name="Set layer scale" sid="2587331363213369" type="System">
+                                    <param id="0" name="Layer">1</param>
+                                    <param id="1" name="Scale">zoom</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="9703937300534405">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="364645630750327" type="System">
+                                    <param id="0" name="Variable">zoom</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">0.95</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="7067309242812012" type="System">
+                                    <param id="0" name="Variable">zoom</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="8834358424947054">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="8424712500866956" type="System">
+                            <param id="0" name="Variable">zoomToggle</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="6597041379083904">
+                            <conditions>
+                                <condition id="-6" name="Every X seconds" sid="6356116360136628" type="System">
+                                    <param id="0" name="Interval (seconds)">0.01</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="7462890039522622" type="System">
+                                    <param id="0" name="Variable">parallax</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-11" name="Subtract from" sid="2645414410006545" type="System">
+                                    <param id="0" name="Variable">parallax</param>
+                                    <param id="1" name="Value">2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="6869901529266401">
+                            <conditions>
+                                <condition id="-1" name="Every tick" sid="8057610601847447" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-33" name="Set layer parallax" sid="1651465022735269" type="System">
+                                    <param id="0" name="Layer">1</param>
+                                    <param id="1" name="Parallax X">LayerParallaxX(1)</param>
+                                    <param id="2" name="Parallax Y">parallax</param>
+                                </action>
+                                <action id="-33" name="Set layer parallax" sid="1599858691607974" type="System">
+                                    <param id="0" name="Layer">0</param>
+                                    <param id="1" name="Parallax X">LayerParallaxX(0)</param>
+                                    <param id="2" name="Parallax Y">parallax</param>
+                                </action>
+                                <action id="-33" name="Set layer parallax" sid="2025539211966514" type="System">
+                                    <param id="0" name="Layer">2</param>
+                                    <param id="1" name="Parallax X">0</param>
+                                    <param id="2" name="Parallax Y">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block disabled="1" sid="6626557278172647">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="8182631680443213" type="System">
+                                    <param id="0" name="Variable">parallax</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="8608566089795453" type="System">
+                                    <param id="0" name="Variable">parallax</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="5554578012118533">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="1989502631840329" type="System">
+                            <param id="0" name="Variable">zoomToggle</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="3287254437449768">
+                            <conditions>
+                                <condition id="-6" name="Every X seconds" sid="1824109075935869" type="System">
+                                    <param id="0" name="Interval (seconds)">0.01</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="5101705233016828" type="System">
+                                    <param id="0" name="Variable">parallax</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">100</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Add to" sid="2624878348237077" type="System">
+                                    <param id="0" name="Variable">parallax</param>
+                                    <param id="1" name="Value">2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="747512253585514">
+                            <conditions>
+                                <condition id="-1" name="Every tick" sid="3076126787077315" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-33" name="Set layer parallax" sid="1123499570240963" type="System">
+                                    <param id="0" name="Layer">1</param>
+                                    <param id="1" name="Parallax X">LayerParallaxX(1)</param>
+                                    <param id="2" name="Parallax Y">parallax</param>
+                                </action>
+                                <action id="-33" name="Set layer parallax" sid="9065711331573509" type="System">
+                                    <param id="0" name="Layer">0</param>
+                                    <param id="1" name="Parallax X">LayerParallaxX(0)</param>
+                                    <param id="2" name="Parallax Y">parallax</param>
+                                </action>
+                                <action id="-33" name="Set layer parallax" sid="7619420649559199" type="System">
+                                    <param id="0" name="Layer">2</param>
+                                    <param id="1" name="Parallax X">0</param>
+                                    <param id="2" name="Parallax Y">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block disabled="1" sid="4809210442668103">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="6185244034385167" type="System">
+                                    <param id="0" name="Variable">parallax</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="4127095485411298" type="System">
+                                    <param id="0" name="Variable">parallax</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group collapsed="1" description="" disabled="1" sid="8906374010124048" title="Zoom">
+            <sub-events>
+                <event-block disabled="1" sid="793091736167962">
                     <conditions>
                         <condition disabled="1" id="2" name="Key is down" sid="4085156145862433" type="Keyboard">
                             <param id="0" name="Key">90 (Z)</param>
                         </condition>
-                        <condition id="-14" name="Compare variable" sid="6675106408675209" type="System">
+                        <condition disabled="1" id="-14" name="Compare variable" sid="6675106408675209" type="System">
                             <param id="0" name="Variable">zoom</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">1</param>
@@ -1337,7 +1715,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="7723780250829204">
+                <event-block disabled="1" sid="7723780250829204">
                     <conditions>
                         <condition disabled="1" id="3" name="On key released" sid="1602449108353394" type="Keyboard">
                             <param id="0" name="Key">90 (Z)</param>
@@ -1425,7 +1803,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="9979809234471455">
+                <event-block disabled="1" sid="9979809234471455">
                     <conditions>
                         <condition id="0" name="On function" sid="1105905401847165" type="Function">
                             <param id="0" name="Name">&quot;down325&quot;</param>
@@ -1433,7 +1811,7 @@
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block sid="879020174280242">
+                        <event-block disabled="1" sid="879020174280242">
                             <conditions>
                                 <condition id="-21" name="Is between values" sid="2723624906965186" type="System">
                                     <param id="0" name="Value">appleZoom</param>
@@ -1443,7 +1821,7 @@
                             </conditions>
                             <actions />
                             <sub-events>
-                                <event-block sid="3391425311249281">
+                                <event-block disabled="1" sid="3391425311249281">
                                     <conditions>
                                         <condition id="-6" name="Every X seconds" sid="2801255740933033" type="System">
                                             <param id="0" name="Interval (seconds)">0.1</param>
@@ -1468,7 +1846,7 @@
                                         </action>
                                     </actions>
                                 </event-block>
-                                <event-block sid="8098484062835312">
+                                <event-block disabled="1" sid="8098484062835312">
                                     <conditions />
                                     <actions />
                                 </event-block>
@@ -1476,7 +1854,7 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block sid="2632020342166895">
+                <event-block disabled="1" sid="2632020342166895">
                     <conditions>
                         <condition id="0" name="On function" sid="6988839794270274" type="Function">
                             <param id="0" name="Name">&quot;raise325&quot;</param>
@@ -1484,7 +1862,7 @@
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block sid="7363498328641455">
+                        <event-block disabled="1" sid="7363498328641455">
                             <conditions>
                                 <condition id="-21" name="Is between values" sid="8023279617547256" type="System">
                                     <param id="0" name="Value">appleZoom</param>
@@ -1494,7 +1872,7 @@
                             </conditions>
                             <actions />
                             <sub-events>
-                                <event-block sid="4923036214071677">
+                                <event-block disabled="1" sid="4923036214071677">
                                     <conditions>
                                         <condition id="-6" name="Every X seconds" sid="2242177980483127" type="System">
                                             <param id="0" name="Interval (seconds)">0.1</param>
@@ -1519,13 +1897,17 @@
                                         </action>
                                     </actions>
                                 </event-block>
-                                <event-block sid="4815321116919405">
+                                <event-block disabled="1" sid="4815321116919405">
                                     <conditions />
                                     <actions />
                                 </event-block>
                             </sub-events>
                         </event-block>
                     </sub-events>
+                </event-block>
+                <event-block sid="395837956328495">
+                    <conditions />
+                    <actions />
                 </event-block>
             </sub-events>
         </event-group>
