@@ -10,13 +10,10 @@
         <variable constant="0" name="bigBasquet" sid="5572258107660725" static="0" type="number">0</variable>
         <variable constant="0" name="AppleSpeed" sid="6055061328537189" static="0" type="number">100</variable>
         <variable constant="0" name="bigBasquetTime" sid="2075747172555441" static="0" type="number">15</variable>
-        <comment>zoom</comment>
         <variable constant="0" name="parallax" sid="3949995712694021" static="0" type="number">100</variable>
+        <variable constant="0" name="appleDown" sid="3546952207972658" static="0" type="number">0</variable>
         <variable constant="0" name="zoomToggle" sid="6926013318688678" static="0" type="number">1</variable>
         <variable constant="0" name="zoom" sid="4361493536635001" static="0" type="number">1.3</variable>
-        <variable constant="0" name="appleTemp" sid="2594986764043756" static="0" type="number">0</variable>
-        <variable constant="0" name="appleZoomFactor" sid="9740494259756866" static="0" type="number">0</variable>
-        <variable constant="0" name="appleZoom" sid="3197364449373718" static="0" type="number">1</variable>
         <variable constant="0" name="breakpoint" sid="6245862550025879" static="0" type="number">200</variable>
         <variable constant="0" name="colide" sid="5847483074379277" static="0" type="number">0</variable>
         <event-group description="" sid="2116889551096455" title="Start">
@@ -62,6 +59,14 @@
                             <param id="0" name="Variable">breakpoint</param>
                             <param id="1" name="Value">breakPointStick.X</param>
                         </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="5756572129519629" type="Sprite20">
+                            <param id="0" name="Pin to">stick1</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                        <action behavior="Physics" id="23" name="Enable/disable collisions" sid="6921197219694198" type="apple">
+                            <param id="0" name="Object">pin</param>
+                            <param id="1" name="State">0</param>
+                        </action>
                     </actions>
                 </event-block>
             </sub-events>
@@ -86,12 +91,7 @@
                     <conditions>
                         <condition id="-1" name="Every tick" sid="4521779248305558" type="System" />
                     </conditions>
-                    <actions>
-                        <action id="-9" name="Set value" sid="2025070498214399" type="System">
-                            <param id="0" name="Variable">appleZoom</param>
-                            <param id="1" name="Value">apple.Y*0.006</param>
-                        </action>
-                    </actions>
+                    <actions />
                 </event-block>
                 <event-block sid="5311729935314953">
                     <conditions>
@@ -200,6 +200,91 @@
                         </event-block>
                     </sub-events>
                 </event-block>
+                <event-block sid="1044341128701464">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="8163156569439614" type="apple">
+                            <param id="0" name="Object">Sprite20</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="5809567725895005" type="System">
+                            <param id="0" name="Variable">appleDown</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="2283224578900491">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="1992286592481987" type="apple">
+                            <param id="0" name="Object">force</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="6040414709006522" type="System">
+                            <param id="0" name="Variable">appleDown</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Physics" id="2" name="Apply force at angle" sid="1784242026849959" type="apple">
+                            <param id="0" name="Force">20</param>
+                            <param id="1" name="Angle">310</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="6318260299061261">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="5697888928891381" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="4468664311142695" type="angleS">
+                            <param id="0" name="Text">&quot;&quot;&amp;stick1.Angle</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="6005397708318649">
+                    <conditions>
+                        <condition id="-13" name="Is between angles" sid="4736586697915163" type="stick1">
+                            <param id="0" name="First angle">50</param>
+                            <param id="1" name="Second angle">320</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="1018709456984475" type="stick1" />
+                        <action id="-3" name="Create object" sid="700306431669737" type="System">
+                            <param id="0" name="Object to create">stick1</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="X">211</param>
+                            <param id="3" name="Y">288</param>
+                        </action>
+                        <action id="-5" name="Set width" sid="1774519219602016" type="stick1">
+                            <param id="0" name="Width">181</param>
+                        </action>
+                        <action id="-6" name="Set height" sid="9287702047800386" type="stick1">
+                            <param id="0" name="Height">24</param>
+                        </action>
+                        <action behavior="Physics" id="11" name="Create revolute joint" sid="1651317903542534" type="pin">
+                            <param id="0" name="This image point">0</param>
+                            <param id="1" name="Object">stick1</param>
+                        </action>
+                        <action behavior="Physics" id="23" name="Enable/disable collisions" sid="6203166407298293" type="apple">
+                            <param id="0" name="Object">stick1</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                        <action behavior="Physics" id="23" name="Enable/disable collisions" sid="7683083683954723" type="player">
+                            <param id="0" name="Object">stick1</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                        <action behavior="Physics" id="23" name="Enable/disable collisions" sid="6039937643988665" type="tobogan">
+                            <param id="0" name="Object">stick1</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="7555641236015734" type="Sprite20">
+                            <param id="0" name="Pin to">stick1</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                    </actions>
+                </event-block>
             </sub-events>
         </event-group>
         <event-group description="" sid="3554059471828501" title="Apple Controls">
@@ -223,6 +308,10 @@
                         <action id="-9" name="Set value" sid="7875992453309117" type="System">
                             <param id="0" name="Variable">zoomToggle</param>
                             <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="128474424392841" type="System">
+                            <param id="0" name="Variable">appleDown</param>
+                            <param id="1" name="Value">0</param>
                         </action>
                     </actions>
                     <sub-events>
@@ -1333,9 +1422,9 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="858063542078647" title="ZoomNew">
+        <event-group description="" sid="858063542078647" title="ZoomNew">
             <sub-events>
-                <event-block collapsed="1" sid="3668955889258466">
+                <event-block sid="3668955889258466">
                     <conditions>
                         <condition id="-14" name="Compare variable" sid="7840209011809999" type="System">
                             <param id="0" name="Variable">zoomToggle</param>
@@ -1372,7 +1461,7 @@
                                     <param id="0" name="Layer">0</param>
                                     <param id="1" name="Scale">zoom</param>
                                 </action>
-                                <action id="-17" name="Set layer scale" sid="3796322150553952" type="System">
+                                <action disabled="1" id="-17" name="Set layer scale" sid="3796322150553952" type="System">
                                     <param id="0" name="Layer">1</param>
                                     <param id="1" name="Scale">zoom</param>
                                 </action>
@@ -1395,7 +1484,7 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block collapsed="1" sid="6327358520314345">
+                <event-block sid="6327358520314345">
                     <conditions>
                         <condition id="-14" name="Compare variable" sid="5777886148654195" type="System">
                             <param id="0" name="Variable">zoomToggle</param>
@@ -1432,7 +1521,7 @@
                                     <param id="0" name="Layer">0</param>
                                     <param id="1" name="Scale">zoom</param>
                                 </action>
-                                <action id="-17" name="Set layer scale" sid="2587331363213369" type="System">
+                                <action disabled="1" id="-17" name="Set layer scale" sid="2587331363213369" type="System">
                                     <param id="0" name="Layer">1</param>
                                     <param id="1" name="Scale">zoom</param>
                                 </action>
@@ -1488,7 +1577,7 @@
                                 <condition id="-1" name="Every tick" sid="8057610601847447" type="System" />
                             </conditions>
                             <actions>
-                                <action id="-33" name="Set layer parallax" sid="1651465022735269" type="System">
+                                <action disabled="1" id="-33" name="Set layer parallax" sid="1651465022735269" type="System">
                                     <param id="0" name="Layer">1</param>
                                     <param id="1" name="Parallax X">LayerParallaxX(1)</param>
                                     <param id="2" name="Parallax Y">parallax</param>
@@ -1499,7 +1588,7 @@
                                     <param id="2" name="Parallax Y">parallax</param>
                                 </action>
                                 <action id="-33" name="Set layer parallax" sid="2025539211966514" type="System">
-                                    <param id="0" name="Layer">2</param>
+                                    <param id="0" name="Layer">1</param>
                                     <param id="1" name="Parallax X">0</param>
                                     <param id="2" name="Parallax Y">0</param>
                                 </action>
@@ -1540,7 +1629,7 @@
                                 <condition id="-1" name="Every tick" sid="3076126787077315" type="System" />
                             </conditions>
                             <actions>
-                                <action id="-33" name="Set layer parallax" sid="1123499570240963" type="System">
+                                <action disabled="1" id="-33" name="Set layer parallax" sid="1123499570240963" type="System">
                                     <param id="0" name="Layer">1</param>
                                     <param id="1" name="Parallax X">LayerParallaxX(1)</param>
                                     <param id="2" name="Parallax Y">parallax</param>
@@ -1551,7 +1640,7 @@
                                     <param id="2" name="Parallax Y">parallax</param>
                                 </action>
                                 <action id="-33" name="Set layer parallax" sid="7619420649559199" type="System">
-                                    <param id="0" name="Layer">2</param>
+                                    <param id="0" name="Layer">1</param>
                                     <param id="1" name="Parallax X">0</param>
                                     <param id="2" name="Parallax Y">0</param>
                                 </action>
