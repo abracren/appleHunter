@@ -554,7 +554,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="3512153776535374">
+                <event-block disabled="1" sid="3512153776535374">
                     <conditions>
                         <condition id="-34" name="Pick by evaluate" sid="5704712763605066" type="System">
                             <param id="0" name="Object">Sombra</param>
@@ -565,7 +565,7 @@
                         <action id="-9" name="Destroy" sid="9714995354343197" type="Sombra" />
                     </actions>
                 </event-block>
-                <event-block sid="8094061024218764">
+                <event-block disabled="1" sid="8094061024218764">
                     <conditions>
                         <condition id="-34" name="Pick by evaluate" sid="8871012651724489" type="System">
                             <param id="0" name="Object">Sombra</param>
