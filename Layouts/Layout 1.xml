@@ -368,7 +368,7 @@
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
-                        <opacity>0.5</opacity>
+                        <opacity>0</opacity>
                     </world>
                 </instance>
                 <instance type="Sprite14" uid="29">
@@ -786,8 +786,8 @@
                         <x>172</x>
                         <y>90</y>
                         <z>0</z>
-                        <width>13</width>
-                        <height>13</height>
+                        <width>20</width>
+                        <height>20</height>
                         <depth>0</depth>
                         <hotspotX>0.508000016</hotspotX>
                         <hotspotY>0.523999989</hotspotY>
@@ -815,6 +815,28 @@
                         <hotspotY>0.5</hotspotY>
                         <angle>-1.200286865</angle>
                         <opacity>0</opacity>
+                    </world>
+                </instance>
+                <instance type="saltasalta" uid="32">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>363.529418945</x>
+                        <y>339</y>
+                        <z>0</z>
+                        <width>57</width>
+                        <height>63</height>
+                        <depth>0</depth>
+                        <hotspotX>0.52352941</hotspotX>
+                        <hotspotY>1</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
                     </world>
                 </instance>
             </instances>
