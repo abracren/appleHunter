@@ -58,10 +58,10 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>627.5</x>
+                        <x>668</x>
                         <y>356</y>
                         <z>0</z>
-                        <width>1287</width>
+                        <width>1368</width>
                         <height>45</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
@@ -541,6 +541,47 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="fox" uid="37">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Jumpthru">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Platform">
+                            <properties>
+                                <max-speed>330</max-speed>
+                                <acceleration>1500</acceleration>
+                                <deceleration>1500</deceleration>
+                                <jump-strength>650</jump-strength>
+                                <gravity>1500</gravity>
+                                <max-fall-speed>1000</max-fall-speed>
+                                <default-controls>No</default-controls>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1000</x>
+                        <y>280</y>
+                        <z>0</z>
+                        <width>99</width>
+                        <height>62</height>
+                        <depth>0</depth>
+                        <hotspotX>0.501661122</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
                 <instance type="Sprite17" uid="21">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
@@ -551,10 +592,10 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1074</x>
+                        <x>1065.5</x>
                         <y>142</y>
                         <z>0</z>
-                        <width>386</width>
+                        <width>369</width>
                         <height>485</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
@@ -893,8 +934,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>895</x>
-                        <y>326</y>
+                        <x>1288</x>
+                        <y>273</y>
                         <z>0</z>
                         <width>13</width>
                         <height>14</height>
@@ -902,28 +943,6 @@
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
                         <angle>-0.015119431</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="fox" uid="37">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>1305</x>
-                        <y>321</y>
-                        <z>0</z>
-                        <width>99</width>
-                        <height>62</height>
-                        <depth>0</depth>
-                        <hotspotX>0.501661122</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
                 </instance>

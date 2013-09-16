@@ -27,6 +27,7 @@
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
         <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
         <behavior author="Scirra" id="destroy" version="1">Destroy outside layout</behavior>
+        <behavior author="Scirra" id="jumpthru" version="1">Jump-thru</behavior>
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
         <behavior author="Scirra" id="wrap" version="1">Wrap</behavior>
@@ -1311,6 +1312,14 @@
         </object-type>
         <object-type name="fox" sid="7102254738310978">
             <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Jumpthru" sid="4270714949143115">
+                    <behavior id="jumpthru" />
+                </behavior-type>
+                <behavior-type name="Platform" sid="7964276206843209">
+                    <behavior id="Platform" />
+                </behavior-type>
+            </behaviors>
             <animation-folder expanded="1">
                 <animation framecount="11" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7602897545349263" speed="18">
                     <frame duration="1" hotspotX="0.501661" hotspotY="0.5">
@@ -1347,7 +1356,7 @@
                     <frame duration="1" hotspotX="0.501661" hotspotY="0.5" />
                     <frame duration="1" hotspotX="0.501661" hotspotY="0.5" />
                 </animation>
-                <animation framecount="12" loop="1" name="Animation2" pingpong="0" repeatcount="1" repeatto="0" sid="7510800033678075" speed="18">
+                <animation framecount="12" loop="1" name="Birded" pingpong="0" repeatcount="1" repeatto="0" sid="7510800033678075" speed="18">
                     <frame duration="1" hotspotX="0.501548" hotspotY="0.5">
                         <collision-poly>
                             <point x="0.219814" y="0.365979" />
