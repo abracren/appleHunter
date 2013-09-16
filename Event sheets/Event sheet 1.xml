@@ -1332,11 +1332,21 @@
                             <param id="2" name="Value">0</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action behavior="Platform" id="7" name="Simulate control" sid="1886444336772751" type="fox">
-                            <param id="0" name="Control">0</param>
-                        </action>
-                    </actions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="9183024626573333">
+                            <conditions />
+                            <actions />
+                        </event-block>
+                        <event-block sid="8171540687992474">
+                            <conditions />
+                            <actions>
+                                <action behavior="Platform" id="7" name="Simulate control" sid="1886444336772751" type="fox">
+                                    <param id="0" name="Control">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-block sid="7192270897506786">
                     <conditions>
@@ -1499,13 +1509,16 @@
                         <action behavior="Platform" id="5" name="Set gravity" sid="2738713942872251" type="bird">
                             <param id="0" name="Gravity">1500</param>
                         </action>
-                        <action id="-9" name="Set value" sid="2004800622206947" type="System">
-                            <param id="0" name="Variable">birdMoving</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
                         <action id="4" name="Set animation" sid="9190505755406302" type="bird">
                             <param id="0" name="Animation">&quot;die&quot;</param>
                             <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="3420886460215542" type="System">
+                            <param id="0" name="Seconds">1.0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="2004800622206947" type="System">
+                            <param id="0" name="Variable">birdMoving</param>
+                            <param id="1" name="Value">0</param>
                         </action>
                     </actions>
                 </event-block>
@@ -1519,13 +1532,16 @@
                         <action behavior="Platform" id="5" name="Set gravity" sid="792892492649087" type="bird">
                             <param id="0" name="Gravity">1500</param>
                         </action>
-                        <action id="-9" name="Set value" sid="286567296862584" type="System">
-                            <param id="0" name="Variable">birdMoving</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
                         <action id="4" name="Set animation" sid="4453362495274764" type="bird">
                             <param id="0" name="Animation">&quot;die&quot;</param>
                             <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="6087950504985739" type="System">
+                            <param id="0" name="Seconds">1.0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="286567296862584" type="System">
+                            <param id="0" name="Variable">birdMoving</param>
+                            <param id="1" name="Value">0</param>
                         </action>
                     </actions>
                 </event-block>
