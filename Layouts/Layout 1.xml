@@ -83,11 +83,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>572</x>
-                        <y>229</y>
+                        <x>571.933349609</x>
+                        <y>226.400863647</y>
                         <z>0</z>
                         <width>41</width>
-                        <height>20</height>
+                        <height>15</height>
                         <depth>0</depth>
                         <hotspotX>0.486238539</hotspotX>
                         <hotspotY>0.519999981</hotspotY>
@@ -1011,36 +1011,6 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="highscore" uid="49">
-                    <properties>
-                        <character-width>37</character-width>
-                        <character-height>36</character-height>
-                        <character-set>ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.,;:?!-_#&quot;&apos;&amp;()/@+=*$£€&lt;&gt;</character-set>
-                        <text>0</text>
-                        <scale>0.8</scale>
-                        <initial-visibility>Visible</initial-visibility>
-                        <horizontal-alignment>Right</horizontal-alignment>
-                        <vertical-alignment>Center</vertical-alignment>
-                        <hotspot>Top-left</hotspot>
-                        <wrapping>Word</wrapping>
-                        <character-spacing>-15</character-spacing>
-                        <line-height>0</line-height>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>379</x>
-                        <y>35.900001526</y>
-                        <z>0</z>
-                        <width>150</width>
-                        <height>29</height>
-                        <depth>0</depth>
-                        <hotspotX>0</hotspotX>
-                        <hotspotY>0</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
             </instances>
             <effects />
         </layer>
@@ -1232,6 +1202,36 @@
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="highscore" uid="49">
+                    <properties>
+                        <character-width>37</character-width>
+                        <character-height>36</character-height>
+                        <character-set>ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.,;:?!-_#&quot;&apos;&amp;()/@+=*$£€&lt;&gt;</character-set>
+                        <text>0</text>
+                        <scale>0.8</scale>
+                        <initial-visibility>Visible</initial-visibility>
+                        <horizontal-alignment>Right</horizontal-alignment>
+                        <vertical-alignment>Center</vertical-alignment>
+                        <hotspot>Top-left</hotspot>
+                        <wrapping>Word</wrapping>
+                        <character-spacing>-15</character-spacing>
+                        <line-height>0</line-height>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>287</x>
+                        <y>16</y>
+                        <z>0</z>
+                        <width>150</width>
+                        <height>29</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>

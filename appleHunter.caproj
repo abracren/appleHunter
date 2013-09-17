@@ -227,6 +227,7 @@
                 <animation framecount="19" loop="1" name="run" pingpong="0" repeatcount="1" repeatto="0" sid="9232333975272022" speed="24">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.501529">
                         <image-point name="Imagepoint 1" x="0.685841" y="0.0611621" />
+                        <image-point name="mano" x="0.632743" y="0.287462" />
                         <collision-poly>
                             <point x="0.172566" y="0" />
                             <point x="0.831858" y="0" />
@@ -236,6 +237,7 @@
                     </frame>
                     <frame duration="1" hotspotX="0.5" hotspotY="0.501529">
                         <image-point name="Imagepoint 1" x="0.752212" y="0.0428135" />
+                        <image-point name="mano" x="0.256637" y="0.562691" />
                         <collision-poly>
                             <point x="1" y="0" />
                             <point x="1" y="1" />
@@ -245,6 +247,7 @@
                     </frame>
                     <frame duration="1" hotspotX="0.5" hotspotY="0.501529">
                         <image-point name="Imagepoint 1" x="0.725664" y="0.0550459" />
+                        <image-point name="mano" x="0.371681" y="0.611621" />
                         <collision-poly>
                             <point x="0.0575221" y="0" />
                             <point x="0.924779" y="0.0030581" />
@@ -254,6 +257,7 @@
                     </frame>
                     <frame duration="1" hotspotX="0.5" hotspotY="0.501529">
                         <image-point name="Imagepoint 1" x="0.70354" y="0.0611621" />
+                        <image-point name="mano" x="0.504425" y="0.568807" />
                         <collision-poly>
                             <point x="0" y="0.0030581" />
                             <point x="0.995575" y="0.0030581" />
@@ -263,53 +267,69 @@
                     </frame>
                     <frame duration="1" hotspotX="0.5" hotspotY="0.501529">
                         <image-point name="Imagepoint 1" x="0.699115" y="0.0428135" />
+                        <image-point name="mano" x="0.584071" y="0.507645" />
                     </frame>
                     <frame duration="1" hotspotX="0.5" hotspotY="0.501529">
                         <image-point name="Imagepoint 1" x="0.654867" y="0.030581" />
+                        <image-point name="mano" x="0.619469" y="0.366972" />
                     </frame>
                     <frame duration="1" hotspotX="0.5" hotspotY="0.501529">
                         <image-point name="Imagepoint 1" x="0.712389" y="0.0978593" />
+                        <image-point name="mano" x="0.685841" y="0.302752" />
                     </frame>
                     <frame duration="1" hotspotX="0.5" hotspotY="0.501529">
                         <image-point name="Imagepoint 1" x="0.707965" y="0.107034" />
+                        <image-point name="mano" x="0.690265" y="0.262997" />
                     </frame>
                     <frame duration="1" hotspotX="0.5" hotspotY="0.501529">
                         <image-point name="Imagepoint 1" x="0.70354" y="0.122324" />
+                        <image-point name="mano" x="0.685841" y="0.266055" />
                     </frame>
                     <frame duration="1" hotspotX="0.5" hotspotY="0.501529">
                         <image-point name="Imagepoint 1" x="0.752212" y="0.110092" />
+                        <image-point name="mano" x="0.707965" y="0.204893" />
                     </frame>
                     <frame duration="1" hotspotX="0.5" hotspotY="0.501529">
                         <image-point name="Imagepoint 1" x="0.716814" y="0.107034" />
+                        <image-point name="mano" x="0.699115" y="0.278287" />
                     </frame>
                     <frame duration="1" hotspotX="0.5" hotspotY="0.501529">
                         <image-point name="Imagepoint 1" x="0.734513" y="0.0978593" />
+                        <image-point name="mano" x="0.685841" y="0.281346" />
                     </frame>
                     <frame duration="1" hotspotX="0.5" hotspotY="0.501529">
                         <image-point name="Imagepoint 1" x="0.712389" y="0.0917431" />
+                        <image-point name="mano" x="0.681416" y="0.302752" />
                     </frame>
                     <frame duration="1" hotspotX="0.5" hotspotY="0.501529">
                         <image-point name="Imagepoint 1" x="0.725664" y="0.0978593" />
+                        <image-point name="mano" x="0.681416" y="0.318043" />
                     </frame>
                     <frame duration="1" hotspotX="0.5" hotspotY="0.501529">
                         <image-point name="Imagepoint 1" x="0.712389" y="0.0733945" />
+                        <image-point name="mano" x="0.659292" y="0.351682" />
                     </frame>
                     <frame duration="1" hotspotX="0.5" hotspotY="0.501529">
                         <image-point name="Imagepoint 1" x="0.721239" y="0.0795107" />
+                        <image-point name="mano" x="0.659292" y="0.348624" />
                     </frame>
                     <frame duration="1" hotspotX="0.5" hotspotY="0.501529">
                         <image-point name="Imagepoint 1" x="0.721239" y="0.0611621" />
+                        <image-point name="mano" x="0.477876" y="0.602446" />
                     </frame>
                     <frame duration="1" hotspotX="0.5" hotspotY="0.501529">
                         <image-point name="Imagepoint 1" x="0.730088" y="0.0703364" />
+                        <image-point name="mano" x="0.367257" y="0.590214" />
                     </frame>
                     <frame duration="1" hotspotX="0.5" hotspotY="0.501529">
                         <image-point name="Imagepoint 1" x="0.721239" y="0.0642202" />
+                        <image-point name="mano" x="0.261062" y="0.587156" />
                     </frame>
                 </animation>
                 <animation framecount="4" loop="0" name="jump" pingpong="0" repeatcount="1" repeatto="0" sid="2481123833039584" speed="10">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.501393">
                         <image-point name="Imagepoint 1" x="0.619318" y="0.142061" />
+                        <image-point name="mano" x="0.107955" y="0.651811" />
                         <collision-poly>
                             <point x="0" y="0" />
                             <point x="0.988636" y="0" />
@@ -319,12 +339,15 @@
                     </frame>
                     <frame duration="1" hotspotX="0.5" hotspotY="0.501393">
                         <image-point name="Imagepoint 1" x="0.801136" y="0.111421" />
+                        <image-point name="mano" x="0.255682" y="0.635098" />
                     </frame>
                     <frame duration="1" hotspotX="0.5" hotspotY="0.501393">
                         <image-point name="Imagepoint 1" x="0.75" y="0.0306407" />
+                        <image-point name="mano" x="0.403409" y="0.62117" />
                     </frame>
                     <frame duration="1" hotspotX="0.5" hotspotY="0.501393">
                         <image-point name="Imagepoint 1" x="0.738636" y="0.0334262" />
+                        <image-point name="mano" x="0.357955" y="0.5961" />
                         <collision-poly>
                             <point x="0.00568182" y="0.00278552" />
                             <point x="1" y="0" />
@@ -336,9 +359,11 @@
                 <animation framecount="4" loop="0" name="fall" pingpong="0" repeatcount="1" repeatto="0" sid="6483894638293356" speed="4">
                     <frame duration="1" hotspotX="0.504" hotspotY="0.501416">
                         <image-point name="Imagepoint 1" x="0.72" y="0.0623229" />
+                        <image-point name="mano" x="0.304" y="0.569405" />
                     </frame>
                     <frame duration="1" hotspotX="0.504" hotspotY="0.501416">
                         <image-point name="Imagepoint 1" x="0.72" y="0.0623229" />
+                        <image-point name="mano" x="0.296" y="0.569405" />
                         <collision-poly>
                             <point x="0" y="0" />
                             <point x="1" y="0" />
@@ -348,6 +373,7 @@
                     </frame>
                     <frame duration="1" hotspotX="0.504" hotspotY="0.501416">
                         <image-point name="Imagepoint 1" x="0.72" y="0.0623229" />
+                        <image-point name="mano" x="0.264" y="0.569405" />
                         <collision-poly>
                             <point x="0" y="0" />
                             <point x="1" y="0" />
@@ -357,11 +383,13 @@
                     </frame>
                     <frame duration="1" hotspotX="0.504348" hotspotY="0.5">
                         <image-point name="Imagepoint 1" x="0.678261" y="0.0371429" />
+                        <image-point name="mano" x="0.391304" y="0.64" />
                     </frame>
                 </animation>
                 <animation framecount="1" loop="0" name="stand" pingpong="0" repeatcount="1" repeatto="0" sid="7815259605343916" speed="5">
                     <frame duration="1" hotspotX="0.504348" hotspotY="0.5">
                         <image-point name="Imagepoint 1" x="0.695652" y="0.0371429" />
+                        <image-point name="mano" x="0.391304" y="0.634286" />
                         <collision-poly>
                             <point x="0.573913" y="0.188571" />
                             <point x="0.495652" y="0.0142857" />
@@ -377,6 +405,7 @@
                 <animation framecount="1" loop="0" name="basquetStand" pingpong="0" repeatcount="1" repeatto="0" sid="6790288278335814" speed="5">
                     <frame duration="1" hotspotX="0.502222" hotspotY="0.5">
                         <image-point name="Imagepoint 1" x="0.671111" y="0.0591133" />
+                        <image-point name="mano" x="0.542222" y="0.684729" />
                         <collision-poly>
                             <point x="1" y="0" />
                             <point x="0.982222" y="1" />
@@ -387,7 +416,12 @@
                 </animation>
                 <animation framecount="19" loop="0" name="basquetRun" pingpong="0" repeatcount="1" repeatto="0" sid="8351713824812897" speed="24">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.501377">
+                        <image-point name="Imagepoint 1" x="0.640496" y="0.0826446" />
+                        <image-point name="mano" x="0.619835" y="0.325069" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.501377">
                         <image-point name="Imagepoint 1" x="0.68595" y="0.0440771" />
+                        <image-point name="mano" x="0.22314" y="0.600551" />
                         <collision-poly>
                             <point x="0" y="0" />
                             <point x="1" y="0" />
@@ -397,89 +431,113 @@
                     </frame>
                     <frame duration="1" hotspotX="0.5" hotspotY="0.501377">
                         <image-point name="Imagepoint 1" x="0.677686" y="0.0716253" />
-                    </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.501377">
-                        <image-point name="Imagepoint 1" x="0.669421" y="0.0716253" />
-                    </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.501377">
-                        <image-point name="Imagepoint 1" x="0.652893" y="0.0661157" />
-                    </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.501377">
-                        <image-point name="Imagepoint 1" x="0.640496" y="0.0606061" />
-                    </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.501377">
-                        <image-point name="Imagepoint 1" x="0.607438" y="0.0716253" />
-                    </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.501377">
-                        <image-point name="Imagepoint 1" x="0.661157" y="0.0743802" />
-                    </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.501377">
-                        <image-point name="Imagepoint 1" x="0.640496" y="0.0826446" />
-                    </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.501377">
-                        <image-point name="Imagepoint 1" x="0.652893" y="0.0881543" />
-                    </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.501377">
-                        <image-point name="Imagepoint 1" x="0.632231" y="0.0826446" />
-                    </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.501377">
-                        <image-point name="Imagepoint 1" x="0.677686" y="0.0826446" />
-                    </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.501377">
-                        <image-point name="Imagepoint 1" x="0.665289" y="0.0688705" />
-                    </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.501377">
-                        <image-point name="Imagepoint 1" x="0.652893" y="0.0633609" />
-                    </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.501377">
-                        <image-point name="Imagepoint 1" x="0.628099" y="0.0716253" />
-                    </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.501377">
-                        <image-point name="Imagepoint 1" x="0.640496" y="0.0743802" />
-                    </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.501377">
-                        <image-point name="Imagepoint 1" x="0.644628" y="0.0661157" />
+                        <image-point name="mano" x="0.326446" y="0.647383" />
                     </frame>
                     <frame duration="1" hotspotX="0.5" hotspotY="0.501377">
                         <image-point name="Imagepoint 1" x="0.640496" y="0.0550964" />
+                        <image-point name="mano" x="0.446281" y="0.650138" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.501377">
+                        <image-point name="Imagepoint 1" x="0.669421" y="0.0716253" />
+                        <image-point name="mano" x="0.471074" y="0.62259" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.501377">
+                        <image-point name="Imagepoint 1" x="0.652893" y="0.0661157" />
+                        <image-point name="mano" x="0.557851" y="0.553719" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.501377">
+                        <image-point name="Imagepoint 1" x="0.640496" y="0.0606061" />
+                        <image-point name="mano" x="0.570248" y="0.435262" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.501377">
+                        <image-point name="Imagepoint 1" x="0.607438" y="0.0716253" />
+                        <image-point name="mano" x="0.595041" y="0.380165" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.501377">
+                        <image-point name="Imagepoint 1" x="0.661157" y="0.0743802" />
+                        <image-point name="mano" x="0.619835" y="0.352617" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.501377">
+                        <image-point name="Imagepoint 1" x="0.652893" y="0.0881543" />
+                        <image-point name="mano" x="0.644628" y="0.333333" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.501377">
+                        <image-point name="Imagepoint 1" x="0.632231" y="0.0826446" />
+                        <image-point name="mano" x="0.669421" y="0.300275" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.501377">
+                        <image-point name="Imagepoint 1" x="0.677686" y="0.0826446" />
+                        <image-point name="mano" x="0.665289" y="0.352617" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.501377">
+                        <image-point name="Imagepoint 1" x="0.665289" y="0.0688705" />
+                        <image-point name="mano" x="0.636364" y="0.360882" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.501377">
+                        <image-point name="Imagepoint 1" x="0.652893" y="0.0633609" />
+                        <image-point name="mano" x="0.640496" y="0.38292" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.501377">
+                        <image-point name="Imagepoint 1" x="0.628099" y="0.0716253" />
+                        <image-point name="mano" x="0.623967" y="0.399449" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.501377">
+                        <image-point name="Imagepoint 1" x="0.640496" y="0.0743802" />
+                        <image-point name="mano" x="0.61157" y="0.413223" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.501377">
+                        <image-point name="Imagepoint 1" x="0.644628" y="0.0661157" />
+                        <image-point name="mano" x="0.628099" y="0.424242" />
                     </frame>
                     <frame duration="1" hotspotX="0.5" hotspotY="0.501377">
                         <image-point name="Imagepoint 1" x="0.64876" y="0.0578512" />
+                        <image-point name="mano" x="0.318182" y="0.636364" />
                     </frame>
                     <frame duration="1" hotspotX="0.5" hotspotY="0.501377">
                         <image-point name="Imagepoint 1" x="0.632231" y="0.0688705" />
+                        <image-point name="mano" x="0.235537" y="0.630854" />
                     </frame>
                 </animation>
                 <animation framecount="4" loop="0" name="basquetJump" pingpong="0" repeatcount="1" repeatto="0" sid="6817749176253762" speed="5">
                     <frame duration="1" hotspotX="0.502164" hotspotY="0.5">
-                        <image-point name="Imagepoint 1" x="0.692641" y="0.0497512" />
-                    </frame>
-                    <frame duration="1" hotspotX="0.502164" hotspotY="0.5">
-                        <image-point name="Imagepoint 1" x="0.679654" y="0.104478" />
-                    </frame>
-                    <frame duration="1" hotspotX="0.502164" hotspotY="0.5">
-                        <image-point name="Imagepoint 1" x="0.688312" y="0.0820896" />
+                        <image-point name="Imagepoint 1" x="0.666667" y="0.106965" />
+                        <image-point name="mano" x="0.428571" y="0.664179" />
                     </frame>
                     <frame duration="1" hotspotX="0.502164" hotspotY="0.5">
                         <image-point name="Imagepoint 1" x="0.692641" y="0.0497512" />
+                        <image-point name="mano" x="0.212121" y="0.676617" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.502164" hotspotY="0.5">
+                        <image-point name="Imagepoint 1" x="0.688312" y="0.119403" />
+                        <image-point name="mano" x="0.320346" y="0.661692" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.502164" hotspotY="0.5">
+                        <image-point name="Imagepoint 1" x="0.692641" y="0.0572139" />
+                        <image-point name="mano" x="0.385281" y="0.631841" />
                     </frame>
                 </animation>
                 <animation framecount="4" loop="0" name="basquetFall" pingpong="0" repeatcount="1" repeatto="0" sid="5176299884730476" speed="5">
                     <frame duration="1" hotspotX="0.502222" hotspotY="0.5">
                         <image-point name="Imagepoint 1" x="0.688889" y="0.0531915" />
+                        <image-point name="mano" x="0.493333" y="0.625" />
                     </frame>
                     <frame duration="1" hotspotX="0.502222" hotspotY="0.5">
-                        <image-point name="Imagepoint 1" x="0.688889" y="0.0531915" />
+                        <image-point name="Imagepoint 1" x="0.506667" y="0.601064" />
+                        <image-point name="mano" x="0.493333" y="0.625" />
                     </frame>
                     <frame duration="1" hotspotX="0.502222" hotspotY="0.5">
-                        <image-point name="Imagepoint 1" x="0.688889" y="0.0531915" />
+                        <image-point name="Imagepoint 1" x="0.48" y="0.625" />
+                        <image-point name="mano" x="0.493333" y="0.625" />
                     </frame>
                     <frame duration="1" hotspotX="0.502222" hotspotY="0.5">
                         <image-point name="Imagepoint 1" x="0.688889" y="0.0541872" />
+                        <image-point name="mano" x="0.555556" y="0.70197" />
                     </frame>
                 </animation>
                 <animation framecount="1" loop="1" name="exploted" pingpong="0" repeatcount="1" repeatto="0" sid="319931290998288" speed="5">
                     <frame duration="1" hotspotX="0.504348" hotspotY="0.5">
+                        <image-point name="Imagepoint 1" x="0.652174" y="0.0142857" />
+                        <image-point name="mano" x="0.408696" y="0.637143" />
                         <collision-poly>
                             <point x="0.573913" y="0.188571" />
                             <point x="0.495652" y="0.0142857" />
@@ -1176,7 +1234,7 @@
         <object-type name="Coin" sid="7730829399353682">
             <plugin id="Sprite" />
             <animation-folder expanded="1">
-                <animation framecount="10" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9053288076998083" speed="12">
+                <animation framecount="10" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9053288076998083" speed="18">
                     <frame duration="1" hotspotX="0.509804" hotspotY="0.988166">
                         <collision-poly>
                             <point x="0.490196" y="0.704142" />
