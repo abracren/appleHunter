@@ -64,7 +64,7 @@
                             <param id="0" name="Variable">breakpoint</param>
                             <param id="1" name="Value">breakPointStick.X</param>
                         </action>
-                        <action behavior="Pin" id="0" name="Pin to object" sid="5756572129519629" type="Sprite20">
+                        <action behavior="Pin" disabled="1" id="0" name="Pin to object" sid="5756572129519629" type="Sprite20">
                             <param id="0" name="Pin to">stick1</param>
                             <param id="1" name="Mode">0</param>
                         </action>
@@ -75,6 +75,25 @@
                         <action id="2" name="Stop" sid="392595158320626" type="saltasalta" />
                         <action id="-9" name="Destroy" sid="4058050570408101" type="bird" />
                         <action id="-9" name="Destroy" sid="5868720668581227" type="fox" />
+                        <action behavior="Physics" id="23" name="Enable/disable collisions" sid="2876564869691781" type="stick1">
+                            <param id="0" name="Object">breakPointStick</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action behavior="Physics" id="23" name="Enable/disable collisions" sid="5769285518164119" type="stick1">
+                            <param id="0" name="Object">tobogan</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action behavior="Physics" id="23" name="Enable/disable collisions" sid="9682455766529516" type="player">
+                            <param id="0" name="Object">fox</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action behavior="Physics" disabled="1" id="13" name="Set stepping mode" sid="2067224880853356" type="apple">
+                            <param id="0" name="Mode">0</param>
+                        </action>
+                        <action behavior="Physics" disabled="1" id="14" name="Set stepping iterations" sid="4622179153207408" type="apple">
+                            <param id="0" name="Velocity iterations">3</param>
+                            <param id="1" name="Position iterations">3</param>
+                        </action>
                     </actions>
                 </event-block>
             </sub-events>
@@ -266,10 +285,10 @@
                             <param id="3" name="Y">288</param>
                         </action>
                         <action id="-5" name="Set width" sid="1774519219602016" type="stick1">
-                            <param id="0" name="Width">181</param>
+                            <param id="0" name="Width">251.389</param>
                         </action>
                         <action id="-6" name="Set height" sid="9287702047800386" type="stick1">
-                            <param id="0" name="Height">24</param>
+                            <param id="0" name="Height">56</param>
                         </action>
                         <action behavior="Physics" id="11" name="Create revolute joint" sid="1651317903542534" type="pin">
                             <param id="0" name="This image point">0</param>
@@ -287,9 +306,20 @@
                             <param id="0" name="Object">stick1</param>
                             <param id="1" name="State">0</param>
                         </action>
-                        <action behavior="Pin" id="0" name="Pin to object" sid="7555641236015734" type="Sprite20">
+                        <action behavior="Pin" disabled="1" id="0" name="Pin to object" sid="7555641236015734" type="Sprite20">
                             <param id="0" name="Pin to">stick1</param>
                             <param id="1" name="Mode">0</param>
+                        </action>
+                        <action behavior="Physics" id="23" name="Enable/disable collisions" sid="2591710921998632" type="stick1">
+                            <param id="0" name="Object">breakPointStick</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action behavior="Physics" id="23" name="Enable/disable collisions" sid="6357434128253148" type="stick1">
+                            <param id="0" name="Object">tobogan</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="-8" name="Set angle" sid="2682275916373136" type="stick1">
+                            <param id="0" name="Angle">340.201</param>
                         </action>
                     </actions>
                 </event-block>
