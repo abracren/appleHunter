@@ -263,11 +263,7 @@
                     <conditions>
                         <condition id="-1" name="Every tick" sid="5697888928891381" type="System" />
                     </conditions>
-                    <actions>
-                        <action id="0" name="Set text" sid="4468664311142695" type="angleS">
-                            <param id="0" name="Text">&quot;&quot;&amp;stick1.Angle</param>
-                        </action>
-                    </actions>
+                    <actions />
                 </event-block>
                 <event-block sid="6005397708318649">
                     <conditions>
@@ -684,6 +680,31 @@
                                     <param id="2" name="X">player.ImagePointX(1)</param>
                                     <param id="3" name="Y">player.ImagePointY(1)</param>
                                 </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="2357567532241974">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="6774632993264102" type="apple">
+                                    <param id="0" name="Instance variable">bomb</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="588372853077967" type="System">
+                                    <param id="0" name="Object to create">Coin</param>
+                                    <param id="1" name="Layer">0</param>
+                                    <param id="2" name="X">player.ImagePointX(1)</param>
+                                    <param id="3" name="Y">player.ImagePointY(1)</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="7795636192158718" type="Coin">
+                                    <param id="0" name="Animation">&quot;default&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="4704783818177957" type="System">
+                                    <param id="0" name="Seconds">5</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="8590726877298704" type="Coin" />
                             </actions>
                         </event-block>
                         <event-block sid="2985968363469534">
@@ -1273,11 +1294,7 @@
                     <conditions>
                         <condition id="-1" name="Every tick" sid="9568888627964662" type="System" />
                     </conditions>
-                    <actions>
-                        <action id="0" name="Set text" sid="3515243962339895" type="birCountt">
-                            <param id="0" name="Text">&quot;&quot;&amp;birdCount</param>
-                        </action>
-                    </actions>
+                    <actions />
                 </event-block>
             </sub-events>
         </event-group>
@@ -1834,12 +1851,6 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-3" name="Create object" sid="6550476434440629" type="System">
-                                    <param id="0" name="Object to create">apple</param>
-                                    <param id="1" name="Layer">0</param>
-                                    <param id="2" name="X">tresapplesTrigger.X</param>
-                                    <param id="3" name="Y">tresapplesTrigger.Y</param>
-                                </action>
                                 <action behavior="Physics" id="2" name="Apply force at angle" sid="4183558433373073" type="apple">
                                     <param id="0" name="Force">150</param>
                                     <param id="1" name="Angle">random(280,300)</param>
@@ -1976,9 +1987,6 @@
                         <condition id="-1" name="Every tick" sid="2011241912587112" type="System" />
                     </conditions>
                     <actions>
-                        <action id="0" name="Set text" sid="1367962269365279" type="jumpRan">
-                            <param id="0" name="Text">&quot;&quot;&amp;jumpRan</param>
-                        </action>
                         <action id="0" name="Set text" sid="1971951837117403" type="forceRan">
                             <param id="0" name="Text">&quot;&quot;&amp;forceRan</param>
                         </action>
@@ -2361,9 +2369,6 @@
                                 <action id="-10" name="Add to" sid="6657650687438104" type="System">
                                     <param id="0" name="Variable">TotalTime</param>
                                     <param id="1" name="Value">Seconds</param>
-                                </action>
-                                <action id="0" name="Set text" sid="9420270248050322" type="Timebox">
-                                    <param id="0" name="Text">TotalTime</param>
                                 </action>
                                 <action id="0" name="Set text" sid="4403436345979502" type="clockk">
                                     <param id="0" name="Text">&quot;&quot;&amp;TotalTime</param>
