@@ -19,13 +19,13 @@
         <plugin author="Scirra" id="TextBox" version="1">Text box</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
         <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
+        <plugin author="Scirra" id="Facebook" version="1">Facebook</plugin>
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
         <behavior author="Scirra" id="Physics" version="1">Physics</behavior>
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
         <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
-        <behavior author="Scirra" id="destroy" version="1">Destroy outside layout</behavior>
         <behavior author="Scirra" id="jumpthru" version="1">Jump-thru</behavior>
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
@@ -104,7 +104,7 @@
                 </behavior-type>
             </behaviors>
             <animation-folder expanded="1">
-                <animation framecount="3" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3895293270556765" speed="5">
+                <animation framecount="4" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3895293270556765" speed="5">
                     <frame duration="1" hotspotX="0.508" hotspotY="0.524">
                         <collision-poly>
                             <point x="0.284" y="0.284" />
@@ -137,6 +137,17 @@
                             <point x="0.5" y="0.9375" />
                             <point x="0.148438" y="0.851563" />
                             <point x="0.0273438" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.508" hotspotY="0.524">
+                        <collision-poly>
+                            <point x="0.284" y="0.284" />
+                            <point x="0.74" y="0.26" />
+                            <point x="0.884" y="0.5" />
+                            <point x="0.816" y="0.816" />
+                            <point x="0.5" y="0.976" />
+                            <point x="0.156" y="0.844" />
+                            <point x="0.092" y="0.5" />
                         </collision-poly>
                     </frame>
                 </animation>
@@ -625,22 +636,6 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="BigBasquetTrigger" sid="9415360933210852">
-            <plugin id="Sprite" />
-            <behaviors>
-                <behavior-type name="Platform" sid="1152142714097672">
-                    <behavior id="Platform" />
-                </behavior-type>
-                <behavior-type name="DestroyOutsideLayout" sid="9355511106247455">
-                    <behavior id="destroy" />
-                </behavior-type>
-            </behaviors>
-            <animation-folder expanded="1">
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9648827153663076" speed="5">
-                    <frame duration="1" hotspotX="0.478528" hotspotY="0.454545" />
-                </animation>
-            </animation-folder>
-        </object-type>
         <object-type name="tobogan" sid="6194661745722337">
             <plugin id="Sprite" />
             <behaviors>
@@ -850,14 +845,6 @@
                             <point x="0.0133333" y="0.382609" />
                         </collision-poly>
                     </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="Sprite16" sid="2826808299540258">
-            <plugin id="Sprite" />
-            <animation-folder expanded="1">
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6165663667959536" speed="5">
-                    <frame duration="1" hotspotX="0.501299" hotspotY="0.5" />
                 </animation>
             </animation-folder>
         </object-type>
@@ -1224,6 +1211,111 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="Facebook" sid="8960840438689823">
+            <plugin id="Facebook" />
+        </object-type>
+        <object-type name="start2" sid="3664019996366862">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1122527397846037" speed="5">
+                    <frame duration="1" hotspotX="0.503937" hotspotY="0.52381">
+                        <collision-poly>
+                            <point x="0.00787402" y="0.047619" />
+                            <point x="1" y="0" />
+                            <point x="0.984252" y="0.47619" />
+                            <point x="1" y="1" />
+                            <point x="0.00787402" y="0.952381" />
+                            <point x="0.023622" y="0.47619" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="start3" sid="1125645031719633">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8688165835362472" speed="5">
+                    <frame duration="1" hotspotX="0.503937" hotspotY="0.52381">
+                        <collision-poly>
+                            <point x="0.00787402" y="0.047619" />
+                            <point x="1" y="0" />
+                            <point x="0.984252" y="0.47619" />
+                            <point x="1" y="1" />
+                            <point x="0.00787402" y="0.952381" />
+                            <point x="0.023622" y="0.47619" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="AppleSended" sid="4518329934132823">
+            <plugin id="Spritefont2" />
+            <texture />
+        </object-type>
+        <object-type name="AppleRecived" sid="2727215739840179">
+            <plugin id="Spritefont2" />
+            <texture />
+        </object-type>
+        <object-type name="Sprite3" sid="4974285737401186">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8958514916897589" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.284" y="0.284" />
+                            <point x="0.74" y="0.26" />
+                            <point x="0.884" y="0.5" />
+                            <point x="0.816" y="0.816" />
+                            <point x="0.5" y="0.976" />
+                            <point x="0.156" y="0.844" />
+                            <point x="0.092" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Coin2" sid="1937239559612722">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="10" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4798283763698087" speed="18">
+                    <frame duration="1" hotspotX="0.509804" hotspotY="0.988166">
+                        <collision-poly>
+                            <point x="0.490196" y="0.704142" />
+                            <point x="0.862745" y="0.95858" />
+                            <point x="0.490196" y="1" />
+                            <point x="0.137255" y="0.95858" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.509804" hotspotY="0.988166" />
+                    <frame duration="1" hotspotX="0.509804" hotspotY="0.988166" />
+                    <frame duration="1" hotspotX="0.509804" hotspotY="0.988166" />
+                    <frame duration="1" hotspotX="0.509804" hotspotY="0.988166" />
+                    <frame duration="1" hotspotX="0.509804" hotspotY="0.988166" />
+                    <frame duration="1" hotspotX="0.509804" hotspotY="0.988166" />
+                    <frame duration="1" hotspotX="0.509804" hotspotY="0.988166" />
+                    <frame duration="1" hotspotX="0.509804" hotspotY="0.988166">
+                        <collision-poly>
+                            <point x="0.490196" y="0.704142" />
+                            <point x="0.862745" y="0.95858" />
+                            <point x="0.490196" y="1" />
+                            <point x="0.137255" y="0.95858" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.509804" hotspotY="0.988166">
+                        <collision-poly>
+                            <point x="0.490196" y="0.704142" />
+                            <point x="0.862745" y="0.95858" />
+                            <point x="0.490196" y="1" />
+                            <point x="0.137255" y="0.95858" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="highscore" sid="7536287470641201">
+            <plugin id="Spritefont2" />
+            <texture />
+        </object-type>
     </object-folder>
     <families />
     <layout-folder expanded="1">
@@ -1248,6 +1340,12 @@
                 <physics-engine>Standard web-based</physics-engine>
                 <store-mode>Managed</store-mode>
                 <store-sandbox>Enabled</store-sandbox>
+            </properties>
+        </global-instance>
+        <global-instance type="Facebook" uid="39">
+            <properties>
+                <app-id></app-id>
+                <app-secret></app-secret>
             </properties>
         </global-instance>
     </global-instances>
