@@ -26,9 +26,11 @@
         <variable constant="0" name="highscore" sid="6726946695475454" static="0" type="number">0</variable>
         <variable constant="0" name="breakpoint" sid="6245862550025879" static="0" type="number">200</variable>
         <variable constant="0" name="TotalTime" sid="7103189245258967" static="0" type="text"></variable>
-        <variable constant="0" name="timerTemp" sid="8865185134923239" static="0" type="number">45</variable>
-        <variable constant="0" name="timerAdd" sid="4292575909077445" static="0" type="number">45</variable>
+        <variable constant="0" name="timerTemp" sid="8865185134923239" static="0" type="number">10</variable>
+        <variable constant="0" name="timerAdd" sid="4292575909077445" static="0" type="number">10</variable>
         <variable constant="0" name="appleToCatch" sid="2335959835660676" static="0" type="number">5</variable>
+        <variable constant="0" name="menuSlide" sid="9963719958668556" static="0" type="number">0</variable>
+        <variable constant="0" name="menuToggle" sid="7486974041151051" static="0" type="number">1</variable>
         <variable constant="0" name="CurrentTime" sid="9214060383100296" static="0" type="number">0</variable>
         <comment>Level Variables</comment>
         <variable constant="0" name="Mode" sid="7362545164385401" static="0" type="number">1</variable>
@@ -38,7 +40,7 @@
         <variable constant="0" name="apSended" sid="9068944063771235" static="0" type="number">0</variable>
         <comment>---deprecated---</comment>
         <variable constant="0" name="colide" sid="5847483074379277" static="0" type="number">0</variable>
-        <event-group collapsed="1" description="" sid="2116889551096455" title="Start">
+        <event-group description="" sid="2116889551096455" title="Start">
             <sub-events>
                 <event-block sid="2799303908366137">
                     <conditions>
@@ -821,8 +823,47 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="3464215456308079" title="controles">
+        <event-group description="" sid="3464215456308079" title="controles">
             <sub-events>
+                <event-block sid="4719329887712782">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="4543875320510613" type="Keyboard">
+                            <param id="0" name="Key">65 (A)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="4659069583817436" type="System">
+                            <param id="0" name="Variable">menuToggle</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="9221123467420775">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="6514199074260563" type="Keyboard">
+                            <param id="0" name="Key">83 (S)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="7960712781056766" type="System">
+                            <param id="0" name="Variable">menuToggle</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="4738487465078986">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="615328502911731" type="Keyboard">
+                            <param id="0" name="Key">49 (1)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="8449963710738181" type="System">
+                            <param id="0" name="Variable">level</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
                 <event-block sid="6961489080426855">
                     <conditions>
                         <condition id="0" name="On key pressed" sid="8674249101535769" type="Keyboard">
@@ -1380,7 +1421,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="919597695147619" title="Stone">
+        <event-group collapsed="1" description="" sid="919597695147619" title="Stone">
             <sub-events>
                 <event-block sid="3215225023624483">
                     <conditions>
@@ -1405,6 +1446,10 @@
                                     <param id="1" name="Layer">0</param>
                                     <param id="2" name="X">random(600,960)</param>
                                     <param id="3" name="Y">330</param>
+                                </action>
+                                <action id="-29" name="Move to object" sid="25708806835033" type="stone">
+                                    <param id="0" name="Where">0</param>
+                                    <param id="1" name="Object">Sprite17</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -2336,6 +2381,11 @@
                                     <param id="1" name="Parallax X">0</param>
                                     <param id="2" name="Parallax Y">0</param>
                                 </action>
+                                <action id="-33" name="Set layer parallax" sid="3355729968056554" type="System">
+                                    <param id="0" name="Layer">4</param>
+                                    <param id="1" name="Parallax X">0</param>
+                                    <param id="2" name="Parallax Y">0</param>
+                                </action>
                             </actions>
                         </event-block>
                     </sub-events>
@@ -2395,6 +2445,11 @@
                                 </action>
                                 <action id="-33" name="Set layer parallax" sid="222402357923234" type="System">
                                     <param id="0" name="Layer">3</param>
+                                    <param id="1" name="Parallax X">0</param>
+                                    <param id="2" name="Parallax Y">0</param>
+                                </action>
+                                <action id="-33" name="Set layer parallax" sid="7087428270859349" type="System">
+                                    <param id="0" name="Layer">4</param>
                                     <param id="1" name="Parallax X">0</param>
                                     <param id="2" name="Parallax Y">0</param>
                                 </action>
@@ -2584,6 +2639,106 @@
                         </event-block>
                     </sub-events>
                 </event-block>
+                <event-block sid="1826408790660355">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="3977622507107599" type="System">
+                            <param id="0" name="Variable">menuToggle</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="9391225701647612">
+                            <conditions>
+                                <condition id="-6" name="Every X seconds" sid="8375681136985474" type="System">
+                                    <param id="0" name="Interval (seconds)">0.01</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="6021557585209926" type="System">
+                                    <param id="0" name="Variable">menuSlide</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-11" name="Subtract from" sid="8661713831423368" type="System">
+                                    <param id="0" name="Variable">menuSlide</param>
+                                    <param id="1" name="Value">20</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="2893511777480666">
+                            <conditions>
+                                <condition id="-1" name="Every tick" sid="160726684488953" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-33" name="Set layer parallax" sid="7529521497978312" type="System">
+                                    <param id="0" name="Layer">4</param>
+                                    <param id="1" name="Parallax X">0</param>
+                                    <param id="2" name="Parallax Y">menuSlide</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="4971438231145511">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="2140278381523992" type="System">
+                                    <param id="0" name="Variable">menuSlide</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-33" name="Set layer parallax" sid="8395321334192825" type="System">
+                                    <param id="0" name="Layer">4</param>
+                                    <param id="1" name="Parallax X">0</param>
+                                    <param id="2" name="Parallax Y">menuSlide</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="1801248189044477">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="4270283060831287" type="System">
+                            <param id="0" name="Variable">menuToggle</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="2677016231272081">
+                            <conditions>
+                                <condition id="-6" name="Every X seconds" sid="4920918135693096" type="System">
+                                    <param id="0" name="Interval (seconds)">0.01</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="7743308179150353" type="System">
+                                    <param id="0" name="Variable">menuSlide</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">1000</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Add to" sid="5289390386483456" type="System">
+                                    <param id="0" name="Variable">menuSlide</param>
+                                    <param id="1" name="Value">20</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="3066389854892708">
+                            <conditions>
+                                <condition id="-1" name="Every tick" sid="4184012907187078" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-33" name="Set layer parallax" sid="7470067529533107" type="System">
+                                    <param id="0" name="Layer">4</param>
+                                    <param id="1" name="Parallax X">0</param>
+                                    <param id="2" name="Parallax Y">menuSlide</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
             </sub-events>
         </event-group>
         <event-group collapsed="1" description="" sid="1209103964592662" title="Destroy outside Screen">
@@ -2627,7 +2782,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="8745653065298061" title="Levels">
+        <event-group collapsed="1" description="" sid="8745653065298061" title="Levels">
             <sub-events>
                 <event-block sid="624859850481244">
                     <conditions>
@@ -2642,7 +2797,7 @@
                         <event-block sid="8526409750459336">
                             <conditions>
                                 <condition id="-2" name="On start of layout" sid="7190990186736531" type="System" />
-                                <condition id="-14" name="Compare variable" sid="6877811692958015" type="System">
+                                <condition disabled="1" id="-14" name="Compare variable" sid="6877811692958015" type="System">
                                     <param id="0" name="Variable">level</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">1</param>
@@ -2657,7 +2812,7 @@
                                     <param id="0" name="Variable">apRecived</param>
                                     <param id="1" name="Value">0</param>
                                 </action>
-                                <action id="-9" name="Set value" sid="4272365383307983" type="System">
+                                <action disabled="1" id="-9" name="Set value" sid="4272365383307983" type="System">
                                     <param id="0" name="Variable">highscore</param>
                                     <param id="1" name="Value">0</param>
                                 </action>
@@ -2668,6 +2823,10 @@
                                 <action id="0" name="Call function" sid="5229307420677986" type="Function">
                                     <param id="0" name="Name">&quot;createLevel&quot;</param>
                                     <param id="1" name="Parameter {n}">level</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="8875021477059296" type="System">
+                                    <param id="0" name="Variable">appleToCatch</param>
+                                    <param id="1" name="Value">5*level</param>
                                 </action>
                                 <action id="-9" name="Set value" sid="5504708323185075" type="System">
                                     <param id="0" name="Variable">fadeToggle</param>
@@ -2776,9 +2935,9 @@
                                                             <param id="0" name="Variable">level</param>
                                                             <param id="1" name="Value">1</param>
                                                         </action>
-                                                        <action id="-10" name="Add to" sid="6436630605265404" type="System">
+                                                        <action id="-9" name="Set value" sid="6436630605265404" type="System">
                                                             <param id="0" name="Variable">appleToCatch</param>
-                                                            <param id="1" name="Value">5</param>
+                                                            <param id="1" name="Value">5*level</param>
                                                         </action>
                                                         <action id="-9" name="Set value" sid="3833966666404166" type="System">
                                                             <param id="0" name="Variable">HighscoreTemp</param>
@@ -2807,6 +2966,10 @@
                                                         <action disabled="1" id="-9" name="Set value" sid="9873417747273036" type="System">
                                                             <param id="0" name="Variable">highscore</param>
                                                             <param id="1" name="Value">0</param>
+                                                        </action>
+                                                        <action id="0" name="Call function" sid="8408554068741741" type="Function">
+                                                            <param id="0" name="Name">&quot;saveProgress&quot;</param>
+                                                            <param id="1" name="Parameter {n}"></param>
                                                         </action>
                                                         <action id="0" name="Call function" sid="8741333099524688" type="Function">
                                                             <param id="0" name="Name">&quot;createLeyend&quot;</param>
@@ -3207,17 +3370,238 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="6189173560806226">
+                    <conditions>
+                        <condition id="-18" name="On created" sid="399393211738923" type="mainmenuButton" />
+                    </conditions>
+                    <actions>
+                        <action id="11" name="Load" sid="8008351270189033" type="SpriteFontImporter">
+                            <param id="0" name="JSON">&quot;{&quot;&quot;c2array&quot;&quot;:true,&quot;&quot;size&quot;&quot;:[2,12,1],&quot;&quot;data&quot;&quot;:[[[8],[10],[11],[12],[13],[14],[15],[16],[17],[18],[19],[20]],[[&quot;&quot;|&quot;&quot;],[&quot;&quot;l:&apos;°&quot;&quot;],[&quot;&quot;Ii.,&quot;&quot;],[&quot;&quot;1;\&quot;&quot;&quot;&quot;],[&quot;&quot;j&quot;&quot;],[&quot;&quot;!&quot;&quot;],[&quot;&quot;[]`&quot;&quot;],[&quot;&quot;#()&quot;&quot;],[&quot;&quot;f&amp;+&quot;&quot;],[&quot;&quot;KNOShz?-\\=$&quot;&quot;],[&quot;&quot;DEHJLPQRTVXabdgknpqrstuv23579*£&lt;&gt;&quot;&quot;],[&quot;&quot;ABCFGMUWYZcemowxy0468_~/@€%&quot;&quot;]]]}&#x0D;&#x0A;&quot;</param>
+                        </action>
+                        <action id="5" name="Set character width" sid="4679174305708094" type="mainmenuButton">
+                            <param id="0" name="Character">&quot;|&quot;</param>
+                            <param id="1" name="Width">8</param>
+                        </action>
+                        <action id="5" name="Set character width" sid="1590284175591923" type="mainmenuButton">
+                            <param id="0" name="Character">&quot;l:&apos;°&quot;</param>
+                            <param id="1" name="Width">10</param>
+                        </action>
+                        <action id="5" name="Set character width" sid="1842934109526396" type="mainmenuButton">
+                            <param id="0" name="Character">&quot;Ii.,&quot;</param>
+                            <param id="1" name="Width">11</param>
+                        </action>
+                        <action id="5" name="Set character width" sid="7363350420959304" type="mainmenuButton">
+                            <param id="0" name="Character">&quot;1;&quot;&quot;&quot;</param>
+                            <param id="1" name="Width">12</param>
+                        </action>
+                        <action id="5" name="Set character width" sid="6593712385065593" type="mainmenuButton">
+                            <param id="0" name="Character">&quot;j&quot;</param>
+                            <param id="1" name="Width">13</param>
+                        </action>
+                        <action id="5" name="Set character width" sid="7993419308211598" type="mainmenuButton">
+                            <param id="0" name="Character">&quot;!&quot;</param>
+                            <param id="1" name="Width">14</param>
+                        </action>
+                        <action id="5" name="Set character width" sid="347084339675728" type="mainmenuButton">
+                            <param id="0" name="Character">&quot;[]`&quot;</param>
+                            <param id="1" name="Width">15</param>
+                        </action>
+                        <action id="5" name="Set character width" sid="1682932865694352" type="mainmenuButton">
+                            <param id="0" name="Character">&quot;#()&quot;</param>
+                            <param id="1" name="Width">16</param>
+                        </action>
+                        <action id="5" name="Set character width" sid="6006862027211423" type="mainmenuButton">
+                            <param id="0" name="Character">&quot;f&amp;+&quot;</param>
+                            <param id="1" name="Width">17</param>
+                        </action>
+                        <action id="5" name="Set character width" sid="7136400694155747" type="mainmenuButton">
+                            <param id="0" name="Character">&quot;KNOShz?-\=$&quot;</param>
+                            <param id="1" name="Width">18</param>
+                        </action>
+                        <action id="5" name="Set character width" sid="7528514373296781" type="mainmenuButton">
+                            <param id="0" name="Character">&quot;DEHJLPQRTVXabdgknpqrstuv23579*£&lt;&gt;&quot;</param>
+                            <param id="1" name="Width">19</param>
+                        </action>
+                        <action id="5" name="Set character width" sid="7068197359264141" type="mainmenuButton">
+                            <param id="0" name="Character">&quot;ABCFGMUWYZcemowxy0468_~/@€%&quot;</param>
+                            <param id="1" name="Width">20</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="6349568086365598">
+                    <conditions>
+                        <condition id="-18" name="On created" sid="4324980721204337" type="restartButton" />
+                    </conditions>
+                    <actions>
+                        <action id="11" name="Load" sid="6620375564963398" type="SpriteFontImporter">
+                            <param id="0" name="JSON">&quot;{&quot;&quot;c2array&quot;&quot;:true,&quot;&quot;size&quot;&quot;:[2,12,1],&quot;&quot;data&quot;&quot;:[[[8],[10],[11],[12],[13],[14],[15],[16],[17],[18],[19],[20]],[[&quot;&quot;|&quot;&quot;],[&quot;&quot;l:&apos;°&quot;&quot;],[&quot;&quot;Ii.,&quot;&quot;],[&quot;&quot;1;\&quot;&quot;&quot;&quot;],[&quot;&quot;j&quot;&quot;],[&quot;&quot;!&quot;&quot;],[&quot;&quot;[]`&quot;&quot;],[&quot;&quot;#()&quot;&quot;],[&quot;&quot;f&amp;+&quot;&quot;],[&quot;&quot;KNOShz?-\\=$&quot;&quot;],[&quot;&quot;DEHJLPQRTVXabdgknpqrstuv23579*£&lt;&gt;&quot;&quot;],[&quot;&quot;ABCFGMUWYZcemowxy0468_~/@€%&quot;&quot;]]]}&#x0D;&#x0A;&quot;</param>
+                        </action>
+                        <action id="5" name="Set character width" sid="3371759316939241" type="restartButton">
+                            <param id="0" name="Character">&quot;|&quot;</param>
+                            <param id="1" name="Width">8</param>
+                        </action>
+                        <action id="5" name="Set character width" sid="9200309266723351" type="restartButton">
+                            <param id="0" name="Character">&quot;l:&apos;°&quot;</param>
+                            <param id="1" name="Width">10</param>
+                        </action>
+                        <action id="5" name="Set character width" sid="2923018338633819" type="restartButton">
+                            <param id="0" name="Character">&quot;Ii.,&quot;</param>
+                            <param id="1" name="Width">11</param>
+                        </action>
+                        <action id="5" name="Set character width" sid="505117596226174" type="restartButton">
+                            <param id="0" name="Character">&quot;1;&quot;&quot;&quot;</param>
+                            <param id="1" name="Width">12</param>
+                        </action>
+                        <action id="5" name="Set character width" sid="6343461890426744" type="restartButton">
+                            <param id="0" name="Character">&quot;j&quot;</param>
+                            <param id="1" name="Width">13</param>
+                        </action>
+                        <action id="5" name="Set character width" sid="252986331535623" type="restartButton">
+                            <param id="0" name="Character">&quot;!&quot;</param>
+                            <param id="1" name="Width">14</param>
+                        </action>
+                        <action id="5" name="Set character width" sid="7330812039671595" type="restartButton">
+                            <param id="0" name="Character">&quot;[]`&quot;</param>
+                            <param id="1" name="Width">15</param>
+                        </action>
+                        <action id="5" name="Set character width" sid="8955984491405754" type="restartButton">
+                            <param id="0" name="Character">&quot;#()&quot;</param>
+                            <param id="1" name="Width">16</param>
+                        </action>
+                        <action id="5" name="Set character width" sid="3052096474504544" type="restartButton">
+                            <param id="0" name="Character">&quot;f&amp;+&quot;</param>
+                            <param id="1" name="Width">17</param>
+                        </action>
+                        <action id="5" name="Set character width" sid="795830243963144" type="restartButton">
+                            <param id="0" name="Character">&quot;KNOShz?-\=$&quot;</param>
+                            <param id="1" name="Width">18</param>
+                        </action>
+                        <action id="5" name="Set character width" sid="3931090210119925" type="restartButton">
+                            <param id="0" name="Character">&quot;DEHJLPQRTVXabdgknpqrstuv23579*£&lt;&gt;&quot;</param>
+                            <param id="1" name="Width">19</param>
+                        </action>
+                        <action id="5" name="Set character width" sid="1780758286968741" type="restartButton">
+                            <param id="0" name="Character">&quot;ABCFGMUWYZcemowxy0468_~/@€%&quot;</param>
+                            <param id="1" name="Width">20</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="6062003079931976">
+                    <conditions>
+                        <condition id="-18" name="On created" sid="824910605228824" type="opcionButton" />
+                    </conditions>
+                    <actions>
+                        <action id="11" name="Load" sid="9436086853860201" type="SpriteFontImporter">
+                            <param id="0" name="JSON">&quot;{&quot;&quot;c2array&quot;&quot;:true,&quot;&quot;size&quot;&quot;:[2,12,1],&quot;&quot;data&quot;&quot;:[[[8],[10],[11],[12],[13],[14],[15],[16],[17],[18],[19],[20]],[[&quot;&quot;|&quot;&quot;],[&quot;&quot;l:&apos;°&quot;&quot;],[&quot;&quot;Ii.,&quot;&quot;],[&quot;&quot;1;\&quot;&quot;&quot;&quot;],[&quot;&quot;j&quot;&quot;],[&quot;&quot;!&quot;&quot;],[&quot;&quot;[]`&quot;&quot;],[&quot;&quot;#()&quot;&quot;],[&quot;&quot;f&amp;+&quot;&quot;],[&quot;&quot;KNOShz?-\\=$&quot;&quot;],[&quot;&quot;DEHJLPQRTVXabdgknpqrstuv23579*£&lt;&gt;&quot;&quot;],[&quot;&quot;ABCFGMUWYZcemowxy0468_~/@€%&quot;&quot;]]]}&#x0D;&#x0A;&quot;</param>
+                        </action>
+                        <action id="5" name="Set character width" sid="7302961188027491" type="opcionButton">
+                            <param id="0" name="Character">&quot;|&quot;</param>
+                            <param id="1" name="Width">8</param>
+                        </action>
+                        <action id="5" name="Set character width" sid="3805745786037851" type="opcionButton">
+                            <param id="0" name="Character">&quot;l:&apos;°&quot;</param>
+                            <param id="1" name="Width">10</param>
+                        </action>
+                        <action id="5" name="Set character width" sid="6966017108397117" type="opcionButton">
+                            <param id="0" name="Character">&quot;Ii.,&quot;</param>
+                            <param id="1" name="Width">11</param>
+                        </action>
+                        <action id="5" name="Set character width" sid="8766839482314544" type="opcionButton">
+                            <param id="0" name="Character">&quot;1;&quot;&quot;&quot;</param>
+                            <param id="1" name="Width">12</param>
+                        </action>
+                        <action id="5" name="Set character width" sid="8262632759481336" type="opcionButton">
+                            <param id="0" name="Character">&quot;j&quot;</param>
+                            <param id="1" name="Width">13</param>
+                        </action>
+                        <action id="5" name="Set character width" sid="7632384348838732" type="opcionButton">
+                            <param id="0" name="Character">&quot;!&quot;</param>
+                            <param id="1" name="Width">14</param>
+                        </action>
+                        <action id="5" name="Set character width" sid="7081782985096267" type="opcionButton">
+                            <param id="0" name="Character">&quot;[]`&quot;</param>
+                            <param id="1" name="Width">15</param>
+                        </action>
+                        <action id="5" name="Set character width" sid="6282726412626106" type="opcionButton">
+                            <param id="0" name="Character">&quot;#()&quot;</param>
+                            <param id="1" name="Width">16</param>
+                        </action>
+                        <action id="5" name="Set character width" sid="1704877956409528" type="opcionButton">
+                            <param id="0" name="Character">&quot;f&amp;+&quot;</param>
+                            <param id="1" name="Width">17</param>
+                        </action>
+                        <action id="5" name="Set character width" sid="9124539815190729" type="opcionButton">
+                            <param id="0" name="Character">&quot;KNOShz?-\=$&quot;</param>
+                            <param id="1" name="Width">18</param>
+                        </action>
+                        <action id="5" name="Set character width" sid="5132743902060128" type="opcionButton">
+                            <param id="0" name="Character">&quot;DEHJLPQRTVXabdgknpqrstuv23579*£&lt;&gt;&quot;</param>
+                            <param id="1" name="Width">19</param>
+                        </action>
+                        <action id="5" name="Set character width" sid="7679387140966356" type="opcionButton">
+                            <param id="0" name="Character">&quot;ABCFGMUWYZcemowxy0468_~/@€%&quot;</param>
+                            <param id="1" name="Width">20</param>
+                        </action>
+                    </actions>
+                </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="2312432058937612" title="Storage">
+        <event-group collapsed="1" description="" sid="2312432058937612" title="Storage">
             <sub-events>
-                <event-block sid="5340873386786295">
-                    <conditions />
+                <event-block collapsed="1" sid="5340873386786295">
+                    <conditions>
+                        <condition id="0" name="On function" sid="5910731443915535" type="Function">
+                            <param id="0" name="Name">&quot;saveProgress&quot;</param>
+                        </condition>
+                    </conditions>
                     <actions />
                     <sub-events>
                         <event-block sid="6743896732014746">
                             <conditions />
-                            <actions />
+                            <actions>
+                                <action id="0" name="Set local value" sid="231043571011977" type="WebStorage">
+                                    <param id="0" name="Key">&quot;highscore&quot;</param>
+                                    <param id="1" name="Value">highscore</param>
+                                </action>
+                                <action id="0" name="Set local value" sid="8584792113337961" type="WebStorage">
+                                    <param id="0" name="Key">&quot;level&quot;</param>
+                                    <param id="1" name="Value">level</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="2481901009236877">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="3524755940930108" type="System" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="5580382431238527">
+                            <conditions>
+                                <condition id="3" name="Local key exists" sid="5023083697162167" type="WebStorage">
+                                    <param id="0" name="Key">&quot;highscore&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="2867077220569039" type="System">
+                                    <param id="0" name="Variable">highscore</param>
+                                    <param id="1" name="Value">int(WebStorage.LocalValue(&quot;highscore&quot;))</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="2724026804791684">
+                            <conditions>
+                                <condition id="3" name="Local key exists" sid="7395277872438331" type="WebStorage">
+                                    <param id="0" name="Key">&quot;level&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="9279466835424126" type="System">
+                                    <param id="0" name="Variable">level</param>
+                                    <param id="1" name="Value">int(WebStorage.LocalValue(&quot;level&quot;))</param>
+                                </action>
+                            </actions>
                         </event-block>
                     </sub-events>
                 </event-block>

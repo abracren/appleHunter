@@ -1484,6 +1484,22 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="TiledBackground2" sid="776628852323646">
+            <plugin id="TiledBg" />
+            <texture />
+        </object-type>
+        <object-type name="mainmenuButton" sid="8650654907954645">
+            <plugin id="Spritefont2" />
+            <texture />
+        </object-type>
+        <object-type name="restartButton" sid="2297848642789866">
+            <plugin id="Spritefont2" />
+            <texture />
+        </object-type>
+        <object-type name="opcionButton" sid="9810283369350011">
+            <plugin id="Spritefont2" />
+            <texture />
+        </object-type>
     </object-folder>
     <families />
     <layout-folder expanded="1">
