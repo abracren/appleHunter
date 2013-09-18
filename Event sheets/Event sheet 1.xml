@@ -10,6 +10,8 @@
         <variable constant="0" name="bigBasquet" sid="5572258107660725" static="0" type="number">0</variable>
         <variable constant="0" name="AppleSpeed" sid="6055061328537189" static="0" type="number">100</variable>
         <variable constant="0" name="bigBasquetTime" sid="2075747172555441" static="0" type="number">15</variable>
+        <variable constant="0" name="fadeToggle" sid="5980941606097558" static="0" type="number">0</variable>
+        <variable constant="0" name="fading" sid="9196543141547883" static="0" type="number">0</variable>
         <variable constant="0" name="parallax" sid="3949995712694021" static="0" type="number">100</variable>
         <variable constant="0" name="birdCount" sid="9534045019847246" static="0" type="number">0</variable>
         <variable constant="0" name="appleDown" sid="3546952207972658" static="0" type="number">0</variable>
@@ -20,6 +22,7 @@
         <variable constant="0" name="zoom" sid="4361493536635001" static="0" type="number">1.3</variable>
         <variable constant="0" name="highscore" sid="6726946695475454" static="0" type="number">0</variable>
         <variable constant="0" name="breakpoint" sid="6245862550025879" static="0" type="number">200</variable>
+        <variable constant="0" name="TotalTime" sid="7103189245258967" static="0" type="text"></variable>
         <variable constant="0" name="CurrentTime" sid="9214060383100296" static="0" type="number">0</variable>
         <comment>Level Variables</comment>
         <variable constant="0" name="Mode" sid="7362545164385401" static="0" type="number">1</variable>
@@ -335,7 +338,7 @@
                         <action id="2" name="Stop" sid="174378006031896" type="apple" />
                     </actions>
                 </event-block>
-                <event-block sid="1804500159847002">
+                <event-block disabled="1" sid="1804500159847002">
                     <conditions>
                         <condition id="-1" name="Every tick" sid="3120297125033321" type="System" />
                     </conditions>
@@ -800,7 +803,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="3464215456308079" title="controles">
+        <event-group description="" sid="3464215456308079" title="controles">
             <sub-events>
                 <event-block sid="483894788559556">
                     <conditions>
@@ -1320,9 +1323,29 @@
                 </event-block>
                 <event-block sid="3098395409261877">
                     <conditions>
-                        <condition id="-1" name="Every tick" sid="9568888627964662" type="System" />
+                        <condition id="0" name="On key pressed" sid="9568888627964662" type="Keyboard">
+                            <param id="0" name="Key">70 (F)</param>
+                        </condition>
                     </conditions>
-                    <actions />
+                    <actions>
+                        <action id="-9" name="Set value" sid="2385417045586593" type="System">
+                            <param id="0" name="Variable">fadeToggle</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="772671300123195">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="6799291982062737" type="Keyboard">
+                            <param id="0" name="Key">68 (D)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="6580296535493286" type="System">
+                            <param id="0" name="Variable">fadeToggle</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
                 </event-block>
             </sub-events>
         </event-group>
@@ -1505,7 +1528,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="768143005920519" title="Birds">
+        <event-group collapsed="1" description="" sid="768143005920519" title="Birds">
             <sub-events>
                 <event-block sid="955193310390578">
                     <conditions>
@@ -1713,7 +1736,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="8643764412194803" title="Intance Variables Functions">
+        <event-group collapsed="1" description="" sid="8643764412194803" title="Intance Variables Functions">
             <sub-events>
                 <event-block sid="746290564293407">
                     <conditions>
@@ -1987,7 +2010,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="8505434671193494" title="jumper">
+        <event-group collapsed="1" description="" sid="8505434671193494" title="jumper">
             <sub-events>
                 <event-block sid="8668105912367573">
                     <conditions>
@@ -2055,7 +2078,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="858063542078647" title="ZoomNew">
+        <event-group description="" sid="858063542078647" title="ZoomNew">
             <sub-events>
                 <event-block sid="3668955889258466">
                     <conditions>
@@ -2225,6 +2248,11 @@
                                     <param id="1" name="Parallax X">0</param>
                                     <param id="2" name="Parallax Y">0</param>
                                 </action>
+                                <action id="-33" name="Set layer parallax" sid="3667378812377881" type="System">
+                                    <param id="0" name="Layer">2</param>
+                                    <param id="1" name="Parallax X">0</param>
+                                    <param id="2" name="Parallax Y">0</param>
+                                </action>
                             </actions>
                         </event-block>
                     </sub-events>
@@ -2276,6 +2304,93 @@
                                     <param id="0" name="Layer">1</param>
                                     <param id="1" name="Parallax X">0</param>
                                     <param id="2" name="Parallax Y">0</param>
+                                </action>
+                                <action id="-33" name="Set layer parallax" sid="3757936539240256" type="System">
+                                    <param id="0" name="Layer">2</param>
+                                    <param id="1" name="Parallax X">0</param>
+                                    <param id="2" name="Parallax Y">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="5588499286437">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="7319496168088822" type="System">
+                            <param id="0" name="Variable">fadeToggle</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="97209640042574">
+                            <conditions>
+                                <condition id="-6" name="Every X seconds" sid="9125453469965363" type="System">
+                                    <param id="0" name="Interval (seconds)">0.01</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="5295553587611607" type="System">
+                                    <param id="0" name="Variable">fading</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-11" name="Subtract from" sid="1612143598765083" type="System">
+                                    <param id="0" name="Variable">fading</param>
+                                    <param id="1" name="Value">2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="6366211245355531">
+                            <conditions>
+                                <condition id="-1" name="Every tick" sid="7805562273814096" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-18" name="Set layer opacity" sid="5496602815670577" type="System">
+                                    <param id="0" name="Layer">2</param>
+                                    <param id="1" name="Opacity">fading</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="5238713857092865">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="6951022378070875" type="System">
+                            <param id="0" name="Variable">fadeToggle</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="3124644075860124">
+                            <conditions>
+                                <condition id="-6" name="Every X seconds" sid="8003763673942503" type="System">
+                                    <param id="0" name="Interval (seconds)">0.01</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="5256057051116313" type="System">
+                                    <param id="0" name="Variable">fading</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">100</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Add to" sid="6777474339305208" type="System">
+                                    <param id="0" name="Variable">fading</param>
+                                    <param id="1" name="Value">2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="9487137077518926">
+                            <conditions>
+                                <condition id="-1" name="Every tick" sid="4141578406100307" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-18" name="Set layer opacity" sid="8247774441426903" type="System">
+                                    <param id="0" name="Layer">2</param>
+                                    <param id="1" name="Opacity">fading</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -2358,6 +2473,20 @@
                                     <param id="0" name="Variable">highscore</param>
                                     <param id="1" name="Value">0</param>
                                 </action>
+                                <action id="0" name="Set text" sid="7890407392086049" type="leyend">
+                                    <param id="0" name="Text">&quot;Collect 30 apples in 1 minute!&quot;</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="5504708323185075" type="System">
+                                    <param id="0" name="Variable">fadeToggle</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="8245216333414378" type="System">
+                                    <param id="0" name="Seconds">3</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="9400291609077536" type="System">
+                                    <param id="0" name="Variable">fadeToggle</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="1728776849256325">
@@ -2373,16 +2502,63 @@
                                 </action>
                             </actions>
                         </event-block>
+                        <event-block sid="9710902240740779">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="7269305128578675" type="System">
+                                    <param id="0" name="Variable">level</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="9962718727136852">
+                                    <conditions>
+                                        <condition id="-1" name="Every tick" sid="3352656804271389" type="System" />
+                                        <condition id="-14" name="Compare variable" sid="455889823056166" type="System">
+                                            <param id="0" name="Variable">TotalTime</param>
+                                            <param id="1" name="Comparison">1</param>
+                                            <param id="2" name="Value">&quot;00:00&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action disabled="1" id="-9" name="Set value" sid="72419055660597" type="System">
+                                            <param id="0" name="Variable">CurrentTime</param>
+                                            <param id="1" name="Value">time</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="929920953132872" type="System">
+                                            <param id="0" name="Variable">CurrentTime</param>
+                                            <param id="1" name="Value">int(1 * 1* 10) - time</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="6013268820114188">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="6651133365111884" type="System">
+                                            <param id="0" name="Variable">TotalTime</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;00:00&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="6962787658479289" type="System">
+                                            <param id="0" name="Variable">fadeToggle</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
                     </sub-events>
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="2336545514748946" title="Time Counter">
+        <event-group description="" sid="2336545514748946" title="Time Counter">
             <sub-events>
                 <variable constant="0" name="Hours" sid="1790803364684282" static="0" type="number">0</variable>
                 <variable constant="0" name="Minutes" sid="7008367649565129" static="0" type="number">0</variable>
                 <variable constant="0" name="Seconds" sid="1073739006019584" static="0" type="number">0</variable>
-                <variable constant="0" name="TotalTime" sid="1340293460956348" static="0" type="text"></variable>
+                <variable constant="0" name="TotalTime1" sid="1340293460956348" static="0" type="text"></variable>
                 <event-block sid="5212976814392683">
                     <conditions>
                         <condition id="-1" name="Every tick" sid="4673143564480091" type="System" />
@@ -2400,13 +2576,13 @@
                             <param id="0" name="Variable">Minutes</param>
                             <param id="1" name="Value">int(CurrentTime/60)%60</param>
                         </action>
-                        <action id="-9" name="Set value" sid="4636741651327651" type="System">
+                        <action disabled="1" id="-9" name="Set value" sid="4636741651327651" type="System">
                             <param id="0" name="Variable">Hours</param>
                             <param id="1" name="Value">int(int(CurrentTime/60)/60)%24</param>
                         </action>
                     </actions>
                     <sub-events>
-                        <event-block sid="3410459897604424">
+                        <event-block disabled="1" sid="3410459897604424">
                             <conditions>
                                 <condition id="-14" name="Compare variable" sid="588515020980262" type="System">
                                     <param id="0" name="Variable">Hours</param>
@@ -2421,7 +2597,7 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="1300862004110829">
+                        <event-block disabled="1" sid="1300862004110829">
                             <conditions />
                             <actions>
                                 <action id="-10" name="Add to" sid="9321573591314539" type="System">
@@ -2490,6 +2666,68 @@
                             </actions>
                         </event-block>
                     </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group collapsed="1" description="" sid="3771406755060438" title="spriteFonts">
+            <sub-events>
+                <event-block sid="2840854709042895">
+                    <conditions>
+                        <condition id="-18" name="On created" sid="3759252307598788" type="leyend" />
+                    </conditions>
+                    <actions>
+                        <action id="11" name="Load" sid="7897510775710178" type="SpriteFontImporter">
+                            <param id="0" name="JSON">&quot;{&quot;&quot;c2array&quot;&quot;:true,&quot;&quot;size&quot;&quot;:[2,12,1],&quot;&quot;data&quot;&quot;:[[[8],[10],[11],[12],[13],[14],[15],[16],[17],[18],[19],[20]],[[&quot;&quot;|&quot;&quot;],[&quot;&quot;l:&apos;°&quot;&quot;],[&quot;&quot;Ii.,&quot;&quot;],[&quot;&quot;1;\&quot;&quot;&quot;&quot;],[&quot;&quot;j&quot;&quot;],[&quot;&quot;!&quot;&quot;],[&quot;&quot;[]`&quot;&quot;],[&quot;&quot;#()&quot;&quot;],[&quot;&quot;f&amp;+&quot;&quot;],[&quot;&quot;KNOShz?-\\=$&quot;&quot;],[&quot;&quot;DEHJLPQRTVXabdgknpqrstuv23579*£&lt;&gt;&quot;&quot;],[&quot;&quot;ABCFGMUWYZcemowxy0468_~/@€%&quot;&quot;]]]}&#x0D;&#x0A;&quot;</param>
+                        </action>
+                        <action id="5" name="Set character width" sid="4707333889722033" type="leyend">
+                            <param id="0" name="Character">&quot;|&quot;</param>
+                            <param id="1" name="Width">8</param>
+                        </action>
+                        <action id="5" name="Set character width" sid="3500795667381651" type="leyend">
+                            <param id="0" name="Character">&quot;l:&apos;°&quot;</param>
+                            <param id="1" name="Width">10</param>
+                        </action>
+                        <action id="5" name="Set character width" sid="9099833636668031" type="leyend">
+                            <param id="0" name="Character">&quot;Ii.,&quot;</param>
+                            <param id="1" name="Width">11</param>
+                        </action>
+                        <action id="5" name="Set character width" sid="4128785050928575" type="leyend">
+                            <param id="0" name="Character">&quot;1;&quot;&quot;&quot;</param>
+                            <param id="1" name="Width">12</param>
+                        </action>
+                        <action id="5" name="Set character width" sid="3961574476087288" type="leyend">
+                            <param id="0" name="Character">&quot;j&quot;</param>
+                            <param id="1" name="Width">13</param>
+                        </action>
+                        <action id="5" name="Set character width" sid="6793602928571567" type="leyend">
+                            <param id="0" name="Character">&quot;!&quot;</param>
+                            <param id="1" name="Width">14</param>
+                        </action>
+                        <action id="5" name="Set character width" sid="6893784626322264" type="leyend">
+                            <param id="0" name="Character">&quot;[]`&quot;</param>
+                            <param id="1" name="Width">15</param>
+                        </action>
+                        <action id="5" name="Set character width" sid="6253125051514645" type="leyend">
+                            <param id="0" name="Character">&quot;#()&quot;</param>
+                            <param id="1" name="Width">16</param>
+                        </action>
+                        <action id="5" name="Set character width" sid="5719790812335366" type="leyend">
+                            <param id="0" name="Character">&quot;f&amp;+&quot;</param>
+                            <param id="1" name="Width">17</param>
+                        </action>
+                        <action id="5" name="Set character width" sid="1365032118186997" type="leyend">
+                            <param id="0" name="Character">&quot;KNOShz?-\=$&quot;</param>
+                            <param id="1" name="Width">18</param>
+                        </action>
+                        <action id="5" name="Set character width" sid="1595621812266124" type="leyend">
+                            <param id="0" name="Character">&quot;DEHJLPQRTVXabdgknpqrstuv23579*£&lt;&gt;&quot;</param>
+                            <param id="1" name="Width">19</param>
+                        </action>
+                        <action id="5" name="Set character width" sid="3410493785555404" type="leyend">
+                            <param id="0" name="Character">&quot;ABCFGMUWYZcemowxy0468_~/@€%&quot;</param>
+                            <param id="1" name="Width">20</param>
+                        </action>
+                    </actions>
                 </event-block>
             </sub-events>
         </event-group>

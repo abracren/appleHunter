@@ -10,8 +10,9 @@
     <unique-id>2kg24gbyu6n6</unique-id>
     <saved-with-version>14300</saved-with-version>
     <used-plugins>
-        <plugin author="Scirra" id="CJSAds" version="1">CocoonJS</plugin>
+        <plugin author="Scirra" id="Facebook" version="1">Facebook</plugin>
         <plugin author="Scirra" id="Function" version="1">Function</plugin>
+        <plugin author="Scirra" id="Arr" version="1">Array</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
@@ -19,7 +20,7 @@
         <plugin author="Scirra" id="TextBox" version="1">Text box</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
         <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
-        <plugin author="Scirra" id="Facebook" version="1">Facebook</plugin>
+        <plugin author="Scirra" id="CJSAds" version="1">CocoonJS</plugin>
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
@@ -1373,6 +1374,21 @@
         <object-type name="highscore" sid="7536287470641201">
             <plugin id="Spritefont2" />
             <texture />
+        </object-type>
+        <object-type name="sf_Reduced" sid="59340807432727">
+            <plugin id="Spritefont2" />
+            <texture />
+        </object-type>
+        <object-type name="sf_Commodore64" sid="6896537710112635">
+            <plugin id="Spritefont2" />
+            <texture />
+        </object-type>
+        <object-type name="leyend" sid="4777945565474205">
+            <plugin id="Spritefont2" />
+            <texture />
+        </object-type>
+        <object-type global="1" name="SpriteFontImporter" sid="9283016854054603">
+            <plugin id="Arr" />
         </object-type>
     </object-folder>
     <families />
