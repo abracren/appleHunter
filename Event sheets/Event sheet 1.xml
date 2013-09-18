@@ -825,7 +825,7 @@
         </event-group>
         <event-group description="" sid="3464215456308079" title="controles">
             <sub-events>
-                <event-block sid="4719329887712782">
+                <event-block disabled="1" sid="4719329887712782">
                     <conditions>
                         <condition id="0" name="On key pressed" sid="4543875320510613" type="Keyboard">
                             <param id="0" name="Key">65 (A)</param>
@@ -838,10 +838,10 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="9221123467420775">
+                <event-block bookmark="1" disabled="1" sid="9221123467420775">
                     <conditions>
                         <condition id="0" name="On key pressed" sid="6514199074260563" type="Keyboard">
-                            <param id="0" name="Key">83 (S)</param>
+                            <param id="0" name="Key">74 (J)</param>
                         </condition>
                     </conditions>
                     <actions>

@@ -1500,6 +1500,25 @@
             <plugin id="Spritefont2" />
             <texture />
         </object-type>
+        <object-type name="Sprite4" sid="5857746127766349">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5606913868879513" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.501292">
+                        <collision-poly>
+                            <point x="0.0394089" y="0.0413437" />
+                            <point x="0.5" y="0.0723514" />
+                            <point x="0.963054" y="0.0387597" />
+                            <point x="0.891626" y="0.498708" />
+                            <point x="0.960591" y="0.958656" />
+                            <point x="0.5" y="0.917313" />
+                            <point x="0.0394089" y="0.958656" />
+                            <point x="0.1133" y="0.498708" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families />
     <layout-folder expanded="1">
