@@ -475,7 +475,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="3554059471828501" title="Apple Controls">
+        <event-group collapsed="1" description="" sid="3554059471828501" title="Apple Controls">
             <sub-events>
                 <event-block sid="3769815204404241">
                     <conditions>
@@ -807,9 +807,21 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="3369166233021382">
+                    <conditions>
+                        <condition id="1" inverted="1" name="Is overlapping another object" sid="1001631757936307" type="apple">
+                            <param id="0" name="Object">AppleDetector</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-6" name="Set height" sid="2732411324430987" type="breakPointStick">
+                            <param id="0" name="Height">300</param>
+                        </action>
+                    </actions>
+                </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="3464215456308079" title="controles">
+        <event-group collapsed="1" description="" sid="3464215456308079" title="controles">
             <sub-events>
                 <event-block sid="6961489080426855">
                     <conditions>
@@ -1368,6 +1380,38 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-group description="" sid="919597695147619" title="Stone">
+            <sub-events>
+                <event-block sid="3215225023624483">
+                    <conditions>
+                        <condition id="0" name="On function" sid="900398679992743" type="Function">
+                            <param id="0" name="Name">&quot;createStone&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="5865565879523912">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="3198270116135995" type="System">
+                                    <param id="0" name="Variable">level</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">3</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="8641834428126696" type="stone" />
+                                <action id="-3" name="Create object" sid="3963306602508245" type="System">
+                                    <param id="0" name="Object to create">stone</param>
+                                    <param id="1" name="Layer">0</param>
+                                    <param id="2" name="X">random(600,960)</param>
+                                    <param id="3" name="Y">330</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
         <event-group collapsed="1" description="" sid="4901084431053162" title="Fox">
             <sub-events>
                 <event-block sid="9392220519649303">
@@ -1414,6 +1458,18 @@
                             </actions>
                         </event-block>
                     </sub-events>
+                </event-block>
+                <event-block sid="6943446644596185">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="3250485404956705" type="fox">
+                            <param id="0" name="Object">stone</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="7" name="Simulate control" sid="7924906859575355" type="fox">
+                            <param id="0" name="Control">2</param>
+                        </action>
+                    </actions>
                 </event-block>
                 <event-block sid="7589666275354508">
                     <conditions>
@@ -2069,6 +2125,9 @@
                         <action id="-2" name="Set Y" sid="8977289870294482" type="baseJump">
                             <param id="0" name="Y">345</param>
                         </action>
+                        <action id="-6" name="Set height" sid="7048365206034626" type="breakPointStick">
+                            <param id="0" name="Height">63</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="9317097611026662">
@@ -2625,6 +2684,10 @@
                                     <param id="0" name="Variable">HighscoreTemp</param>
                                     <param id="1" name="Value">highscore</param>
                                 </action>
+                                <action id="0" name="Call function" sid="4949154974788678" type="Function">
+                                    <param id="0" name="Name">&quot;createStone&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="1728776849256325">
@@ -2739,7 +2802,7 @@
                                                         </action>
                                                         <action id="-9" name="Set value" sid="3670070730301929" type="System">
                                                             <param id="0" name="Variable">timerAdd</param>
-                                                            <param id="1" name="Value">((timerTemp+3)*level)+time</param>
+                                                            <param id="1" name="Value">((timerTemp+5)*level)+time</param>
                                                         </action>
                                                         <action disabled="1" id="-9" name="Set value" sid="9873417747273036" type="System">
                                                             <param id="0" name="Variable">highscore</param>
@@ -2805,7 +2868,7 @@
                                                         </action>
                                                         <action id="-9" name="Set value" sid="4062393081259888" type="System">
                                                             <param id="0" name="Variable">timerAdd</param>
-                                                            <param id="1" name="Value">((timerTemp+3)*level)+time</param>
+                                                            <param id="1" name="Value">((timerTemp+5)*level)+time</param>
                                                         </action>
                                                         <action disabled="1" id="-9" name="Set value" sid="8785323799331514" type="System">
                                                             <param id="0" name="Variable">highscore</param>
