@@ -11,6 +11,7 @@
         <variable constant="0" name="AppleSpeed" sid="6055061328537189" static="0" type="number">100</variable>
         <variable constant="0" name="bigBasquetTime" sid="2075747172555441" static="0" type="number">15</variable>
         <variable constant="0" name="fadeToggle" sid="5980941606097558" static="0" type="number">0</variable>
+        <variable constant="0" name="fading2" sid="8254112920556217" static="0" type="number">0</variable>
         <variable constant="0" name="fading" sid="9196543141547883" static="0" type="number">0</variable>
         <variable constant="0" name="parallax" sid="3949995712694021" static="0" type="number">100</variable>
         <variable constant="0" name="birdCount" sid="9534045019847246" static="0" type="number">0</variable>
@@ -825,7 +826,7 @@
         </event-group>
         <event-group description="" sid="3464215456308079" title="controles">
             <sub-events>
-                <event-block disabled="1" sid="4719329887712782">
+                <event-block sid="4719329887712782">
                     <conditions>
                         <condition id="0" name="On key pressed" sid="4543875320510613" type="Keyboard">
                             <param id="0" name="Key">65 (A)</param>
@@ -838,7 +839,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block bookmark="1" disabled="1" sid="9221123467420775">
+                <event-block bookmark="1" sid="9221123467420775">
                     <conditions>
                         <condition id="0" name="On key pressed" sid="6514199074260563" type="Keyboard">
                             <param id="0" name="Key">74 (J)</param>
@@ -2215,9 +2216,6 @@
                     <sub-events>
                         <event-block sid="3509629039335787">
                             <conditions>
-                                <condition id="-6" name="Every X seconds" sid="7507739437041844" type="System">
-                                    <param id="0" name="Interval (seconds)">0.01</param>
-                                </condition>
                                 <condition id="-14" name="Compare variable" sid="3142562314671404" type="System">
                                     <param id="0" name="Variable">zoom</param>
                                     <param id="1" name="Comparison">3</param>
@@ -2234,6 +2232,9 @@
                         <event-block sid="8693048918099865">
                             <conditions>
                                 <condition id="-1" name="Every tick" sid="9013669283569237" type="System" />
+                                <condition id="-6" name="Every X seconds" sid="7507739437041844" type="System">
+                                    <param id="0" name="Interval (seconds)">0.01</param>
+                                </condition>
                             </conditions>
                             <actions>
                                 <action id="-17" name="Set layer scale" sid="1052899543778122" type="System">
@@ -2356,11 +2357,6 @@
                                 <condition id="-1" name="Every tick" sid="8057610601847447" type="System" />
                             </conditions>
                             <actions>
-                                <action disabled="1" id="-33" name="Set layer parallax" sid="1651465022735269" type="System">
-                                    <param id="0" name="Layer">1</param>
-                                    <param id="1" name="Parallax X">LayerParallaxX(1)</param>
-                                    <param id="2" name="Parallax Y">parallax</param>
-                                </action>
                                 <action id="-33" name="Set layer parallax" sid="1599858691607974" type="System">
                                     <param id="0" name="Layer">0</param>
                                     <param id="1" name="Parallax X">LayerParallaxX(0)</param>
@@ -2383,6 +2379,11 @@
                                 </action>
                                 <action id="-33" name="Set layer parallax" sid="3355729968056554" type="System">
                                     <param id="0" name="Layer">4</param>
+                                    <param id="1" name="Parallax X">0</param>
+                                    <param id="2" name="Parallax Y">0</param>
+                                </action>
+                                <action id="-33" name="Set layer parallax" sid="8450953117582376" type="System">
+                                    <param id="0" name="Layer">5</param>
                                     <param id="1" name="Parallax X">0</param>
                                     <param id="2" name="Parallax Y">0</param>
                                 </action>
@@ -2423,11 +2424,6 @@
                                 <condition id="-1" name="Every tick" sid="3076126787077315" type="System" />
                             </conditions>
                             <actions>
-                                <action disabled="1" id="-33" name="Set layer parallax" sid="1123499570240963" type="System">
-                                    <param id="0" name="Layer">1</param>
-                                    <param id="1" name="Parallax X">LayerParallaxX(1)</param>
-                                    <param id="2" name="Parallax Y">parallax</param>
-                                </action>
                                 <action id="-33" name="Set layer parallax" sid="9065711331573509" type="System">
                                     <param id="0" name="Layer">0</param>
                                     <param id="1" name="Parallax X">LayerParallaxX(0)</param>
@@ -2450,6 +2446,11 @@
                                 </action>
                                 <action id="-33" name="Set layer parallax" sid="7087428270859349" type="System">
                                     <param id="0" name="Layer">4</param>
+                                    <param id="1" name="Parallax X">0</param>
+                                    <param id="2" name="Parallax Y">0</param>
+                                </action>
+                                <action id="-33" name="Set layer parallax" sid="7579037948069707" type="System">
+                                    <param id="0" name="Layer">5</param>
                                     <param id="1" name="Parallax X">0</param>
                                     <param id="2" name="Parallax Y">0</param>
                                 </action>
@@ -2644,7 +2645,7 @@
                         <condition id="-14" name="Compare variable" sid="3977622507107599" type="System">
                             <param id="0" name="Variable">menuToggle</param>
                             <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">0</param>
+                            <param id="2" name="Value">1</param>
                         </condition>
                     </conditions>
                     <actions />
@@ -2663,7 +2664,7 @@
                             <actions>
                                 <action id="-11" name="Subtract from" sid="8661713831423368" type="System">
                                     <param id="0" name="Variable">menuSlide</param>
-                                    <param id="1" name="Value">20</param>
+                                    <param id="1" name="Value">10</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -2672,10 +2673,9 @@
                                 <condition id="-1" name="Every tick" sid="160726684488953" type="System" />
                             </conditions>
                             <actions>
-                                <action id="-33" name="Set layer parallax" sid="7529521497978312" type="System">
+                                <action id="-18" name="Set layer opacity" sid="7529521497978312" type="System">
                                     <param id="0" name="Layer">4</param>
-                                    <param id="1" name="Parallax X">0</param>
-                                    <param id="2" name="Parallax Y">menuSlide</param>
+                                    <param id="1" name="Opacity">menuSlide</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -2702,7 +2702,7 @@
                         <condition id="-14" name="Compare variable" sid="4270283060831287" type="System">
                             <param id="0" name="Variable">menuToggle</param>
                             <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">1</param>
+                            <param id="2" name="Value">0</param>
                         </condition>
                     </conditions>
                     <actions />
@@ -2715,13 +2715,13 @@
                                 <condition id="-14" name="Compare variable" sid="7743308179150353" type="System">
                                     <param id="0" name="Variable">menuSlide</param>
                                     <param id="1" name="Comparison">3</param>
-                                    <param id="2" name="Value">1000</param>
+                                    <param id="2" name="Value">100</param>
                                 </condition>
                             </conditions>
                             <actions>
                                 <action id="-10" name="Add to" sid="5289390386483456" type="System">
                                     <param id="0" name="Variable">menuSlide</param>
-                                    <param id="1" name="Value">20</param>
+                                    <param id="1" name="Value">10</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -2730,10 +2730,14 @@
                                 <condition id="-1" name="Every tick" sid="4184012907187078" type="System" />
                             </conditions>
                             <actions>
-                                <action id="-33" name="Set layer parallax" sid="7470067529533107" type="System">
+                                <action disabled="1" id="-33" name="Set layer parallax" sid="7470067529533107" type="System">
                                     <param id="0" name="Layer">4</param>
                                     <param id="1" name="Parallax X">0</param>
                                     <param id="2" name="Parallax Y">menuSlide</param>
+                                </action>
+                                <action id="-18" name="Set layer opacity" sid="7222616257027842" type="System">
+                                    <param id="0" name="Layer">4</param>
+                                    <param id="1" name="Opacity">menuSlide</param>
                                 </action>
                             </actions>
                         </event-block>

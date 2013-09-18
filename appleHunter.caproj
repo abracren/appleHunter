@@ -1500,7 +1500,7 @@
             <plugin id="Spritefont2" />
             <texture />
         </object-type>
-        <object-type name="Sprite4" sid="5857746127766349">
+        <object-type name="fondoMenu" sid="5857746127766349">
             <plugin id="Sprite" />
             <animation-folder expanded="1">
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5606913868879513" speed="5">

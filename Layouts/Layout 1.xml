@@ -1371,7 +1371,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="Sprite4" uid="55">
+                <instance type="fondoMenu" uid="55">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1382,7 +1382,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>320</x>
-                        <y>181.987060547</y>
+                        <y>212</y>
                         <z>0</z>
                         <width>352</width>
                         <height>341</height>
@@ -1411,8 +1411,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>186</x>
-                        <y>58</y>
+                        <x>182</x>
+                        <y>109</y>
                         <z>0</z>
                         <width>276</width>
                         <height>35</height>
@@ -1441,8 +1441,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>224</x>
-                        <y>123</y>
+                        <x>221</x>
+                        <y>174</y>
                         <z>0</z>
                         <width>198</width>
                         <height>35</height>
@@ -1472,7 +1472,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>243</x>
-                        <y>193</y>
+                        <y>244</y>
                         <z>0</z>
                         <width>154</width>
                         <height>35</height>
