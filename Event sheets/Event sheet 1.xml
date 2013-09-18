@@ -27,8 +27,8 @@
         <variable constant="0" name="highscore" sid="6726946695475454" static="0" type="number">0</variable>
         <variable constant="0" name="breakpoint" sid="6245862550025879" static="0" type="number">200</variable>
         <variable constant="0" name="TotalTime" sid="7103189245258967" static="0" type="text"></variable>
-        <variable constant="0" name="timerTemp" sid="8865185134923239" static="0" type="number">10</variable>
-        <variable constant="0" name="timerAdd" sid="4292575909077445" static="0" type="number">10</variable>
+        <variable constant="0" name="timerTemp" sid="8865185134923239" static="0" type="number">45</variable>
+        <variable constant="0" name="timerAdd" sid="4292575909077445" static="0" type="number">45</variable>
         <variable constant="0" name="appleToCatch" sid="2335959835660676" static="0" type="number">5</variable>
         <variable constant="0" name="menuSlide" sid="9963719958668556" static="0" type="number">0</variable>
         <variable constant="0" name="menuToggle" sid="7486974041151051" static="0" type="number">1</variable>
@@ -43,11 +43,53 @@
         <variable constant="0" name="colide" sid="5847483074379277" static="0" type="number">0</variable>
         <event-group description="" sid="2116889551096455" title="Start">
             <sub-events>
+                <event-block sid="2499881746672465">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="6398897694938442" type="System" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="1641084950458287">
+                            <conditions>
+                                <condition id="3" name="Local key exists" sid="7714944376287509" type="WebStorage">
+                                    <param id="0" name="Key">&quot;highscore&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="1432708577615412" type="System">
+                                    <param id="0" name="Variable">highscore</param>
+                                    <param id="1" name="Value">int(WebStorage.LocalValue(&quot;highscore&quot;))</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="4948308357322929">
+                            <conditions>
+                                <condition id="3" name="Local key exists" sid="1994533947358424" type="WebStorage">
+                                    <param id="0" name="Key">&quot;level&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="1297712460379507" type="System">
+                                    <param id="0" name="Variable">level</param>
+                                    <param id="1" name="Value">int(WebStorage.LocalValue(&quot;level&quot;))</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
                 <event-block sid="2799303908366137">
                     <conditions>
                         <condition id="-2" name="On start of layout" sid="4333017317821683" type="System" />
                     </conditions>
                     <actions>
+                        <action id="-9" name="Set value" sid="1682003216057494" type="System">
+                            <param id="0" name="Variable">appleToCatch</param>
+                            <param id="1" name="Value">5*level</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="4544980658855353" type="System">
+                            <param id="0" name="Variable">timerAdd</param>
+                            <param id="1" name="Value">((timerTemp+5)*level)+time</param>
+                        </action>
                         <action behavior="Physics" id="23" name="Enable/disable collisions" sid="3735596240995045" type="tobogan">
                             <param id="0" name="Object">stick1</param>
                             <param id="1" name="State">0</param>
@@ -2202,7 +2244,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="858063542078647" title="ZoomNew">
+        <event-group collapsed="1" description="" sid="858063542078647" title="ZoomNew">
             <sub-events>
                 <event-block sid="3668955889258466">
                     <conditions>
@@ -2786,7 +2828,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="8745653065298061" title="Levels">
+        <event-group description="" sid="8745653065298061" title="Levels">
             <sub-events>
                 <event-block sid="624859850481244">
                     <conditions>
@@ -2827,10 +2869,6 @@
                                 <action id="0" name="Call function" sid="5229307420677986" type="Function">
                                     <param id="0" name="Name">&quot;createLevel&quot;</param>
                                     <param id="1" name="Parameter {n}">level</param>
-                                </action>
-                                <action id="-9" name="Set value" sid="8875021477059296" type="System">
-                                    <param id="0" name="Variable">appleToCatch</param>
-                                    <param id="1" name="Value">5*level</param>
                                 </action>
                                 <action id="-9" name="Set value" sid="5504708323185075" type="System">
                                     <param id="0" name="Variable">fadeToggle</param>
@@ -3550,7 +3588,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="2312432058937612" title="Storage">
+        <event-group description="" sid="2312432058937612" title="Storage">
             <sub-events>
                 <event-block collapsed="1" sid="5340873386786295">
                     <conditions>
@@ -3570,40 +3608,6 @@
                                 <action id="0" name="Set local value" sid="8584792113337961" type="WebStorage">
                                     <param id="0" name="Key">&quot;level&quot;</param>
                                     <param id="1" name="Value">level</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-block>
-                <event-block sid="2481901009236877">
-                    <conditions>
-                        <condition id="-2" name="On start of layout" sid="3524755940930108" type="System" />
-                    </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block sid="5580382431238527">
-                            <conditions>
-                                <condition id="3" name="Local key exists" sid="5023083697162167" type="WebStorage">
-                                    <param id="0" name="Key">&quot;highscore&quot;</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-9" name="Set value" sid="2867077220569039" type="System">
-                                    <param id="0" name="Variable">highscore</param>
-                                    <param id="1" name="Value">int(WebStorage.LocalValue(&quot;highscore&quot;))</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="2724026804791684">
-                            <conditions>
-                                <condition id="3" name="Local key exists" sid="7395277872438331" type="WebStorage">
-                                    <param id="0" name="Key">&quot;level&quot;</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-9" name="Set value" sid="9279466835424126" type="System">
-                                    <param id="0" name="Variable">level</param>
-                                    <param id="1" name="Value">int(WebStorage.LocalValue(&quot;level&quot;))</param>
                                 </action>
                             </actions>
                         </event-block>
