@@ -20,6 +20,7 @@
         <plugin author="Scirra" id="TextBox" version="1">Text box</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
         <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
+        <plugin author="Zack0Wack0/Scirra" id="WebStorage" version="1">WebStorage</plugin>
         <plugin author="Scirra" id="CJSAds" version="1">CocoonJS</plugin>
     </used-plugins>
     <used-behaviors>
@@ -1390,6 +1391,13 @@
         <object-type global="1" name="SpriteFontImporter" sid="9283016854054603">
             <plugin id="Arr" />
         </object-type>
+        <object-type name="WebStorage" sid="8051343369178421">
+            <plugin id="WebStorage" />
+        </object-type>
+        <object-type name="levelLeyend" sid="4085937508969271">
+            <plugin id="Spritefont2" />
+            <texture />
+        </object-type>
     </object-folder>
     <families />
     <layout-folder expanded="1">
@@ -1422,6 +1430,7 @@
                 <app-secret></app-secret>
             </properties>
         </global-instance>
+        <global-instance type="WebStorage" uid="52" />
     </global-instances>
     <sounds-folder expanded="1" />
     <music-folder expanded="1" />

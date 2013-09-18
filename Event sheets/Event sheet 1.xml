@@ -18,11 +18,17 @@
         <variable constant="0" name="birdCatchedFox" sid="9395206134852323" static="0" type="number">0</variable>
         <variable constant="0" name="bombed" sid="1841872498077962" static="0" type="number">0</variable>
         <variable constant="0" name="foxCount" sid="2546553930282576" static="0" type="number">0</variable>
+        <variable constant="0" name="puntosSlide" sid="4416041978452015" static="0" type="number">0</variable>
+        <variable constant="0" name="puntosToggle" sid="3932024098002654" static="0" type="number">0</variable>
         <variable constant="0" name="zoomToggle" sid="6926013318688678" static="0" type="number">1</variable>
         <variable constant="0" name="zoom" sid="4361493536635001" static="0" type="number">1.3</variable>
+        <variable constant="0" name="HighscoreTemp" sid="9793737347748142" static="0" type="number">0</variable>
         <variable constant="0" name="highscore" sid="6726946695475454" static="0" type="number">0</variable>
         <variable constant="0" name="breakpoint" sid="6245862550025879" static="0" type="number">200</variable>
         <variable constant="0" name="TotalTime" sid="7103189245258967" static="0" type="text"></variable>
+        <variable constant="0" name="timerTemp" sid="8865185134923239" static="0" type="number">45</variable>
+        <variable constant="0" name="timerAdd" sid="4292575909077445" static="0" type="number">45</variable>
+        <variable constant="0" name="appleToCatch" sid="2335959835660676" static="0" type="number">5</variable>
         <variable constant="0" name="CurrentTime" sid="9214060383100296" static="0" type="number">0</variable>
         <comment>Level Variables</comment>
         <variable constant="0" name="Mode" sid="7362545164385401" static="0" type="number">1</variable>
@@ -109,7 +115,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="5363567654430132" title="Dinamic Controls">
+        <event-group collapsed="1" description="" sid="5363567654430132" title="Dinamic Controls">
             <sub-events>
                 <event-block sid="7577244280834887">
                     <conditions>
@@ -495,7 +501,7 @@
                             <param id="0" name="Variable">appleDown</param>
                             <param id="1" name="Value">0</param>
                         </action>
-                        <action id="-16" name="Wait" sid="805482114223702" type="System">
+                        <action disabled="1" id="-16" name="Wait" sid="805482114223702" type="System">
                             <param id="0" name="Seconds">2</param>
                         </action>
                     </actions>
@@ -805,6 +811,19 @@
         </event-group>
         <event-group description="" sid="3464215456308079" title="controles">
             <sub-events>
+                <event-block sid="6961489080426855">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="8674249101535769" type="Keyboard">
+                            <param id="0" name="Key">84 (T)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="2846313968222004" type="System">
+                            <param id="0" name="Variable">apRecived</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
                 <event-block sid="483894788559556">
                     <conditions>
                         <condition id="0" name="On key pressed" sid="1853630219652265" type="Keyboard">
@@ -1349,7 +1368,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="4901084431053162" title="Fox">
+        <event-group collapsed="1" description="" sid="4901084431053162" title="Fox">
             <sub-events>
                 <event-block sid="9392220519649303">
                     <conditions>
@@ -2253,6 +2272,11 @@
                                     <param id="1" name="Parallax X">0</param>
                                     <param id="2" name="Parallax Y">0</param>
                                 </action>
+                                <action id="-33" name="Set layer parallax" sid="7281521533086947" type="System">
+                                    <param id="0" name="Layer">3</param>
+                                    <param id="1" name="Parallax X">0</param>
+                                    <param id="2" name="Parallax Y">0</param>
+                                </action>
                             </actions>
                         </event-block>
                     </sub-events>
@@ -2307,6 +2331,11 @@
                                 </action>
                                 <action id="-33" name="Set layer parallax" sid="3757936539240256" type="System">
                                     <param id="0" name="Layer">2</param>
+                                    <param id="1" name="Parallax X">0</param>
+                                    <param id="2" name="Parallax Y">0</param>
+                                </action>
+                                <action id="-33" name="Set layer parallax" sid="222402357923234" type="System">
+                                    <param id="0" name="Layer">3</param>
                                     <param id="1" name="Parallax X">0</param>
                                     <param id="2" name="Parallax Y">0</param>
                                 </action>
@@ -2368,7 +2397,7 @@
                         <event-block sid="3124644075860124">
                             <conditions>
                                 <condition id="-6" name="Every X seconds" sid="8003763673942503" type="System">
-                                    <param id="0" name="Interval (seconds)">0.01</param>
+                                    <param id="0" name="Interval (seconds)">0.05</param>
                                 </condition>
                                 <condition id="-14" name="Compare variable" sid="5256057051116313" type="System">
                                     <param id="0" name="Variable">fading</param>
@@ -2391,6 +2420,106 @@
                                 <action id="-18" name="Set layer opacity" sid="8247774441426903" type="System">
                                     <param id="0" name="Layer">2</param>
                                     <param id="1" name="Opacity">fading</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="1301060513361511">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="2170870118860701" type="System">
+                            <param id="0" name="Variable">puntosToggle</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="4013932673777867">
+                            <conditions>
+                                <condition id="-6" name="Every X seconds" sid="7119806477139691" type="System">
+                                    <param id="0" name="Interval (seconds)">0.01</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="393297401437942" type="System">
+                                    <param id="0" name="Variable">puntosSlide</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-11" name="Subtract from" sid="8263449540860674" type="System">
+                                    <param id="0" name="Variable">puntosSlide</param>
+                                    <param id="1" name="Value">5</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="1993846808616679">
+                            <conditions>
+                                <condition id="-1" name="Every tick" sid="7957735901506033" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-33" name="Set layer parallax" sid="9101658714988966" type="System">
+                                    <param id="0" name="Layer">3</param>
+                                    <param id="1" name="Parallax X">0</param>
+                                    <param id="2" name="Parallax Y">puntosSlide</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="7829727571970684">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="3998515138507404" type="System">
+                                    <param id="0" name="Variable">puntosSlide</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-33" name="Set layer parallax" sid="1498871734697784" type="System">
+                                    <param id="0" name="Layer">3</param>
+                                    <param id="1" name="Parallax X">0</param>
+                                    <param id="2" name="Parallax Y">puntosSlide</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="1025073949963085">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="4104443695457059" type="System">
+                            <param id="0" name="Variable">puntosToggle</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="4603838291103214">
+                            <conditions>
+                                <condition id="-6" name="Every X seconds" sid="7022774534501826" type="System">
+                                    <param id="0" name="Interval (seconds)">0.01</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="4390465223668493" type="System">
+                                    <param id="0" name="Variable">puntosSlide</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">200</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Add to" sid="2407304050314706" type="System">
+                                    <param id="0" name="Variable">puntosSlide</param>
+                                    <param id="1" name="Value">5</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="4735633854240786">
+                            <conditions>
+                                <condition id="-1" name="Every tick" sid="9942587240757091" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-33" name="Set layer parallax" sid="911592627772779" type="System">
+                                    <param id="0" name="Layer">3</param>
+                                    <param id="1" name="Parallax X">0</param>
+                                    <param id="2" name="Parallax Y">puntosSlide</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -2473,8 +2602,13 @@
                                     <param id="0" name="Variable">highscore</param>
                                     <param id="1" name="Value">0</param>
                                 </action>
-                                <action id="0" name="Set text" sid="7890407392086049" type="leyend">
-                                    <param id="0" name="Text">&quot;Collect 30 apples in 1 minute!&quot;</param>
+                                <action id="0" name="Call function" sid="2347627162757517" type="Function">
+                                    <param id="0" name="Name">&quot;createLeyend&quot;</param>
+                                    <param id="1" name="Parameter {n}">appleToCatch{###}level</param>
+                                </action>
+                                <action id="0" name="Call function" sid="5229307420677986" type="Function">
+                                    <param id="0" name="Name">&quot;createLevel&quot;</param>
+                                    <param id="1" name="Parameter {n}">level</param>
                                 </action>
                                 <action id="-9" name="Set value" sid="5504708323185075" type="System">
                                     <param id="0" name="Variable">fadeToggle</param>
@@ -2487,6 +2621,10 @@
                                     <param id="0" name="Variable">fadeToggle</param>
                                     <param id="1" name="Value">0</param>
                                 </action>
+                                <action id="-9" name="Set value" sid="6863295719670125" type="System">
+                                    <param id="0" name="Variable">HighscoreTemp</param>
+                                    <param id="1" name="Value">highscore</param>
+                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="1728776849256325">
@@ -2494,8 +2632,11 @@
                                 <condition id="-1" name="Every tick" sid="9928897884967317" type="System" />
                             </conditions>
                             <actions>
-                                <action id="0" name="Set text" sid="3539746038117183" type="AppleSended">
+                                <action disabled="1" id="0" name="Set text" sid="3539746038117183" type="AppleSended">
                                     <param id="0" name="Text">&quot;/&quot;&amp;apSended</param>
+                                </action>
+                                <action id="0" name="Set text" sid="3562719705682863" type="AppleSended">
+                                    <param id="0" name="Text">&quot;/&quot;&amp;appleToCatch</param>
                                 </action>
                                 <action id="0" name="Set text" sid="3185058049203757" type="AppleRecived">
                                     <param id="0" name="Text">&quot;&quot;&amp;apRecived</param>
@@ -2503,13 +2644,7 @@
                             </actions>
                         </event-block>
                         <event-block sid="9710902240740779">
-                            <conditions>
-                                <condition id="-14" name="Compare variable" sid="7269305128578675" type="System">
-                                    <param id="0" name="Variable">level</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">1</param>
-                                </condition>
-                            </conditions>
+                            <conditions />
                             <actions />
                             <sub-events>
                                 <event-block sid="9962718727136852">
@@ -2518,7 +2653,7 @@
                                         <condition id="-14" name="Compare variable" sid="455889823056166" type="System">
                                             <param id="0" name="Variable">TotalTime</param>
                                             <param id="1" name="Comparison">1</param>
-                                            <param id="2" name="Value">&quot;00:00&quot;</param>
+                                            <param id="2" name="Value">&quot;0-1:0-1&quot;</param>
                                         </condition>
                                     </conditions>
                                     <actions>
@@ -2528,33 +2663,309 @@
                                         </action>
                                         <action id="-9" name="Set value" sid="929920953132872" type="System">
                                             <param id="0" name="Variable">CurrentTime</param>
-                                            <param id="1" name="Value">int(1 * 1* 10) - time</param>
+                                            <param id="1" name="Value">timerAdd- time</param>
+                                        </action>
+                                        <action id="-16" name="Set opacity" sid="7613251881398892" type="clockk">
+                                            <param id="0" name="Opacity">100</param>
                                         </action>
                                     </actions>
                                 </event-block>
                                 <event-block sid="6013268820114188">
                                     <conditions>
-                                        <condition id="-14" name="Compare variable" sid="6651133365111884" type="System">
+                                        <condition id="-14" name="Compare variable" sid="6369568488708702" type="System">
                                             <param id="0" name="Variable">TotalTime</param>
                                             <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">&quot;00:00&quot;</param>
+                                            <param id="2" name="Value">&quot;0-1:0-1&quot;</param>
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="-9" name="Set value" sid="6962787658479289" type="System">
+                                        <action disabled="1" id="-9" name="Set value" sid="6962787658479289" type="System">
                                             <param id="0" name="Variable">fadeToggle</param>
                                             <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="-16" name="Set opacity" sid="8177880710370759" type="clockk">
+                                            <param id="0" name="Opacity">0</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="3164602207426349">
+                                            <conditions>
+                                                <condition id="-1" name="Every tick" sid="2823905928500345" type="System" />
+                                            </conditions>
+                                            <actions />
+                                        </event-block>
+                                        <event-block sid="7967769050253687">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="279385438946042" type="System">
+                                                    <param id="0" name="Variable">apRecived</param>
+                                                    <param id="1" name="Comparison">5</param>
+                                                    <param id="2" name="Value">appleToCatch</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="6397079521244353">
+                                                    <conditions>
+                                                        <condition id="-4" name="Trigger once while true" sid="644164988071201" type="System" />
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-10" name="Add to" sid="6568045495847466" type="System">
+                                                            <param id="0" name="Variable">level</param>
+                                                            <param id="1" name="Value">1</param>
+                                                        </action>
+                                                        <action id="-10" name="Add to" sid="6436630605265404" type="System">
+                                                            <param id="0" name="Variable">appleToCatch</param>
+                                                            <param id="1" name="Value">5</param>
+                                                        </action>
+                                                        <action id="-9" name="Set value" sid="3833966666404166" type="System">
+                                                            <param id="0" name="Variable">HighscoreTemp</param>
+                                                            <param id="1" name="Value">highscore</param>
+                                                        </action>
+                                                        <action id="-9" name="Set value" sid="63242653641289" type="System">
+                                                            <param id="0" name="Variable">puntosToggle</param>
+                                                            <param id="1" name="Value">1</param>
+                                                        </action>
+                                                        <action id="-9" name="Set value" sid="5068737248234847" type="System">
+                                                            <param id="0" name="Variable">apSended</param>
+                                                            <param id="1" name="Value">1</param>
+                                                        </action>
+                                                        <action id="-9" name="Set value" sid="9608659633846357" type="System">
+                                                            <param id="0" name="Variable">apRecived</param>
+                                                            <param id="1" name="Value">0</param>
+                                                        </action>
+                                                        <action disabled="1" id="-9" name="Set value" sid="5632779407338291" type="System">
+                                                            <param id="0" name="Variable">timerAdd</param>
+                                                            <param id="1" name="Value">(timerTemp+3)+time</param>
+                                                        </action>
+                                                        <action id="-9" name="Set value" sid="3670070730301929" type="System">
+                                                            <param id="0" name="Variable">timerAdd</param>
+                                                            <param id="1" name="Value">((timerTemp+3)*level)+time</param>
+                                                        </action>
+                                                        <action disabled="1" id="-9" name="Set value" sid="9873417747273036" type="System">
+                                                            <param id="0" name="Variable">highscore</param>
+                                                            <param id="1" name="Value">0</param>
+                                                        </action>
+                                                        <action id="0" name="Call function" sid="8741333099524688" type="Function">
+                                                            <param id="0" name="Name">&quot;createLeyend&quot;</param>
+                                                            <param id="1" name="Parameter {n}">appleToCatch{###}level</param>
+                                                        </action>
+                                                        <action id="0" name="Call function" sid="8091263985304172" type="Function">
+                                                            <param id="0" name="Name">&quot;createLevel&quot;</param>
+                                                            <param id="1" name="Parameter {n}">level</param>
+                                                        </action>
+                                                        <action id="-9" name="Set value" sid="9296062055232769" type="System">
+                                                            <param id="0" name="Variable">fadeToggle</param>
+                                                            <param id="1" name="Value">1</param>
+                                                        </action>
+                                                        <action id="-16" name="Wait" sid="4982817371070808" type="System">
+                                                            <param id="0" name="Seconds">3</param>
+                                                        </action>
+                                                        <action id="-9" name="Set value" sid="1567480854558701" type="System">
+                                                            <param id="0" name="Variable">fadeToggle</param>
+                                                            <param id="1" name="Value">0</param>
+                                                        </action>
+                                                        <action id="-9" name="Set value" sid="8662843189517451" type="System">
+                                                            <param id="0" name="Variable">TotalTime</param>
+                                                            <param id="1" name="Value">&quot;00:00&quot;</param>
+                                                        </action>
+                                                        <action id="-9" name="Set value" sid="6346824283679021" type="System">
+                                                            <param id="0" name="Variable">puntosToggle</param>
+                                                            <param id="1" name="Value">0</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                        <event-block sid="158229497474294">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="9741064966993093" type="System" />
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="5663532475244391">
+                                                    <conditions>
+                                                        <condition id="-4" name="Trigger once while true" sid="1089662143364412" type="System" />
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-9" name="Set value" sid="5017061084653296" type="System">
+                                                            <param id="0" name="Variable">puntosToggle</param>
+                                                            <param id="1" name="Value">1</param>
+                                                        </action>
+                                                        <action id="-9" name="Set value" sid="2093427471828084" type="System">
+                                                            <param id="0" name="Variable">apSended</param>
+                                                            <param id="1" name="Value">1</param>
+                                                        </action>
+                                                        <action id="-9" name="Set value" sid="9841969516395044" type="System">
+                                                            <param id="0" name="Variable">highscore</param>
+                                                            <param id="1" name="Value">HighscoreTemp</param>
+                                                        </action>
+                                                        <action id="-9" name="Set value" sid="8542587948859163" type="System">
+                                                            <param id="0" name="Variable">apRecived</param>
+                                                            <param id="1" name="Value">0</param>
+                                                        </action>
+                                                        <action id="-9" name="Set value" sid="4062393081259888" type="System">
+                                                            <param id="0" name="Variable">timerAdd</param>
+                                                            <param id="1" name="Value">((timerTemp+3)*level)+time</param>
+                                                        </action>
+                                                        <action disabled="1" id="-9" name="Set value" sid="8785323799331514" type="System">
+                                                            <param id="0" name="Variable">highscore</param>
+                                                            <param id="1" name="Value">0</param>
+                                                        </action>
+                                                        <action id="0" name="Call function" sid="9651286164315833" type="Function">
+                                                            <param id="0" name="Name">&quot;createLeyend&quot;</param>
+                                                            <param id="1" name="Parameter {n}">appleToCatch{###}level</param>
+                                                        </action>
+                                                        <action id="0" name="Call function" sid="9684628758898473" type="Function">
+                                                            <param id="0" name="Name">&quot;createLevel&quot;</param>
+                                                            <param id="1" name="Parameter {n}">level</param>
+                                                        </action>
+                                                        <action id="-9" name="Set value" sid="532444683318783" type="System">
+                                                            <param id="0" name="Variable">fadeToggle</param>
+                                                            <param id="1" name="Value">1</param>
+                                                        </action>
+                                                        <action id="-16" name="Wait" sid="4323628231236598" type="System">
+                                                            <param id="0" name="Seconds">3</param>
+                                                        </action>
+                                                        <action id="-9" name="Set value" sid="5845340985943161" type="System">
+                                                            <param id="0" name="Variable">fadeToggle</param>
+                                                            <param id="1" name="Value">0</param>
+                                                        </action>
+                                                        <action id="-9" name="Set value" sid="4050698973908712" type="System">
+                                                            <param id="0" name="Variable">TotalTime</param>
+                                                            <param id="1" name="Value">&quot;00:00&quot;</param>
+                                                        </action>
+                                                        <action id="-9" name="Set value" sid="7398514940676365" type="System">
+                                                            <param id="0" name="Variable">puntosToggle</param>
+                                                            <param id="1" name="Value">0</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="8156734528863507">
+                                                    <conditions />
+                                                    <actions />
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                        <event-block sid="632347015881436">
+                                            <conditions />
+                                            <actions />
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <variable constant="0" name="itemLeyend" sid="2702359868788826" static="0" type="text"></variable>
+                        <event-block collapsed="1" sid="8453734721047157">
+                            <conditions>
+                                <condition id="0" name="On function" sid="4488256594813355" type="Function">
+                                    <param id="0" name="Name">&quot;createLeyend&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Add to" sid="8911753386044805" type="System">
+                                    <param id="0" name="Variable">itemLeyend</param>
+                                    <param id="1" name="Value">&quot;Collect &quot;</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="9157503720426731" type="System">
+                                    <param id="0" name="Variable">itemLeyend</param>
+                                    <param id="1" name="Value">Function.Param(0)</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="5375514041523986" type="System">
+                                    <param id="0" name="Variable">itemLeyend</param>
+                                    <param id="1" name="Value">&quot; apples before the countdown ends &quot;</param>
+                                </action>
+                                <action disabled="1" id="-10" name="Add to" sid="1086460232456396" type="System">
+                                    <param id="0" name="Variable">itemLeyend</param>
+                                    <param id="1" name="Value">Function.Param(1)</param>
+                                </action>
+                                <action id="0" name="Set text" sid="2927544658332968" type="leyend">
+                                    <param id="0" name="Text">&quot;&quot;&amp;itemLeyend</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block disabled="1" sid="8593912128801845">
+                                    <conditions>
+                                        <condition id="1" name="Compare parameter" sid="9310422147362882" type="Function">
+                                            <param id="0" name="Index">1</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Value">2</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Add to" sid="8674117133479793" type="System">
+                                            <param id="0" name="Variable">itemLeyend</param>
+                                            <param id="1" name="Value">&quot; minute!&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block disabled="1" sid="1798334150668337">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="1233234522464838" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Add to" sid="8536564255965809" type="System">
+                                            <param id="0" name="Variable">itemLeyend</param>
+                                            <param id="1" name="Value">&quot; minutes!&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block disabled="1" sid="3150518201936829">
+                                    <conditions />
+                                    <actions>
+                                        <action id="0" name="Set text" sid="1823095493834921" type="leyend">
+                                            <param id="0" name="Text">&quot;&quot;&amp;itemLeyend</param>
                                         </action>
                                     </actions>
                                 </event-block>
                             </sub-events>
                         </event-block>
+                        <variable constant="0" name="itemLevel" sid="2587903349912233" static="0" type="text"></variable>
+                        <event-block sid="5792012385167783">
+                            <conditions>
+                                <condition id="0" name="On function" sid="9999709519284407" type="Function">
+                                    <param id="0" name="Name">&quot;createLevel&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Add to" sid="8720324569552553" type="System">
+                                    <param id="0" name="Variable">itemLevel</param>
+                                    <param id="1" name="Value">&quot;Level &quot;</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="5935901648955649" type="System">
+                                    <param id="0" name="Variable">itemLevel</param>
+                                    <param id="1" name="Value">Function.Param(0)</param>
+                                </action>
+                                <action id="0" name="Set text" sid="5904032247545969" type="levelLeyend">
+                                    <param id="0" name="Text">&quot;&quot;&amp;itemLevel</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="265828555207658">
+                            <conditions />
+                            <actions />
+                        </event-block>
+                        <event-block sid="1616667421589904">
+                            <conditions>
+                                <condition id="-1" name="Every tick" sid="8300163176126671" type="System" />
+                                <condition id="-14" name="Compare variable" sid="1246291984052547" type="System">
+                                    <param id="0" name="Variable">TotalTime</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;00:00&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Set opacity" sid="865573665681402" type="clockk">
+                                    <param id="0" name="Opacity">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
                     </sub-events>
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="2336545514748946" title="Time Counter">
+        <event-group collapsed="1" description="" sid="2336545514748946" title="Time Counter">
             <sub-events>
+                <variable constant="0" name="miles" sid="4201594583161" static="0" type="number">0</variable>
                 <variable constant="0" name="Hours" sid="1790803364684282" static="0" type="number">0</variable>
                 <variable constant="0" name="Minutes" sid="7008367649565129" static="0" type="number">0</variable>
                 <variable constant="0" name="Seconds" sid="1073739006019584" static="0" type="number">0</variable>
@@ -2579,6 +2990,10 @@
                         <action disabled="1" id="-9" name="Set value" sid="4636741651327651" type="System">
                             <param id="0" name="Variable">Hours</param>
                             <param id="1" name="Value">int(int(CurrentTime/60)/60)%24</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="2812685260559436" type="System">
+                            <param id="0" name="Variable">Seconds</param>
+                            <param id="1" name="Value">int(CurrentTime%60)</param>
                         </action>
                     </actions>
                     <sub-events>
@@ -2728,6 +3143,20 @@
                             <param id="1" name="Width">20</param>
                         </action>
                     </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="2312432058937612" title="Storage">
+            <sub-events>
+                <event-block sid="5340873386786295">
+                    <conditions />
+                    <actions />
+                    <sub-events>
+                        <event-block sid="6743896732014746">
+                            <conditions />
+                            <actions />
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-group>
