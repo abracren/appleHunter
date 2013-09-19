@@ -15,7 +15,7 @@
     <layers>
         <layer name="Layer 0" sid="1651607620989853">
             <initially-visible>1</initially-visible>
-            <background-color>255,255,255</background-color>
+            <background-color>0,204,102</background-color>
             <transparent>0</transparent>
             <parallax>
                 <x>1</x>
@@ -37,11 +37,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>322</x>
-                        <y>179</y>
+                        <x>309</x>
+                        <y>196.471603394</y>
                         <z>0</z>
-                        <width>656</width>
-                        <height>405</height>
+                        <width>707</width>
+                        <height>472</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.501234591</hotspotY>
@@ -63,7 +63,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>484</x>
-                        <y>301</y>
+                        <y>320</y>
                         <z>0</z>
                         <width>127</width>
                         <height>21</height>
