@@ -10,8 +10,13 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="-2" name="Go to layout" sid="5341697309956625" type="System">
-                    <param id="0" name="Layout">Layout 1</param>
+                <action behavior="Flash" id="0" name="Flash" sid="6591722848929128" type="start">
+                    <param id="0" name="&apos;On&apos; time">0.1</param>
+                    <param id="1" name="&apos;Off&apos; time">0.1</param>
+                    <param id="2" name="Duration">1.0</param>
+                </action>
+                <action id="-16" name="Wait" sid="7404223197396492" type="System">
+                    <param id="0" name="Seconds">1.0</param>
                 </action>
                 <action id="-9" name="Set value" sid="3528614557897819" type="System">
                     <param id="0" name="Variable">Mode</param>
@@ -20,6 +25,9 @@
                 <action id="-9" name="Set value" sid="8669429625814632" type="System">
                     <param id="0" name="Variable">menuToggle</param>
                     <param id="1" name="Value">1</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="5341697309956625" type="System">
+                    <param id="0" name="Layout">Layout 1</param>
                 </action>
             </actions>
         </event-block>
@@ -32,7 +40,23 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="-2" name="Go to layout" sid="4344667840181603" type="System">
+                <action behavior="Flash" id="0" name="Flash" sid="1365121289563323" type="start">
+                    <param id="0" name="&apos;On&apos; time">0.1</param>
+                    <param id="1" name="&apos;Off&apos; time">0.1</param>
+                    <param id="2" name="Duration">1.0</param>
+                </action>
+                <action id="-16" name="Wait" sid="6987414198189691" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action id="-9" name="Set value" sid="7680453882928553" type="System">
+                    <param id="0" name="Variable">Mode</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-9" name="Set value" sid="6023834243563894" type="System">
+                    <param id="0" name="Variable">menuToggle</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="3825777863185452" type="System">
                     <param id="0" name="Layout">Layout 1</param>
                 </action>
             </actions>
