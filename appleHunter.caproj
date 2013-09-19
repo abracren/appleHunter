@@ -1519,6 +1519,22 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="resetButton" sid="4800299820641893">
+            <plugin id="Spritefont2" />
+            <texture />
+        </object-type>
+        <object-type name="TiledBackground3" sid="2650572464562057">
+            <plugin id="TiledBg" />
+            <texture />
+        </object-type>
+        <object-type name="backButton" sid="4166068141743151">
+            <plugin id="Spritefont2" />
+            <texture />
+        </object-type>
+        <object-type name="backButton2" sid="4461305928228935">
+            <plugin id="Spritefont2" />
+            <texture />
+        </object-type>
     </object-folder>
     <families />
     <layout-folder expanded="1">
