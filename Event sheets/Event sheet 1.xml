@@ -1519,9 +1519,19 @@
                                     <param id="2" name="Value">3</param>
                                 </condition>
                             </conditions>
-                            <actions>
-                                <action id="-9" name="Destroy" sid="2423812576179474" type="stone" />
-                            </actions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="4823572019327045">
+                                    <conditions>
+                                        <condition id="-11" name="For Each" sid="8066420186430445" type="System">
+                                            <param id="0" name="Object">stone</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Destroy" sid="2423812576179474" type="stone" />
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                     </sub-events>
                 </event-block>
@@ -1718,7 +1728,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="768143005920519" title="Birds">
+        <event-group collapsed="1" description="" sid="768143005920519" title="Birds">
             <sub-events>
                 <event-block sid="955193310390578">
                     <conditions>
@@ -2316,7 +2326,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="858063542078647" title="ZoomNew">
+        <event-group collapsed="1" description="" sid="858063542078647" title="ZoomNew">
             <sub-events>
                 <event-block sid="3668955889258466">
                     <conditions>
@@ -3441,7 +3451,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="4709749426858706" title="Menus">
+        <event-group collapsed="1" description="" sid="4709749426858706" title="Menus">
             <sub-events>
                 <event-block sid="6462803725815251">
                     <conditions>
@@ -3641,6 +3651,10 @@
                         <action id="-9" name="Set value" sid="9708699639182449" type="System">
                             <param id="0" name="Variable">level</param>
                             <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Call function" sid="3229955505066365" type="Function">
+                            <param id="0" name="Name">&quot;createStone&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
                         </action>
                         <action id="-13" name="Set time scale" sid="5150643884475519" type="System">
                             <param id="0" name="Time scale">1</param>
@@ -4094,7 +4108,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="2312432058937612" title="Storage">
+        <event-group collapsed="1" description="" sid="2312432058937612" title="Storage">
             <sub-events>
                 <event-block sid="5340873386786295">
                     <conditions>
