@@ -190,7 +190,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="5363567654430132" title="Dinamic Controls">
+        <event-group description="" sid="5363567654430132" title="Dinamic Controls">
             <sub-events>
                 <event-block sid="7577244280834887">
                     <conditions>
@@ -417,6 +417,7 @@
                     </conditions>
                     <actions>
                         <action id="2" name="Stop" sid="174378006031896" type="apple" />
+                        <action id="2" name="Stop" sid="2918361144822329" type="stone" />
                     </actions>
                 </event-block>
                 <event-block disabled="1" sid="1804500159847002">
@@ -550,7 +551,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="3554059471828501" title="Apple Controls">
+        <event-group description="" sid="3554059471828501" title="Apple Controls">
             <sub-events>
                 <event-block sid="3769815204404241">
                     <conditions>
@@ -1520,6 +1521,9 @@
                                     <param id="2" name="X">random(600,960)</param>
                                     <param id="3" name="Y">330</param>
                                 </action>
+                                <action id="5" name="Set frame" sid="6837379594411293" type="stone">
+                                    <param id="0" name="Frame number">random(0,2)</param>
+                                </action>
                                 <action id="-29" name="Move to object" sid="25708806835033" type="stone">
                                     <param id="0" name="Where">0</param>
                                     <param id="1" name="Object">Sprite17</param>
@@ -1977,7 +1981,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="8643764412194803" title="Intance Variables Functions">
+        <event-group description="" sid="8643764412194803" title="Intance Variables Functions">
             <sub-events>
                 <event-block sid="746290564293407">
                     <conditions>
@@ -2160,6 +2164,58 @@
                         </event-block>
                     </sub-events>
                 </event-block>
+                <event-block sid="3825976205905592">
+                    <conditions>
+                        <condition id="-34" name="Pick by evaluate" sid="5019104639679575" type="System">
+                            <param id="0" name="Object">apple</param>
+                            <param id="1" name="Expression">apple.bomb=1</param>
+                        </condition>
+                        <condition id="-21" name="Is between values" sid="9474408324853527" type="System">
+                            <param id="0" name="Value">apple.X</param>
+                            <param id="1" name="Lower bound">breakpoint+30</param>
+                            <param id="2" name="Upper bound">breakpoint+1000</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="435624314779887" type="apple">
+                            <param id="0" name="Instance variable">created</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block any="1" sid="6315662261255544">
+                            <conditions>
+                                <condition id="4" name="Is touching object" sid="7070014096113181" type="Touch">
+                                    <param id="0" name="Object">buttonD</param>
+                                </condition>
+                                <condition id="0" name="On key pressed" sid="3793785424807781" type="Keyboard">
+                                    <param id="0" name="Key">40 (Down arrow)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action disabled="1" id="-3" name="Create object" sid="4183916727548013" type="System">
+                                    <param id="0" name="Object to create">apple</param>
+                                    <param id="1" name="Layer">0</param>
+                                    <param id="2" name="X">apple.X</param>
+                                    <param id="3" name="Y">apple.Y</param>
+                                </action>
+                                <action behavior="Physics" id="2" name="Apply force at angle" sid="5659356382555743" type="apple">
+                                    <param id="0" name="Force">1500</param>
+                                    <param id="1" name="Angle">random(70,110)</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="251174865375904" type="apple">
+                                    <param id="0" name="Instance variable">bomb</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="3488571326787828" type="apple">
+                                    <param id="0" name="Instance variable">created</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
                 <comment>deprecated--&gt;</comment>
                 <event-block sid="8295266399400529">
                     <conditions>
@@ -2251,7 +2307,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="8505434671193494" title="jumper">
+        <event-group collapsed="1" description="" sid="8505434671193494" title="jumper">
             <sub-events>
                 <event-block sid="8668105912367573">
                     <conditions>
@@ -2341,7 +2397,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="858063542078647" title="ZoomNew">
+        <event-group collapsed="1" description="" sid="858063542078647" title="ZoomNew">
             <sub-events>
                 <event-block sid="3668955889258466">
                     <conditions>
@@ -2976,7 +3032,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="8745653065298061" title="Levels">
+        <event-group collapsed="1" description="" sid="8745653065298061" title="Levels">
             <sub-events>
                 <event-block sid="624859850481244">
                     <conditions>
@@ -3301,7 +3357,7 @@
                                 </action>
                                 <action id="-10" name="Add to" sid="5375514041523986" type="System">
                                     <param id="0" name="Variable">itemLeyend</param>
-                                    <param id="1" name="Value">&quot; apples before the countdown ends &quot;</param>
+                                    <param id="1" name="Value">&quot; apples before time ends &quot;</param>
                                 </action>
                                 <action disabled="1" id="-10" name="Add to" sid="1086460232456396" type="System">
                                     <param id="0" name="Variable">itemLeyend</param>
@@ -3517,58 +3573,61 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="4709749426858706" title="Menus" />
-        <event-block sid="9981747383964955">
-            <conditions>
-                <condition id="1" name="On any touch end" sid="3516773448516356" type="Touch" />
-                <condition id="4" name="Is touching object" sid="7502758205565847" type="Touch">
-                    <param id="0" name="Object">Sprite3</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action disabled="1" id="-2" name="Go to layout" sid="5643925008834833" type="System">
-                    <param id="0" name="Layout">Options</param>
-                </action>
-                <action id="-9" name="Set value" sid="8849844066355667" type="System">
-                    <param id="0" name="Variable">menuToggle</param>
-                    <param id="1" name="Value">1</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="8621215857035889">
-            <conditions>
-                <condition id="1" name="On any touch end" sid="7455037197713364" type="Touch" />
-                <condition id="4" name="Is touching object" sid="2752424673634839" type="Touch">
-                    <param id="0" name="Object">backButton</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action disabled="1" id="-2" name="Go to layout" sid="3801829501953077" type="System">
-                    <param id="0" name="Layout">Options</param>
-                </action>
-                <action id="-9" name="Set value" sid="351814956402477" type="System">
-                    <param id="0" name="Variable">menuToggle</param>
-                    <param id="1" name="Value">0</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="3693861129707279">
-            <conditions>
-                <condition id="1" name="On any touch end" sid="1070934895688538" type="Touch" />
-                <condition id="4" name="Is touching object" sid="2486487479122172" type="Touch">
-                    <param id="0" name="Object">menuButton2</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-9" name="Set value" sid="7072476164579935" type="System">
-                    <param id="0" name="Variable">menuToggle</param>
-                    <param id="1" name="Value">0</param>
-                </action>
-                <action id="-2" name="Go to layout" sid="5766301387052769" type="System">
-                    <param id="0" name="Layout">Options</param>
-                </action>
-            </actions>
-        </event-block>
+        <event-group collapsed="1" description="" sid="4709749426858706" title="Menus">
+            <sub-events>
+                <event-block sid="2179534354453265">
+                    <conditions>
+                        <condition id="1" name="On any touch end" sid="7471483416704856" type="Touch" />
+                        <condition id="4" name="Is touching object" sid="2512661561194036" type="Touch">
+                            <param id="0" name="Object">Sprite3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action disabled="1" id="-2" name="Go to layout" sid="4323559535546814" type="System">
+                            <param id="0" name="Layout">Options</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="5067138317816877" type="System">
+                            <param id="0" name="Variable">menuToggle</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="416671829062729">
+                    <conditions>
+                        <condition id="1" name="On any touch end" sid="5550806096676398" type="Touch" />
+                        <condition id="4" name="Is touching object" sid="1085136152601414" type="Touch">
+                            <param id="0" name="Object">backButton</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action disabled="1" id="-2" name="Go to layout" sid="6429480054841246" type="System">
+                            <param id="0" name="Layout">Options</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="3132080134303378" type="System">
+                            <param id="0" name="Variable">menuToggle</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="2873991708511447">
+                    <conditions>
+                        <condition id="1" name="On any touch end" sid="4278171330700438" type="Touch" />
+                        <condition id="4" name="Is touching object" sid="1458303716319429" type="Touch">
+                            <param id="0" name="Object">menuButton2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="9586223215786232" type="System">
+                            <param id="0" name="Variable">menuToggle</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="6076847931494436" type="System">
+                            <param id="0" name="Layout">Options</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
         <event-group collapsed="1" description="" sid="3771406755060438" title="spriteFonts">
             <sub-events>
                 <event-block sid="2840854709042895">
