@@ -1467,11 +1467,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>320</x>
-                        <y>187</y>
+                        <x>-287</x>
+                        <y>210</y>
                         <z>0</z>
                         <width>352</width>
-                        <height>341</height>
+                        <height>234</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.50129199</hotspotY>
@@ -1479,12 +1479,12 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="mainmenuButton" uid="56">
+                <instance type="menuButton2" uid="56">
                     <properties>
                         <character-width>22</character-width>
                         <character-height>35</character-height>
                         <character-set>ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.,;:?!-_~#&quot;&apos;&amp;()[]|`\/@°+=*$£€&lt;&gt;%</character-set>
-                        <text>MAIN MENU</text>
+                        <text>MENU</text>
                         <scale>1</scale>
                         <initial-visibility>Visible</initial-visibility>
                         <horizontal-alignment>Center</horizontal-alignment>
@@ -1497,40 +1497,10 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>182</x>
-                        <y>60</y>
+                        <x>-424</x>
+                        <y>146</y>
                         <z>0</z>
                         <width>276</width>
-                        <height>35</height>
-                        <depth>0</depth>
-                        <hotspotX>0</hotspotX>
-                        <hotspotY>0</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="restartButton" uid="57">
-                    <properties>
-                        <character-width>22</character-width>
-                        <character-height>35</character-height>
-                        <character-set>ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.,;:?!-_~#&quot;&apos;&amp;()[]|`\/@°+=*$£€&lt;&gt;%</character-set>
-                        <text>RESTART</text>
-                        <scale>1</scale>
-                        <initial-visibility>Visible</initial-visibility>
-                        <horizontal-alignment>Center</horizontal-alignment>
-                        <vertical-alignment>Top</vertical-alignment>
-                        <hotspot>Top-left</hotspot>
-                        <wrapping>Word</wrapping>
-                        <character-spacing>0</character-spacing>
-                        <line-height>0</line-height>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>221</x>
-                        <y>128</y>
-                        <z>0</z>
-                        <width>198</width>
                         <height>35</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
@@ -1557,40 +1527,10 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>225</x>
-                        <y>284</y>
+                        <x>-381</x>
+                        <y>233</y>
                         <z>0</z>
                         <width>190</width>
-                        <height>35</height>
-                        <depth>0</depth>
-                        <hotspotX>0</hotspotX>
-                        <hotspotY>0</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="resetButton" uid="60">
-                    <properties>
-                        <character-width>22</character-width>
-                        <character-height>35</character-height>
-                        <character-set>ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.,;:?!-_~#&quot;&apos;&amp;()[]|`\/@°+=*$£€&lt;&gt;%</character-set>
-                        <text>RESET GAME</text>
-                        <scale>1</scale>
-                        <initial-visibility>Visible</initial-visibility>
-                        <horizontal-alignment>Center</horizontal-alignment>
-                        <vertical-alignment>Top</vertical-alignment>
-                        <hotspot>Top-left</hotspot>
-                        <wrapping>Word</wrapping>
-                        <character-spacing>0</character-spacing>
-                        <line-height>0</line-height>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>207</x>
-                        <y>199</y>
-                        <z>0</z>
-                        <width>226</width>
                         <height>35</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>

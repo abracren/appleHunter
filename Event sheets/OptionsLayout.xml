@@ -1,0 +1,385 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>OptionsLayout</name>
+    <events>
+        <event-block sid="3889867585209455">
+            <conditions />
+            <actions />
+        </event-block>
+        <event-block sid="5724527954467009">
+            <conditions>
+                <condition id="3" name="On touched object" sid="7974161286231897" type="Touch">
+                    <param id="0" name="Object">restartButton</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="8053601915061283" type="System">
+                    <param id="0" name="Variable">restart</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="5222468655602659">
+                    <conditions />
+                    <actions />
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="3711808398520303">
+            <conditions>
+                <condition id="1" name="On any touch end" sid="8068714396742193" type="Touch" />
+                <condition id="4" name="Is touching object" sid="4279925869087787" type="Touch">
+                    <param id="0" name="Object">menuButton2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="7223864239947683" type="System">
+                    <param id="0" name="Variable">mainmenuT</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1820824499676356">
+            <conditions>
+                <condition id="1" name="On any touch end" sid="8412648977577312" type="Touch" />
+                <condition id="4" name="Is touching object" sid="9660263388798105" type="Touch">
+                    <param id="0" name="Object">optionButton</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-18" name="Set layer opacity" sid="9010255290545344" type="System">
+                    <param id="0" name="Layer">1</param>
+                    <param id="1" name="Opacity">100</param>
+                </action>
+                <action id="-3" name="Set position" sid="3723349086685422" type="fondoMenu">
+                    <param id="0" name="X">321</param>
+                    <param id="1" name="Y">174</param>
+                </action>
+                <action id="-3" name="Set position" sid="1568817558937575" type="resetButton">
+                    <param id="0" name="X">207</param>
+                    <param id="1" name="Y">108</param>
+                </action>
+                <action id="-3" name="Set position" sid="5031579410044063" type="gobackButton2">
+                    <param id="0" name="X">214</param>
+                    <param id="1" name="Y">195</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="2008046192882044">
+            <conditions>
+                <condition id="1" name="On any touch end" sid="5590588183330242" type="Touch" />
+                <condition id="4" name="Is touching object" sid="570217954962672" type="Touch">
+                    <param id="0" name="Object">resetButton</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="6486757905537679" type="System">
+                    <param id="0" name="Variable">reset</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5410467619270385">
+            <conditions>
+                <condition id="1" name="On any touch end" sid="9453634579846897" type="Touch" />
+                <condition id="4" name="Is touching object" sid="1534259839259693" type="Touch">
+                    <param id="0" name="Object">gobackButton2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-18" name="Set layer opacity" sid="2261931563074114" type="System">
+                    <param id="0" name="Layer">1</param>
+                    <param id="1" name="Opacity">0</param>
+                </action>
+                <action id="-3" name="Set position" sid="6152380426642916" type="fondoMenu">
+                    <param id="0" name="X">-1000</param>
+                    <param id="1" name="Y">174</param>
+                </action>
+                <action id="-3" name="Set position" sid="4211950006845568" type="resetButton">
+                    <param id="0" name="X">-1000</param>
+                    <param id="1" name="Y">108</param>
+                </action>
+                <action id="-3" name="Set position" sid="2469914706403029" type="gobackButton2">
+                    <param id="0" name="X">-1000</param>
+                    <param id="1" name="Y">195</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6336494089371251">
+            <conditions>
+                <condition id="1" name="On any touch end" sid="6960284119470605" type="Touch" />
+                <condition id="4" name="Is touching object" sid="6511135786657688" type="Touch">
+                    <param id="0" name="Object">backButton</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="3269734218627085" type="System">
+                    <param id="0" name="Variable">gobackT</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="301486723530025">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="5214489511273521" type="System">
+                    <param id="0" name="Variable">restart</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="6146813141139514">
+                    <conditions />
+                    <actions>
+                        <action id="-9" name="Set value" sid="9404816466836844" type="System">
+                            <param id="0" name="Variable">puntosToggle</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="3345120956434471" type="System">
+                            <param id="0" name="Variable">apSended</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="6302238861114036" type="System">
+                            <param id="0" name="Variable">highscore</param>
+                            <param id="1" name="Value">HighscoreTemp</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="9327699437813381" type="System">
+                            <param id="0" name="Variable">apRecived</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="8126197139623492" type="System">
+                            <param id="0" name="Variable">appleToCatch</param>
+                            <param id="1" name="Value">5*level</param>
+                        </action>
+                        <action disabled="1" id="-9" name="Set value" sid="4168076903546704" type="System">
+                            <param id="0" name="Variable">highscore</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-13" name="Set time scale" sid="2272625100753331" type="System">
+                            <param id="0" name="Time scale">1</param>
+                        </action>
+                        <action id="0" name="Call function" sid="6769658368935313" type="Function">
+                            <param id="0" name="Name">&quot;createLeyend&quot;</param>
+                            <param id="1" name="Parameter {n}">appleToCatch{###}level</param>
+                        </action>
+                        <action id="0" name="Call function" sid="1191983833115713" type="Function">
+                            <param id="0" name="Name">&quot;createLevel&quot;</param>
+                            <param id="1" name="Parameter {n}">level</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="9231648696871483" type="System">
+                            <param id="0" name="Variable">fadeToggle</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action disabled="1" id="-16" name="Wait" sid="432212530373493" type="System">
+                            <param id="0" name="Seconds">3</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="4179244825993168" type="System">
+                            <param id="0" name="Variable">fadeToggle</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="7286038313586174" type="System">
+                            <param id="0" name="Variable">puntosToggle</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="1071841771428224" type="System">
+                            <param id="0" name="Layout">Layout 1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="4448790915162681" type="System">
+                            <param id="0" name="Variable">restart</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block disabled="1" sid="8859976064149171">
+                    <conditions />
+                    <actions />
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block disabled="1" sid="1163855205224072">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="6473125783907188" type="System">
+                    <param id="0" name="Variable">restart</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Wait" sid="7879765333405127" type="System">
+                    <param id="0" name="Seconds">3</param>
+                </action>
+                <action id="-9" name="Set value" sid="5046830862471029" type="System">
+                    <param id="0" name="Variable">restart</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6890565341977696">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="5022557301704286" type="System">
+                    <param id="0" name="Variable">restart</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+                <condition id="-4" name="Trigger once while true" sid="2510154137225877" type="System" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="170103461883718" type="System">
+                    <param id="0" name="Variable">timerAdd</param>
+                    <param id="1" name="Value">((timerTemp+5)*level)+time</param>
+                </action>
+                <action id="0" name="Call function" sid="5275660808405654" type="Function">
+                    <param id="0" name="Name">&quot;createStone&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+                <action id="-9" name="Set value" sid="7170728166905473" type="System">
+                    <param id="0" name="Variable">TotalTime</param>
+                    <param id="1" name="Value">&quot;00:00&quot;</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="7819370261520838">
+                    <conditions />
+                    <actions />
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="1292625820111579">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="5084833504347085" type="System">
+                    <param id="0" name="Variable">reset</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-13" name="Set time scale" sid="8990980269951982" type="System">
+                    <param id="0" name="Time scale">1.0</param>
+                </action>
+                <action id="-9" name="Set value" sid="8071568691257785" type="System">
+                    <param id="0" name="Variable">timerAdd</param>
+                    <param id="1" name="Value">((timerTemp+5)*level)+time</param>
+                </action>
+                <action id="-9" name="Set value" sid="5407253996550195" type="System">
+                    <param id="0" name="Variable">level</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="0" name="Call function" sid="7687449540870489" type="Function">
+                    <param id="0" name="Name">&quot;createStone&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+                <action id="-9" name="Set value" sid="358449337144564" type="System">
+                    <param id="0" name="Variable">appleToCatch</param>
+                    <param id="1" name="Value">5</param>
+                </action>
+                <action id="2" name="Remove local value" sid="2517207251523236" type="WebStorage">
+                    <param id="0" name="Key">&quot;highscore&quot;</param>
+                </action>
+                <action id="2" name="Remove local value" sid="9699739579899303" type="WebStorage">
+                    <param id="0" name="Key">&quot;level&quot;</param>
+                </action>
+                <action id="-9" name="Set value" sid="8292141077475074" type="System">
+                    <param id="0" name="Variable">highscore</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="6886309943689797" type="System">
+                    <param id="0" name="Variable">HighscoreTemp</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-13" name="Set time scale" sid="7776153361824641" type="System">
+                    <param id="0" name="Time scale">1</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="6754656149834505" type="System">
+                    <param id="0" name="Layout">Layout 1</param>
+                </action>
+                <action id="-9" name="Set value" sid="6597557877026798" type="System">
+                    <param id="0" name="Variable">reset</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5145453889512075">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="7798934992546409" type="System">
+                    <param id="0" name="Variable">menuT</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="2785863801284436" type="System">
+                    <param id="0" name="Variable">menuToggle</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-16" name="Wait" sid="5370852951835858" type="System">
+                    <param id="0" name="Seconds">1</param>
+                </action>
+                <action id="-13" name="Set time scale" sid="4837108048650503" type="System">
+                    <param id="0" name="Time scale">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="5710522908667352" type="System">
+                    <param id="0" name="Variable">menuT</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1147072590336139">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="6941322399318055" type="System">
+                    <param id="0" name="Variable">gobackT</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action disabled="1" id="-9" name="Set value" sid="9553336164824067" type="System">
+                    <param id="0" name="Variable">menuToggle</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action disabled="1" id="-16" name="Wait" sid="2004878729567504" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action id="-13" name="Set time scale" sid="9581549343898722" type="System">
+                    <param id="0" name="Time scale">1.0</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="293473207166109" type="System">
+                    <param id="0" name="Layout">Layout 1</param>
+                </action>
+                <action id="-9" name="Set value" sid="6764221217627142" type="System">
+                    <param id="0" name="Variable">gobackT</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8910612015905771">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="2508271975611864" type="System">
+                    <param id="0" name="Variable">mainmenuT</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action disabled="1" id="-9" name="Set value" sid="1163667611114803" type="System">
+                    <param id="0" name="Variable">menuToggle</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action disabled="1" id="-13" name="Set time scale" sid="3889610702686797" type="System">
+                    <param id="0" name="Time scale">1</param>
+                </action>
+                <action disabled="1" id="-16" name="Wait" sid="4172111494349283" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="3550935203196353" type="System">
+                    <param id="0" name="Layout">menu</param>
+                </action>
+                <action id="-9" name="Set value" sid="9622984301374849" type="System">
+                    <param id="0" name="Variable">mainmenuT</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

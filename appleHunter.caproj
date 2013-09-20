@@ -1493,7 +1493,7 @@
             <plugin id="TiledBg" />
             <texture />
         </object-type>
-        <object-type name="mainmenuButton" sid="8650654907954645">
+        <object-type name="menuButton2" sid="8650654907954645">
             <plugin id="Spritefont2" />
             <texture />
         </object-type>
@@ -1657,15 +1657,48 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="TiledBackground5" sid="2915878801461087">
+            <plugin id="TiledBg" />
+            <texture />
+        </object-type>
+        <object-type name="gobackButton2" sid="6055737075252288">
+            <plugin id="Spritefont2" />
+            <texture />
+        </object-type>
+        <object-type name="optionButton" sid="5333247524871886">
+            <plugin id="Spritefont2" />
+            <texture />
+        </object-type>
+        <object-type name="fondoMenu2" sid="7729933194844531">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2534917248899888" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.501292">
+                        <collision-poly>
+                            <point x="0.0394089" y="0.0413437" />
+                            <point x="0.5" y="0.0723514" />
+                            <point x="0.963054" y="0.0387597" />
+                            <point x="0.891626" y="0.498708" />
+                            <point x="0.960591" y="0.958656" />
+                            <point x="0.5" y="0.917313" />
+                            <point x="0.0394089" y="0.958656" />
+                            <point x="0.1133" y="0.498708" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families />
     <layout-folder expanded="1">
         <layout>Layout 1.xml</layout>
         <layout>menu.xml</layout>
+        <layout>Options.xml</layout>
     </layout-folder>
     <event-folder expanded="1">
         <event-sheet>Event sheet 1.xml</event-sheet>
         <event-sheet>menulayout.xml</event-sheet>
+        <event-sheet>OptionsLayout.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Mouse" uid="6" />
