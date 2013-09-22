@@ -12,6 +12,7 @@
     <used-plugins>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Arr" version="1">Array</plugin>
+        <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
         <plugin author="Scirra" id="CJSAds" version="1">CocoonJS</plugin>
         <plugin author="Scirra" id="Facebook" version="1">Facebook</plugin>
         <plugin author="Scirra" id="Function" version="1">Function</plugin>
@@ -42,14 +43,14 @@
     </window-size>
     <pixel-rounding>0</pixel-rounding>
     <first-layout>menu</first-layout>
-    <use-loader-layout>1</use-loader-layout>
+    <use-loader-layout>0</use-loader-layout>
     <configuration-settings>
         <prop name="Clear background">Yes</prop>
         <prop name="Enable WebGL">On</prop>
         <prop name="Fullscreen in browser">Letterbox scale</prop>
         <prop name="Hide address bar">No</prop>
-        <prop name="Loader style">Progress bar only</prop>
-        <prop name="Pause on unfocus">No</prop>
+        <prop name="Loader style">Percentage text</prop>
+        <prop name="Pause on unfocus">Yes</prop>
         <prop name="Preview browser">(default)</prop>
         <prop name="Sampling">Linear</prop>
         <prop name="Use iOS retina display">All devices</prop>
@@ -1773,6 +1774,29 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="Sprite19" sid="3301717993159982">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4240479755107044" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="LoaderTile" sid="1654315828768772">
+            <plugin id="TiledBg" />
+            <texture />
+        </object-type>
+        <object-type name="Sprite24" sid="9608378475796974">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9955778253573468" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="2.08333" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Browser" sid="7480061569253655">
+            <plugin id="Browser" />
+        </object-type>
     </object-folder>
     <families />
     <layout-folder expanded="1">
@@ -1810,6 +1834,7 @@
             </properties>
         </global-instance>
         <global-instance type="WebStorage" uid="52" />
+        <global-instance type="Browser" uid="77" />
     </global-instances>
     <sounds-folder expanded="1" />
     <music-folder expanded="1" />
