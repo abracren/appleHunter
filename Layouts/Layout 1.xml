@@ -148,10 +148,10 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>626</x>
+                        <x>651.084411621</x>
                         <y>179.155761719</y>
                         <z>0</z>
-                        <width>1267</width>
+                        <width>1313</width>
                         <height>565</height>
                         <depth>0</depth>
                         <hotspotX>0.545312524</hotspotX>
@@ -1020,10 +1020,10 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>546</x>
-                        <y>346.5</y>
+                        <y>328.5</y>
                         <z>0</z>
                         <width>213</width>
-                        <height>303</height>
+                        <height>253</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -1042,10 +1042,10 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>323</x>
-                        <y>343</y>
+                        <y>329</y>
                         <z>0</z>
                         <width>213</width>
-                        <height>282</height>
+                        <height>254</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -1064,10 +1064,10 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>96.5</x>
-                        <y>348</y>
+                        <y>329</y>
                         <z>0</z>
                         <width>208</width>
-                        <height>287</height>
+                        <height>254</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>

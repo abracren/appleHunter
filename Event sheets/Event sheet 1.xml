@@ -186,6 +186,10 @@
                             <param id="0" name="Variable">starting</param>
                             <param id="1" name="Value">0</param>
                         </action>
+                        <action behavior="Physics" disabled="1" id="14" name="Set stepping iterations" sid="2149604668905725" type="apple">
+                            <param id="0" name="Velocity iterations">1</param>
+                            <param id="1" name="Position iterations">2</param>
+                        </action>
                     </actions>
                 </event-block>
             </sub-events>
@@ -897,85 +901,140 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="3464215456308079" title="controles">
+        <event-group description="" sid="3464215456308079" title="controles">
             <sub-events>
-                <event-block sid="4719329887712782">
-                    <conditions>
-                        <condition id="0" name="On key pressed" sid="4543875320510613" type="Keyboard">
-                            <param id="0" name="Key">65 (A)</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Set value" sid="4659069583817436" type="System">
-                            <param id="0" name="Variable">menuToggle</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block bookmark="1" sid="9221123467420775">
-                    <conditions>
-                        <condition id="0" name="On key pressed" sid="6514199074260563" type="Keyboard">
-                            <param id="0" name="Key">74 (J)</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Set value" sid="7960712781056766" type="System">
-                            <param id="0" name="Variable">menuToggle</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="4738487465078986">
-                    <conditions>
-                        <condition id="0" name="On key pressed" sid="615328502911731" type="Keyboard">
-                            <param id="0" name="Key">49 (1)</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-10" name="Add to" sid="8449963710738181" type="System">
-                            <param id="0" name="Variable">level</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="6961489080426855">
-                    <conditions>
-                        <condition id="0" name="On key pressed" sid="8674249101535769" type="Keyboard">
-                            <param id="0" name="Key">84 (T)</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-10" name="Add to" sid="2846313968222004" type="System">
-                            <param id="0" name="Variable">apRecived</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="483894788559556">
-                    <conditions>
-                        <condition id="0" name="On key pressed" sid="1853630219652265" type="Keyboard">
-                            <param id="0" name="Key">71 (G)</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Set value" sid="745575312487724" type="System">
-                            <param id="0" name="Variable">bigBasquet</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="7475227776791196">
-                    <conditions>
-                        <condition id="0" name="On key pressed" sid="557171868389279" type="Keyboard">
-                            <param id="0" name="Key">70 (F)</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Set value" sid="2868753652321054" type="System">
-                            <param id="0" name="Variable">bigBasquet</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                    </actions>
+                <event-block disabled="1" sid="6318736110923812">
+                    <conditions />
+                    <actions />
+                    <sub-events>
+                        <event-block disabled="1" sid="4720399445428904">
+                            <conditions>
+                                <condition id="0" name="On key pressed" sid="6576876193089848" type="Keyboard">
+                                    <param id="0" name="Key">75 (K)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Platform" id="5" name="Set gravity" sid="5837869495117369" type="bird">
+                                    <param id="0" name="Gravity">1500</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="2934267891152658" type="bird">
+                                    <param id="0" name="Animation">&quot;die&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="6194905644665044" type="System">
+                                    <param id="0" name="Seconds">1.0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="6429875393306258" type="System">
+                                    <param id="0" name="Variable">birdMoving</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block disabled="1" sid="4719329887712782">
+                            <conditions>
+                                <condition id="0" name="On key pressed" sid="4543875320510613" type="Keyboard">
+                                    <param id="0" name="Key">65 (A)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="4659069583817436" type="System">
+                                    <param id="0" name="Variable">menuToggle</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block bookmark="1" disabled="1" sid="9221123467420775">
+                            <conditions>
+                                <condition id="0" name="On key pressed" sid="6514199074260563" type="Keyboard">
+                                    <param id="0" name="Key">74 (J)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="7960712781056766" type="System">
+                                    <param id="0" name="Variable">menuToggle</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block disabled="1" sid="4738487465078986">
+                            <conditions>
+                                <condition id="0" name="On key pressed" sid="615328502911731" type="Keyboard">
+                                    <param id="0" name="Key">49 (1)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Add to" sid="8449963710738181" type="System">
+                                    <param id="0" name="Variable">level</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block disabled="1" sid="6961489080426855">
+                            <conditions>
+                                <condition id="0" name="On key pressed" sid="8674249101535769" type="Keyboard">
+                                    <param id="0" name="Key">84 (T)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Add to" sid="2846313968222004" type="System">
+                                    <param id="0" name="Variable">apRecived</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block disabled="1" sid="483894788559556">
+                            <conditions>
+                                <condition id="0" name="On key pressed" sid="1853630219652265" type="Keyboard">
+                                    <param id="0" name="Key">71 (G)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="745575312487724" type="System">
+                                    <param id="0" name="Variable">bigBasquet</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block disabled="1" sid="7475227776791196">
+                            <conditions>
+                                <condition id="0" name="On key pressed" sid="557171868389279" type="Keyboard">
+                                    <param id="0" name="Key">70 (F)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="2868753652321054" type="System">
+                                    <param id="0" name="Variable">bigBasquet</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block disabled="1" sid="4090920195773538">
+                            <conditions>
+                                <condition id="0" name="On key pressed" sid="7783991490331524" type="Keyboard">
+                                    <param id="0" name="Key">70 (F)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="882458831814001" type="System">
+                                    <param id="0" name="Variable">fadeToggle</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block disabled="1" sid="6805962885178022">
+                            <conditions>
+                                <condition id="0" name="On key pressed" sid="295991002053068" type="Keyboard">
+                                    <param id="0" name="Key">68 (D)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="3399169974502109" type="System">
+                                    <param id="0" name="Variable">fadeToggle</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-block sid="9561593344282544">
                     <conditions>
@@ -1467,32 +1526,6 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="3098395409261877">
-                    <conditions>
-                        <condition id="0" name="On key pressed" sid="9568888627964662" type="Keyboard">
-                            <param id="0" name="Key">70 (F)</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Set value" sid="2385417045586593" type="System">
-                            <param id="0" name="Variable">fadeToggle</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="772671300123195">
-                    <conditions>
-                        <condition id="0" name="On key pressed" sid="6799291982062737" type="Keyboard">
-                            <param id="0" name="Key">68 (D)</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Set value" sid="6580296535493286" type="System">
-                            <param id="0" name="Variable">fadeToggle</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                    </actions>
-                </event-block>
             </sub-events>
         </event-group>
         <event-group description="" sid="919597695147619" title="Stone">
@@ -1556,7 +1589,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="4901084431053162" title="Fox">
+        <event-group description="" sid="4901084431053162" title="Fox">
             <sub-events>
                 <event-block sid="9392220519649303">
                     <conditions>
@@ -1651,10 +1684,6 @@
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block sid="9183024626573333">
-                            <conditions />
-                            <actions />
-                        </event-block>
                         <event-block sid="8171540687992474">
                             <conditions />
                             <actions>
@@ -1747,7 +1776,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="768143005920519" title="Birds">
+        <event-group description="" sid="768143005920519" title="Birds">
             <sub-events>
                 <event-block sid="955193310390578">
                     <conditions>
@@ -1819,7 +1848,7 @@
                         </condition>
                         <condition id="-1" name="Compare X" sid="6196470687268816" type="bird">
                             <param id="0" name="Comparison">4</param>
-                            <param id="1" name="X co-ordinate">breakpoint</param>
+                            <param id="1" name="X co-ordinate">breakpoint+50</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -1834,29 +1863,6 @@
                             <param id="0" name="Seconds">1.0</param>
                         </action>
                         <action id="-9" name="Set value" sid="2004800622206947" type="System">
-                            <param id="0" name="Variable">birdMoving</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="2208669546097162">
-                    <conditions>
-                        <condition id="0" name="On key pressed" sid="1770780729579988" type="Keyboard">
-                            <param id="0" name="Key">75 (K)</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action behavior="Platform" id="5" name="Set gravity" sid="792892492649087" type="bird">
-                            <param id="0" name="Gravity">1500</param>
-                        </action>
-                        <action id="4" name="Set animation" sid="4453362495274764" type="bird">
-                            <param id="0" name="Animation">&quot;die&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                        <action id="-16" name="Wait" sid="6087950504985739" type="System">
-                            <param id="0" name="Seconds">1.0</param>
-                        </action>
-                        <action id="-9" name="Set value" sid="286567296862584" type="System">
                             <param id="0" name="Variable">birdMoving</param>
                             <param id="1" name="Value">0</param>
                         </action>

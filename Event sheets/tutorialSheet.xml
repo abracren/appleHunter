@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>tutorialSheet</name>
+    <events>
+        <variable constant="0" name="loope" sid="7578351213006334" static="0" type="number">0</variable>
+        <event-block sid="1097214992383679">
+            <conditions>
+                <condition id="1" name="On any touch end" sid="5550809029284493" type="Touch" />
+            </conditions>
+            <actions>
+                <action id="-10" name="Add to" sid="1671847215871129" type="System">
+                    <param id="0" name="Variable">loope</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4706869171910951">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="1459604676361465" type="System" />
+            </conditions>
+            <actions>
+                <action id="2" name="Stop" sid="4187371273934329" type="tuto1" />
+                <action id="5" name="Set frame" sid="1507195892108367" type="tuto1">
+                    <param id="0" name="Frame number">loope</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="200854609134758">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="4001014081848234" type="System">
+                    <param id="0" name="Variable">loope</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">3</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="1561692304791796" type="System">
+                    <param id="0" name="Variable">loope</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="3670766869258734">
+            <conditions>
+                <condition id="3" name="On touched object" sid="9120522071788409" type="Touch">
+                    <param id="0" name="Object">tutomainmenu</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="9528011825686659" type="System">
+                    <param id="0" name="Layout">menu</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
