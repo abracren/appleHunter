@@ -45,6 +45,9 @@
         <variable constant="0" name="menuT" sid="4938454811374711" static="0" type="number">0</variable>
         <variable constant="0" name="gobackT" sid="4733264920877767" static="0" type="number">0</variable>
         <variable constant="0" name="mainmenuT" sid="3719319386274458" static="0" type="number">0</variable>
+        <variable constant="0" name="tempor" sid="1164200586296537" static="0" type="number">0</variable>
+        <variable constant="0" name="fixed" sid="2171591962965038" static="0" type="number">0</variable>
+        <variable constant="0" name="tempo" sid="7767036361481571" static="0" type="number">0</variable>
         <comment>---deprecated---</comment>
         <variable constant="0" name="colide" sid="5847483074379277" static="0" type="number">0</variable>
         <event-group description="" sid="2116889551096455" title="Start">
@@ -169,13 +172,6 @@
                             <param id="0" name="Object">fox</param>
                             <param id="1" name="State">0</param>
                         </action>
-                        <action behavior="Physics" disabled="1" id="13" name="Set stepping mode" sid="2067224880853356" type="apple">
-                            <param id="0" name="Mode">0</param>
-                        </action>
-                        <action behavior="Physics" disabled="1" id="14" name="Set stepping iterations" sid="4622179153207408" type="apple">
-                            <param id="0" name="Velocity iterations">3</param>
-                            <param id="1" name="Position iterations">3</param>
-                        </action>
                         <action id="-13" name="Set time scale" sid="1888093051080266" type="System">
                             <param id="0" name="Time scale">1</param>
                         </action>
@@ -186,9 +182,8 @@
                             <param id="0" name="Variable">starting</param>
                             <param id="1" name="Value">0</param>
                         </action>
-                        <action behavior="Physics" disabled="1" id="14" name="Set stepping iterations" sid="2149604668905725" type="apple">
-                            <param id="0" name="Velocity iterations">1</param>
-                            <param id="1" name="Position iterations">2</param>
+                        <action behavior="Physics" disabled="1" id="13" name="Set stepping mode" sid="3506988742980719" type="apple">
+                            <param id="0" name="Mode">1</param>
                         </action>
                     </actions>
                 </event-block>
@@ -196,6 +191,10 @@
         </event-group>
         <event-group description="" sid="5363567654430132" title="Dinamic Controls">
             <sub-events>
+                <event-block sid="1990458591830604">
+                    <conditions />
+                    <actions />
+                </event-block>
                 <event-block sid="7577244280834887">
                     <conditions>
                         <condition id="-8" name="Compare two values" sid="7279657918199533" type="System">
@@ -336,7 +335,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="2283224578900491">
+                <event-block bookmark="1" sid="2283224578900491">
                     <conditions>
                         <condition id="1" name="Is overlapping another object" sid="1992286592481987" type="apple">
                             <param id="0" name="Object">force</param>
@@ -349,7 +348,7 @@
                     </conditions>
                     <actions>
                         <action behavior="Physics" id="2" name="Apply force at angle" sid="1784242026849959" type="apple">
-                            <param id="0" name="Force">20</param>
+                            <param id="0" name="Force">10</param>
                             <param id="1" name="Angle">310</param>
                             <param id="2" name="Image point">0</param>
                         </action>
@@ -515,6 +514,10 @@
                             <param id="0" name="Variable">apSended</param>
                             <param id="1" name="Value">1</param>
                         </action>
+                        <action id="-9" name="Set value" sid="376173544963355" type="System">
+                            <param id="0" name="Variable">tempo</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="7463189009821682">
@@ -583,6 +586,10 @@
                         </action>
                         <action disabled="1" id="-16" name="Wait" sid="805482114223702" type="System">
                             <param id="0" name="Seconds">2</param>
+                        </action>
+                        <action behavior="Physics" disabled="1" id="15" name="Set velocity" sid="5997789642977676" type="apple">
+                            <param id="0" name="X component">50</param>
+                            <param id="1" name="Y component">50</param>
                         </action>
                     </actions>
                     <sub-events>
@@ -3986,6 +3993,141 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-group collapsed="1" description="" sid="7724184294475604" title="tempo">
+            <sub-events>
+                <event-block sid="3730284718438952">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="1394325285437148" type="System">
+                            <param id="0" name="Variable">tempo</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="7597111661819363" type="apple">
+                            <param id="0" name="Instance variable">landed</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-6" name="Every X seconds" sid="6998281023942908" type="System">
+                            <param id="0" name="Interval (seconds)">0.1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="4601458477849386" type="System">
+                            <param id="0" name="Variable">tempor</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="9556321399049074">
+                            <conditions />
+                            <actions>
+                                <action disabled="1" id="-16" name="Wait" sid="6608973059795052" type="System">
+                                    <param id="0" name="Seconds">1.0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="2523188944818655">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="9029148703621499" type="System">
+                            <param id="0" name="Variable">tempo</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="7715319768011219" type="System">
+                            <param id="0" name="Variable">tempor</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7897384874049115">
+                    <conditions />
+                    <actions />
+                </event-block>
+                <event-block sid="4608120452854697">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="987504706287235" type="apple">
+                            <param id="0" name="Object">stick1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="5366283415886235" type="System">
+                            <param id="0" name="Variable">tempo</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="8213656130304647" type="apple">
+                            <param id="0" name="Instance variable">landed</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="4837544138136999">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="4382328609326813" type="System">
+                            <param id="0" name="Variable">tempor</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">30</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="4907146579553501" type="System">
+                            <param id="0" name="Variable">fixed</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="6119664250068335">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="2825487312913367" type="System">
+                            <param id="0" name="Variable">tempor</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">12</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="1666019238235699" type="System">
+                            <param id="0" name="Variable">fixed</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="4831100050057763">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="3136883115555862" type="System">
+                            <param id="0" name="Variable">fixed</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Physics" id="13" name="Set stepping mode" sid="1610917660662554" type="apple">
+                            <param id="0" name="Mode">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="5316941445060371">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="8844487855357778" type="System">
+                            <param id="0" name="Variable">fixed</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Physics" id="13" name="Set stepping mode" sid="9454846327554435" type="apple">
+                            <param id="0" name="Mode">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="5979905338537411">
+                    <conditions />
+                    <actions />
+                </event-block>
+            </sub-events>
+        </event-group>
         <event-group collapsed="1" description="" sid="2312432058937612" title="Storage">
             <sub-events>
                 <event-block sid="5340873386786295">
@@ -4013,5 +4155,19 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-block sid="154719065503657">
+            <conditions>
+                <condition id="-3" name="On end of layout" sid="3405472992146528" type="System" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="813485427440691" type="System">
+                    <param id="0" name="Variable">starting</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-16" name="Set opacity" sid="2054224282777712" type="start">
+                    <param id="0" name="Opacity">100</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>

@@ -653,6 +653,7 @@
                         <triple>0</triple>
                         <created>0</created>
                         <bomb>0</bomb>
+                        <landed>0</landed>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Physics">

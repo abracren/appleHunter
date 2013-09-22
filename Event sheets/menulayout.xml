@@ -6,8 +6,7 @@
         <variable constant="0" name="starting" sid="708408913669308" static="0" type="number">0</variable>
         <event-block sid="2863485442922044">
             <conditions>
-                <condition id="1" name="On any touch end" sid="7333287957945025" type="Touch" />
-                <condition id="4" name="Is touching object" sid="8339323484823127" type="Touch">
+                <condition id="3" name="On touched object" sid="8339323484823127" type="Touch">
                     <param id="0" name="Object">start</param>
                 </condition>
             </conditions>
@@ -15,6 +14,9 @@
                 <action id="-9" name="Set value" sid="60760462691318" type="System">
                     <param id="0" name="Variable">starting</param>
                     <param id="1" name="Value">1</param>
+                </action>
+                <action id="-16" name="Set opacity" sid="8433082481876723" type="start">
+                    <param id="0" name="Opacity">0</param>
                 </action>
             </actions>
         </event-block>
@@ -42,31 +44,8 @@
                 </condition>
             </conditions>
             <actions>
-                <action behavior="Flash" disabled="1" id="0" name="Flash" sid="6591722848929128" type="start">
-                    <param id="0" name="&apos;On&apos; time">0.1</param>
-                    <param id="1" name="&apos;Off&apos; time">0.1</param>
-                    <param id="2" name="Duration">1.0</param>
-                </action>
-                <action disabled="1" id="-9" name="Set value" sid="9594273004874571" type="System">
-                    <param id="0" name="Variable">mainmenuT</param>
-                    <param id="1" name="Value">0</param>
-                </action>
-                <action disabled="1" id="-9" name="Set value" sid="8669429625814632" type="System">
-                    <param id="0" name="Variable">menuToggle</param>
-                    <param id="1" name="Value">1</param>
-                </action>
-                <action id="-16" name="Set opacity" sid="6963693173837407" type="start3">
-                    <param id="0" name="Opacity">0</param>
-                </action>
                 <action id="-2" name="Go to layout" sid="5341697309956625" type="System">
                     <param id="0" name="Layout">Layout 1</param>
-                </action>
-                <action id="-16" name="Wait" sid="7404223197396492" type="System">
-                    <param id="0" name="Seconds">1.0</param>
-                </action>
-                <action id="-9" name="Set value" sid="7324280698020915" type="System">
-                    <param id="0" name="Variable">starting</param>
-                    <param id="1" name="Value">0</param>
                 </action>
             </actions>
         </event-block>

@@ -15,10 +15,10 @@
         <plugin author="Scirra" id="CJSAds" version="1">CocoonJS</plugin>
         <plugin author="Scirra" id="Facebook" version="1">Facebook</plugin>
         <plugin author="Scirra" id="Function" version="1">Function</plugin>
+        <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Spritefont2" version="1">Sprite font</plugin>
         <plugin author="Scirra" id="TextBox" version="1">Text box</plugin>
-        <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
         <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
         <plugin author="Zack0Wack0/Scirra" id="WebStorage" version="1">WebStorage</plugin>
@@ -95,6 +95,7 @@
                 <instance-variable name="triple" sid="7947651056134322" type="number" />
                 <instance-variable name="created" sid="4881760724969506" type="number" />
                 <instance-variable name="bomb" sid="5573541969696354" type="number" />
+                <instance-variable name="landed" sid="9318609090572188" type="number" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="Physics" sid="9116106392316847">
