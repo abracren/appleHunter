@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Event sheet 1</name>
     <events>
+        <variable constant="0" name="promo" sid="7363963155113446" static="0" type="number">1</variable>
         <variable constant="0" name="forceRan" sid="4042509109697301" static="0" type="number">0</variable>
         <variable constant="0" name="tresApples" sid="4697374307113076" static="0" type="number">1</variable>
         <variable constant="0" name="birdMoving" sid="5475433639624949" static="0" type="number">1</variable>

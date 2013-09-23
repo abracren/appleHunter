@@ -1797,6 +1797,33 @@
         <object-type name="Browser" sid="7480061569253655">
             <plugin id="Browser" />
         </object-type>
+        <object-type name="Sprite26" sid="692770642782267">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="97206582183269" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite27" sid="6091348749466844">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1625491245706481" speed="5">
+                    <frame duration="1" hotspotX="0.50365" hotspotY="0.514286">
+                        <collision-poly>
+                            <point x="0.00729927" y="0.0285714" />
+                            <point x="0.49635" y="0" />
+                            <point x="0.824818" y="0.685714" />
+                            <point x="0.788321" y="0.485714" />
+                            <point x="0.927007" y="0.714286" />
+                            <point x="0.49635" y="0.742857" />
+                            <point x="0.0729927" y="0.714286" />
+                            <point x="0.00729927" y="0.485714" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families />
     <layout-folder expanded="1">
@@ -1804,12 +1831,14 @@
         <layout>menu.xml</layout>
         <layout>Options.xml</layout>
         <layout>tutorial.xml</layout>
+        <layout>promo.xml</layout>
     </layout-folder>
     <event-folder expanded="1">
         <event-sheet>Event sheet 1.xml</event-sheet>
         <event-sheet>menulayout.xml</event-sheet>
         <event-sheet>OptionsLayout.xml</event-sheet>
         <event-sheet>tutorialSheet.xml</event-sheet>
+        <event-sheet>promoSheet.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Mouse" uid="6" />

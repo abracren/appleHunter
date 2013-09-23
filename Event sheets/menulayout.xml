@@ -42,9 +42,33 @@
                     <param id="1" name="Comparison">0</param>
                     <param id="2" name="Value">1</param>
                 </condition>
+                <condition id="-14" name="Compare variable" sid="9977097017215481" type="System">
+                    <param id="0" name="Variable">promo</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
             </conditions>
             <actions>
                 <action id="-2" name="Go to layout" sid="5341697309956625" type="System">
+                    <param id="0" name="Layout">promo</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8807494488858266">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="8190057845842689" type="System">
+                    <param id="0" name="Variable">starting</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="4138409241478321" type="System">
+                    <param id="0" name="Variable">promo</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="8512776042789365" type="System">
                     <param id="0" name="Layout">Layout 1</param>
                 </action>
             </actions>
